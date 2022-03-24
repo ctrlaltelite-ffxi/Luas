@@ -24,7 +24,7 @@ function get_sets()
 	MaccArray = {"Potency","Resist","Duration"} 
 --Can Delete Any Weapons/Sets That You Don't Need Or Replace/Add The New Weapons That You Want To Use. --
 	WeaponIndex = 1
-	WeaponArray = {"Caladbolg","Apocalypse"} --,"Liberator"
+	WeaponArray = {"Zantetsuken","Apocalypse"} --,"Liberator"
 	IdleIndex = 1
 	IdleArray = {"Movement","Regen","Refresh","Regain"} -- Default Idle Set Is Movement --
 	DarkSealIndex = 0 --Index for Dark Seal headpiece Potency(0) vs Duration(1)
@@ -63,7 +63,6 @@ function get_sets()
 	sets.Idle.Regen = set_combine(sets.Idle,{ring2="Chirich Ring +1"})
 	sets.Idle.Regen.Liberator = set_combine(sets.Idle.Regen,{main="Liberator"})
 	sets.Idle.Regen.Ragnarok = set_combine(sets.Idle.Regen,{main="Ragnarok"})
-	sets.Idle.Regen.Caladbolg = set_combine(sets.Idle.Regen,{main="Caladbolg"})
 	sets.Idle.Regen.Apocalypse = set_combine(sets.Idle.Regen,{main="Apocalypse"})
 	sets.Idle.Regen.Anguta = set_combine(sets.Idle.Regen,{main="Anguta"})
 
@@ -71,7 +70,6 @@ function get_sets()
 	sets.Idle.Movement = set_combine(sets.Idle,{legs="Carmine Cuisses +1"})
 	sets.Idle.Movement.Liberator = set_combine(sets.Idle.Movement,{main="Liberator"})
 	sets.Idle.Movement.Ragnarok = set_combine(sets.Idle.Movement,{main="Ragnarok"})
-	sets.Idle.Movement.Caladbolg = set_combine(sets.Idle.Movement,{main="Caladbolg"})
 	sets.Idle.Movement.Apocalypse = set_combine(sets.Idle.Movement,{main="Apocalypse"})
 	sets.Idle.Movement.Anguta = set_combine(sets.Idle.Movement,{main="Anguta"})
 
@@ -79,7 +77,6 @@ function get_sets()
 	sets.Idle.Refresh = set_combine(sets.Idle,{neck="Vim Torque +1",body="Lugra Cloak +1"})
 	sets.Idle.Refresh.Liberator = set_combine(sets.Idle.Refresh,{main="Liberator"})
 	sets.Idle.Refresh.Ragnarok = set_combine(sets.Idle.Refresh,{main="Ragnarok"})
-	sets.Idle.Refresh.Caladbolg = set_combine(sets.Idle.Refresh,{main="Caladbolg"})
 	sets.Idle.Refresh.Apocalypse = set_combine(sets.Idle.Refresh,{main="Apocalypse"})
 	sets.Idle.Refresh.Anguta = set_combine(sets.Idle.Refresh,{main="Anguta"})
 
@@ -99,7 +96,6 @@ function get_sets()
 		back=Ankou.STP})
 	sets.Idle.Regain.Liberator = set_combine(sets.Idle.Regain,{main="Liberator"})
 	sets.Idle.Regain.Ragnarok = set_combine(sets.Idle.Regain,{main="Ragnarok"})
-	sets.Idle.Regain.Caladbolg = set_combine(sets.Idle.Regain,{main="Caladbolg"})
 	sets.Idle.Regain.Apocalypse = set_combine(sets.Idle.Regain,{main="Apocalypse"})
 	sets.Idle.Regain.Anguta = set_combine(sets.Idle.Regain,{main="Anguta"})
 
@@ -606,186 +602,21 @@ function get_sets()
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------	
 	
 	-- Caladbolg(AM Down) TP Sets --
-	sets.TP.Caladbolg = {main="Caladbolg",
+	sets.TP.Zantetsuken = {main="Zantetsuken",
 		ammo="Coiste Bodhar",
 		head="Flamma Zucchetto +2",
 		hands="Sakpata's gauntlets",
 		legs="Ignominy flanchard +3",
 		feet="Flamma Gambieras +2",
-		neck="Abyssal bead necklace +1",
+		neck="Clotharius torque",
 		body="Sakpata's breastplate",
 		waist="Sailfi belt +1",
 		right_ear="Cessance earring",
-		left_ear="Brutal earring",
+		left_ear="Suppanomimi",
 		left_ring="Chirich ring +1",
 		right_ring="Niqmaddu ring",
 		back=Ankou.DA} 
 		
-	sets.TP.Caladbolg.MidACC = set_combine(sets.TP.Caladbolg,{
-		hands="Sakpata's gauntlets",}) 
-		
-	sets.TP.Caladbolg.HighACC = set_combine(sets.TP.Caladbolg.MidACC,{
-		head="Ignominy Burgonet +3",
-		body="Ignominy Cuirass +3",
-		hands="Ignominy Gauntlets +3",
-		legs="Ignominy Flanchard +3",
-		left_ring="Hetairoi Ring",})
-		
-	-- Caladbolg(AM Down: High Haste) TP Sets --
-	sets.TP.Caladbolg.HighHaste = set_combine(sets.TP.Caladbolg,{waist="Sailfi belt +1",})
-	sets.TP.Caladbolg.MidACC.HighHaste = set_combine(sets.TP.Caladbolg.MidACC,{waist="Sailfi belt +1",})
-	sets.TP.Caladbolg.HighACC.HighHaste = set_combine(sets.TP.Caladbolg.HighACC,{ammo="Coiste Bodhar",waist="Sailfi belt +1",})
-
-	-- Caladbolg(AM Down: SAM Roll) TP Sets --
-	sets.TP.Caladbolg.STP = set_combine(sets.TP.Caladbolg,{})
-	sets.TP.Caladbolg.MidACC.STP = set_combine(sets.TP.Caladbolg.MidACC,{})
-	sets.TP.Caladbolg.HighACC.STP = set_combine(sets.TP.Caladbolg.HighACC,{
-		feet="Flamma Gambieras +2"})
-
-	-- Caladbolg(AM Down: High Haste + SAM Roll) TP Sets --
-	sets.TP.Caladbolg.HighHaste.STP = set_combine(sets.TP.Caladbolg.STP,{waist="Sailfi belt +1",})
-	sets.TP.Caladbolg.MidACC.HighHaste.STP = set_combine(sets.TP.Caladbolg.MidACC.STP,{waist="Sailfi belt +1",})
-	sets.TP.Caladbolg.HighACC.HighHaste.STP = set_combine(sets.TP.Caladbolg.HighACC.STP,{waist="Sailfi belt +1",})
-	
-	-- Caladbolg(AM Up) TP Sets --
-	sets.TP.Caladbolg.AM = set_combine(sets.TP.Caladbolg,{
-		ammo="Coiste Bodhar",
-		head="Flamma Zucchetto +2",
-		hands="Sakpata's gauntlets",
-		legs="Ignominy flanchard +3",
-		feet="Flamma Gambieras +2",
-		neck="Abyssal bead necklace +1",
-		body="Sakpata's breastplate",
-		waist="Sailfi belt +1",
-		right_ear="Cessance earring",
-		left_ear="Brutal earring",
-		left_ring="Chirich ring +1",
-		right_ring="Niqmaddu ring",
-		back=Ankou.DA})
-		
-	sets.TP.Caladbolg.MidACC.AM = set_combine(sets.TP.Caladbolg.AM,{}) 
-		
-	sets.TP.Caladbolg.HighACC.AM = set_combine(sets.TP.Caladbolg.MidACC.AM,{})
-
-	-- Caladbolg(AM Up: High Haste) TP Sets --
-	sets.TP.Caladbolg.AM.HighHaste = set_combine(sets.TP.Caladbolg.AM,{waist="Sailfi belt +1",})
-	sets.TP.Caladbolg.MidACC.AM.HighHaste = set_combine(sets.TP.Caladbolg.AM.MidACC,{waist="Sailfi belt +1",})
-	sets.TP.Caladbolg.HighACC.AM.HighHaste = set_combine(sets.TP.Caladbolg.HighACC.AM,{})
-
-	-- Caladbolg(AM Up: SAM Roll) TP Sets --
-	sets.TP.Caladbolg.AM.STP = set_combine(sets.TP.Caladbolg.STP,{})
-	sets.TP.Caladbolg.MidACC.AM.STP = set_combine(sets.TP.Caladbolg.MidACC.AM,{})
-	sets.TP.Caladbolg.HighACC.AM.STP = set_combine(sets.TP.Caladbolg.HighACC.AM,{})
-
-	-- Caladbolg(AM Up: High Haste + SAM Roll) TP Sets --
-	sets.TP.Caladbolg.AM.HighHaste.STP = set_combine(sets.TP.Caladbolg.HighHaste.STP,{waist="Sailfi belt +1",})
-	sets.TP.Caladbolg.MidACC.AM.HighHaste.STP = set_combine(sets.TP.Caladbolg.MidACC.STP,{waist="Sailfi belt +1",})
-	sets.TP.Caladbolg.HighACC.AM.HighHaste.STP = set_combine(sets.TP.Caladbolg.HighACC.STP,{waist="Sailfi belt +1",})
-	
-	
-	-- Caladbolg /SAM TP Sets -------------------------------------------------------------------
-
-	-- Caladbolg(AM Down) TP Sets --  /SAM
-	--[ACC: 1150 STP: 61]--
-	sets.TP.Caladbolg.SAM = {main="Caladbolg",
-		ammo="Coiste Bodhar",
-		head="Flamma Zucchetto +2",
-		hands="Sakpata's gauntlets",
-		legs="Ignominy flanchard +3",
-		feet="Flamma Gambieras +2",
-		neck="Abyssal bead necklace +1",
-		body="sakpata's plate",
-		waist="Sailfi belt +1",
-		right_ear="Cessance earring",
-		left_ear="Brutal earring",
-		left_ring="Chirich ring +1",
-		right_ring="Niqmaddu ring",
-		back=Ankou.DA} 
-		
-	--[ACC: 1184 STP: 63]--	
-	sets.TP.Caladbolg.SAM.MidACC = set_combine(sets.TP.Caladbolg.SAM,{
-		hands="Emicho Gauntlets",
-		left_ear="Cessance earring",
-		left_ring="Chirich Ring +1",}) 
-		
-	--[ACC: 1264 STP: 27]--		
-	sets.TP.Caladbolg.SAM.HighACC = set_combine(sets.TP.Caladbolg.SAM.MidACC,{
-		head="Ignominy Burgonet +3",
-		neck="Abyssal bead necklace +1",
-		body="Ignominy Cuirass +3",
-		hands="Ignominy Gauntlets +3",
-		legs="Ignominy Flanchard +3",
-		left_ring="Chirich ring +1",})
-
-	-- Caladbolg(AM Down: High Haste) TP Sets -- /SAM
-	sets.TP.Caladbolg.SAM.HighHaste = set_combine(sets.TP.Caladbolg.SAM,{waist="Sailfi belt +1",})
-	sets.TP.Caladbolg.SAM.MidACC.HighHaste = set_combine(sets.TP.Caladbolg.SAM.MidACC,{waist="Sailfi belt +1",})
-	sets.TP.Caladbolg.SAM.HighACC.HighHaste = set_combine(sets.TP.Caladbolg.SAM.HighACC,{ammo="Coiste Bodhar",waist="Sailfi belt +1",})
-	
-	-- Caladbolg(AM Down: SAM Roll) TP Sets -- /SAM
-	sets.TP.Caladbolg.SAM.STP = set_combine(sets.TP.Caladbolg.SAM,{left_ear="Cessance earring",})
-	sets.TP.Caladbolg.SAM.MidACC.STP = set_combine(sets.TP.Caladbolg.SAM.MidACC,{})
-	sets.TP.Caladbolg.SAM.HighACC.STP = set_combine(sets.TP.Caladbolg.SAM.HighACC,{
-		ammo="Coiste Bodhar",
-		neck="Abyssal bead necklace +1",
-		ear1="Cessance earring",
-		feet="Flamma Gambieras +2"})
-
-	-- Caladbolg(AM Down: High Haste + SAM Roll) TP Sets -- /SAM
-	sets.TP.Caladbolg.SAM.HighHaste.STP = set_combine(sets.TP.Caladbolg.SAM.STP,{waist="Sailfi belt +1",})
-	sets.TP.Caladbolg.SAM.MidACC.HighHaste.STP = set_combine(sets.TP.Caladbolg.SAM.MidACC.STP,{waist="Sailfi belt +1",})
-	sets.TP.Caladbolg.SAM.HighACC.HighHaste.STP = set_combine(sets.TP.Caladbolg.SAM.HighACC.STP,{waist="Sailfi belt +1",})
-	
-	-- Caladbolg(AM Up) TP Sets -- /SAM
-	--[ACC: 1150 STP: 61]--
-	sets.TP.Caladbolg.SAM.AM = set_combine(sets.TP.Caladbolg.SAM,{
-		ammo="Coiste Bodhar",
-		head="Flamma Zucchetto +2",
-		hands="Sakpata's gauntlets",
-		legs="Ignominy flanchard +3",
-		feet="Flamma Gambieras +2",
-		neck="Abyssal bead necklace +1",
-		body="Sakpata's breastplate",
-		waist="Sailfi belt +1",
-		right_ear="Cessance earring",
-		left_ear="Brutal earring",
-		left_ring="Chirich ring +1",
-		right_ring="Niqmaddu ring",
-		back=Ankou.DA})
-		
-	--[ACC: 1184 STP: 63]--		
-	sets.TP.Caladbolg.SAM.MidACC.AM = set_combine(sets.TP.Caladbolg.SAM.AM,{
-		hands="Emicho Gauntlets",
-		left_ear="Cessance earring",
-		left_ring="Chirich Ring +1",}) 
-	
-	--[ACC: 1264 STP: 27]--		
-	sets.TP.Caladbolg.SAM.HighACC.AM = set_combine(sets.TP.Caladbolg.SAM.MidACC.AM,{
-		head="Ignominy Burgonet +3",
-		neck="Abyssal bead necklace +1",
-		body="Ignominy Cuirass +3",
-		hands="Ignominy Gauntlets +3",
-		legs="Ignominy Flanchard +3",
-		left_ring="Chirich ring +1",})
-	
-	-- Caladbolg(AM Up: High Haste) TP Sets -- /SAM
-	sets.TP.Caladbolg.SAM.AM.HighHaste = set_combine(sets.TP.Caladbolg.SAM.AM,{waist="Sailfi belt +1",})
-	sets.TP.Caladbolg.SAM.MidACC.AM.HighHaste = set_combine(sets.TP.Caladbolg.SAM.MidACC.AM,{waist="Sailfi belt +1",})
-	sets.TP.Caladbolg.SAM.HighACC.AM.HighHaste = set_combine(sets.TP.Caladbolg.SAM.HighACC.AM,{ammo="Coiste Bodhar",waist="Sailfi belt +1",})
-
-	-- Caladbolg(AM Up: SAM Roll) TP Sets -- /SAM
-	sets.TP.Caladbolg.SAM.AM.STP = set_combine(sets.TP.Caladbolg.SAM.STP,{left_ear="Cessance earring",})
-	sets.TP.Caladbolg.SAM.MidACC.AM.STP = set_combine(sets.TP.Caladbolg.SAM.MidACC.AM,{})
-	sets.TP.Caladbolg.SAM.HighACC.AM.STP = set_combine(sets.TP.Caladbolg.SAM.HighACC.AM,{
-		ammo="Coiste Bodhar",
-		neck="Abyssal bead necklace +1",
-		ear1="Cessance earring",
-		feet="Flamma Gambieras +2"})
-
-	-- Caladbolg(AM Up: High Haste + SAM Roll) TP Sets --
-	sets.TP.Caladbolg.SAM.AM.HighHaste.STP = set_combine(sets.TP.Caladbolg.SAM.HighHaste.STP,{waist="Sailfi belt +1",})
-	sets.TP.Caladbolg.SAM.MidACC.AM.HighHaste.STP = set_combine(sets.TP.Caladbolg.SAM.MidACC.STP,{waist="Sailfi belt +1",})
-	sets.TP.Caladbolg.SAM.HighACC.AM.HighHaste.STP = set_combine(sets.TP.Caladbolg.SAM.HighACC.STP,{waist="Sailfi belt +1",})
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------	
 ---------------------------------------------------------------- ANGUTA SETS -----------------------------------------------------------------------------------
@@ -932,7 +763,6 @@ function get_sets()
 		
 	sets.TP.Hybrid.Liberator = set_combine(sets.TP.Hybrid,{main="Liberator",ammo="Coiste Bodhar",})
 	sets.TP.Hybrid.Ragnarok = set_combine(sets.TP.Hybrid,{main="Ragnarok", ammo="Coiste Bodhar",})
-	sets.TP.Hybrid.Caladbolg = set_combine(sets.TP.Hybrid,{main="Caladbolg", ammo="Coiste Bodhar",})
 	sets.TP.Hybrid.Apocalypse = set_combine(sets.TP.Hybrid,{main="Apocalypse", ammo="Coiste Bodhar",})
 	sets.TP.Hybrid.Anguta = set_combine(sets.TP.Hybrid,{main="Anguta", ammo="Coiste Bodhar",})
 		
@@ -1043,6 +873,21 @@ function get_sets()
 	-- Description:	Deals triple damage. Damage varies with TP.
 	-- Stat Modifier:	80% VIT fTP:	4.75	7.5	10
     sets.WS.Torcleaver = {
+		ammo="Knobkierrie",
+		head="Odyssean Helm",
+		body="Ignominy Cuirass +3",
+		hands="Odyssean gauntlets",
+		legs="Fallen's flanchard +3",
+		feet="Sulevia's Leggings +2",
+		neck="Abyssal bead necklace +1",
+		waist="Fotia Belt",
+		left_ear="Moonshade earring",
+		right_ear="Thrud earring",
+		left_ring="Epaminondas's ring",
+		right_ring="Karieyh ring",
+		back=Ankou.WSDVIT}
+
+	sets.WS.SavageBlade = {
 		ammo="Knobkierrie",
 		head="Odyssean Helm",
 		body="Ignominy Cuirass +3",

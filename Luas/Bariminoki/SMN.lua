@@ -106,7 +106,7 @@ function get_sets()
     sets.midcast = {}
 
 	-- Ward blood pacts optimize summoner magic skill to maximize buff length
-	sets.precast.BPWard = {
+	sets.midcast.BPWard = {
 		head="Convoker's Horn +2",
 		body="Baayami Robe",
 		hands="Lamassu mitts +1",
@@ -123,7 +123,7 @@ function get_sets()
 	}
 
 	-- Rage blood pacts optimize BP timer reduction
-	sets.precast.BPRage = {
+	sets.midcast.BPRage = {
 		head="Beckoner's Horn +1",
 		body="Shomonjijoe +1",
 		hands="Lamassu mitts +1",
@@ -501,7 +501,7 @@ function midcast(spell)
 	-- BP length gear needs to swap here
 	if (spell.type=="BloodPactWard") then
 		if not buffactive["Astral Conduit"] then
-			equip(sets.precast.BPWard)
+			equip(sets.midcast.BPWard)
 		end
 		-- If lag compensation mode is on, set up a timer to equip the BP gear.
 		if LagMode then
@@ -510,7 +510,7 @@ function midcast(spell)
 	-- BP Timer gear needs to swap here
 	elseif (spell.type=="BloodPactRage") then
 		if not buffactive["Astral Conduit"] then
-			equip(sets.precast.BPRage)
+			equip(sets.midcast.BPRage)
 		end
 		-- If lag compensation mode is on, set up a timer to equip the BP gear.
 		if LagMode then
@@ -605,6 +605,10 @@ function pet_midcast(spell)
 	if not LagMode then
 		equipBPGear(spell.name)
 	end
+end
+
+function pet_status_change(new, old)
+	-- send_command('console_echo "New: '..new..' : Old: '..old..'"')
 end
 
 function pet_aftercast(spell)
