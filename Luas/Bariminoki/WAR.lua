@@ -24,7 +24,7 @@ function get_sets()
 	MaccArray = {"Potency","Resist","Duration"} 
 --Can Delete Any Weapons/Sets That You Don't Need Or Replace/Add The New Weapons That You Want To Use. --
 	WeaponIndex = 1
-	WeaponArray = {"Zantetsuken","Apocalypse"} --,"Liberator"
+	WeaponArray = {"Naegling", "Shining One","Jokushuono"} --,"Liberator"
 	IdleIndex = 1
 	IdleArray = {"Movement","Regen","Refresh","Regain"} -- Default Idle Set Is Movement --
 	DarkSealIndex = 0 --Index for Dark Seal headpiece Potency(0) vs Duration(1)
@@ -44,16 +44,17 @@ function get_sets()
 	Ankou.INTDA=	{ name="Ankou's Mantle", augments={'INT+20','Accuracy+20 Attack+20','INT+10','"Dbl.Atk."+10',}}
 	Ankou.MEVA= 	{ name="Ankou's Mantle", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','"Fast Cast"+10',}}
 	
-	sets.Idle = {			
-		ammo="Coiste Bodhar",
+	sets.Idle = {	
+		ranged="Grand crossbow",		
+		ammo="Darksteel bolt",
 		neck="Twilight torque",
 		ear1="Genmei Earring",
 		ear2="Infused Earring",
 		head="Sakpata's helm",
-		body="Chozoron coselete",
+		body="Sakpata's plate",
 		hands="Sakpata's gauntlets",
 		left_ring="Karieyh ring",
-		right_ring="Stikini ring +1",
+		right_ring="Defending ring",
 		back=Ankou.DA,
 		waist="Flume belt",
 		legs="Carmine cuisses +1",
@@ -276,7 +277,20 @@ function get_sets()
 	sets.MAXDrain = {main="Misanthropy",}
 	
 		-- TP Base Set --
-	sets.TP = {}
+	sets.TP = {		
+		ammo="Coiste Bodhar",
+		head="Flamma Zucchetto +2",
+		body="Sakpata's Plate",
+		hands="Sakpata's gauntlets",
+		legs="Sakpata's cuisses",
+		feet="Flamma Gambieras +2",
+		neck="Clotharius Torque",
+		waist="Sailfi belt +1",
+		left_ear="Cessance earring",
+		right_ear="Brutal earring",
+		left_ring="Petrov Ring",
+		right_ring="Niqmaddu ring",
+		back="Mecistopins mantle"}
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------	
 ---------------------------------------------------------------- LIBERATOR SETS -----------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------	
@@ -612,7 +626,7 @@ function get_sets()
 		body="Sakpata's breastplate",
 		waist="Sailfi belt +1",
 		right_ear="Cessance earring",
-		left_ear="Suppanomimi",
+		left_ear="Brutal earring",
 		left_ring="Chirich ring +1",
 		right_ring="Niqmaddu ring",
 		back=Ankou.DA} 
@@ -832,18 +846,18 @@ function get_sets()
 	-- WS Base Set --
 	sets.WS = {
 		ammo="Knobkierrie",
-		head="Flamma Zucchetto +2",
-		body="Ignominy Cuirass +3",
+		head="Sakpata's Helm",
+		body="Pummeler's lorica +2",
 		hands="Sakpata's gauntlets",
-		legs="Ignominy Flanchard +3",
-		feet="Argosy Sollerets +1",
+		legs="Sakpata's cuisses",
+		feet="Sulev. Leggings +2",
 		neck="Fotia Gorget",
 		waist="Fotia Belt",
 		left_ear="Moonshade earring",
-		right_ear="Cessance earring",
-		left_ring="Chirich ring +1",
+		right_ear="Thrud Earring",
+		left_ring="Epaminondas's ring",
 		right_ring="Niqmaddu ring",
-		back=Ankou.WSDSTR}
+		back="Cichol's Mantle"}
 
 	-- Resolution Sets --
 	--Description:	Delivers a fivefold attack. Damage varies with TP.

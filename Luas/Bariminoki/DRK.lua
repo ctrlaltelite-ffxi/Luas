@@ -24,7 +24,7 @@ function get_sets()
 	MaccArray = {"Potency","Resist","Duration"} 
 --Can Delete Any Weapons/Sets That You Don't Need Or Replace/Add The New Weapons That You Want To Use. --
 	WeaponIndex = 1
-	WeaponArray = {"Caladbolg","Apocalypse"} --,"Liberator"
+	WeaponArray = {"Caladbolg","Apocalypse", "Jokushuono"} --,"Liberator"
 	IdleIndex = 1
 	IdleArray = {"Movement","Regen","Refresh","Regain"} -- Default Idle Set Is Movement --
 	DarkSealIndex = 0 --Index for Dark Seal headpiece Potency(0) vs Duration(1)
@@ -36,9 +36,9 @@ function get_sets()
 	select_default_macro_book() -- Change Default Macro Book At The End --
 
 	Ankou={}
-	Ankou.WSDSTR=	{ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}}
+	Ankou.WSDSTR=	{ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Accuracy+10','Weapon skill damage +10%',}}
 	Ankou.DA= 		{ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','"Dbl.Atk."+10',}}
-	Ankou.WSDVIT=	{ name="Ankou's Mantle", augments={'VIT+20','Weapon skill damage +10%',}}
+	Ankou.WSDVIT=	{ name="Ankou's Mantle", augments={'VIT+20','Accuracy+20 Attack+20','VIT+10','Weapon skill damage +10%',}}
 	Ankou.FC=		{ name="Ankou's Mantle", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','"Fast Cast"+10',}}
     Ankou.STP=      { name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10',}}
 	Ankou.INTDA=	{ name="Ankou's Mantle", augments={'INT+20','Accuracy+20 Attack+20','INT+10','"Dbl.Atk."+10',}}
@@ -606,7 +606,8 @@ function get_sets()
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------	
 	
 	-- Caladbolg(AM Down) TP Sets --
-	sets.TP.Caladbolg = {main="Caladbolg",
+	sets.TP.Caladbolg = {
+		main="Caladbolg",
 		ammo="Coiste Bodhar",
 		head="Flamma Zucchetto +2",
 		hands="Sakpata's gauntlets",
@@ -617,9 +618,27 @@ function get_sets()
 		waist="Sailfi belt +1",
 		right_ear="Cessance earring",
 		left_ear="Brutal earring",
-		left_ring="Chirich ring +1",
+		left_ring="Hetairoi ring",
 		right_ring="Niqmaddu ring",
 		back=Ankou.DA} 
+
+	sets.TP.Jokushuono = {
+		main="Jokushuono",
+		ammo="Coiste Bodhar",
+		head="Flamma Zucchetto +2",
+		hands="Sakpata's gauntlets",
+		legs="Ignominy flanchard +3",
+		feet="Flamma Gambieras +2",
+		neck="Abyssal bead necklace +1",
+		body="Sakpata's breastplate",
+		waist="Sailfi belt +1",
+		right_ear="Cessance earring",
+		left_ear="Brutal earring",
+		left_ring="Hetairoi ring",
+		right_ring="Niqmaddu ring",
+		back=Ankou.DA} 
+
+	sets.TP.Caladbolg.SAM = sets.TP.Jokushuono;
 		
 	sets.TP.Caladbolg.MidACC = set_combine(sets.TP.Caladbolg,{
 		hands="Sakpata's gauntlets",}) 
@@ -659,7 +678,7 @@ function get_sets()
 		waist="Sailfi belt +1",
 		right_ear="Cessance earring",
 		left_ear="Brutal earring",
-		left_ring="Chirich ring +1",
+		left_ring="Hetairoi ring",
 		right_ring="Niqmaddu ring",
 		back=Ankou.DA})
 		
@@ -698,7 +717,7 @@ function get_sets()
 		waist="Sailfi belt +1",
 		right_ear="Cessance earring",
 		left_ear="Brutal earring",
-		left_ring="Chirich ring +1",
+		left_ring="Hetairoi ring",
 		right_ring="Niqmaddu ring",
 		back=Ankou.DA} 
 		
@@ -706,7 +725,7 @@ function get_sets()
 	sets.TP.Caladbolg.SAM.MidACC = set_combine(sets.TP.Caladbolg.SAM,{
 		hands="Emicho Gauntlets",
 		left_ear="Cessance earring",
-		left_ring="Chirich Ring +1",}) 
+		left_ring="Hetairoi ring",}) 
 		
 	--[ACC: 1264 STP: 27]--		
 	sets.TP.Caladbolg.SAM.HighACC = set_combine(sets.TP.Caladbolg.SAM.MidACC,{
@@ -715,7 +734,7 @@ function get_sets()
 		body="Ignominy Cuirass +3",
 		hands="Ignominy Gauntlets +3",
 		legs="Ignominy Flanchard +3",
-		left_ring="Chirich ring +1",})
+		left_ring="Hetairoi ring",})
 
 	-- Caladbolg(AM Down: High Haste) TP Sets -- /SAM
 	sets.TP.Caladbolg.SAM.HighHaste = set_combine(sets.TP.Caladbolg.SAM,{waist="Sailfi belt +1",})
@@ -749,7 +768,7 @@ function get_sets()
 		waist="Sailfi belt +1",
 		right_ear="Cessance earring",
 		left_ear="Brutal earring",
-		left_ring="Chirich ring +1",
+		left_ring="Hetairoi ring",
 		right_ring="Niqmaddu ring",
 		back=Ankou.DA})
 		
@@ -757,7 +776,7 @@ function get_sets()
 	sets.TP.Caladbolg.SAM.MidACC.AM = set_combine(sets.TP.Caladbolg.SAM.AM,{
 		hands="Emicho Gauntlets",
 		left_ear="Cessance earring",
-		left_ring="Chirich Ring +1",}) 
+		left_ring="Hetairoi ring",}) 
 	
 	--[ACC: 1264 STP: 27]--		
 	sets.TP.Caladbolg.SAM.HighACC.AM = set_combine(sets.TP.Caladbolg.SAM.MidACC.AM,{
@@ -766,7 +785,7 @@ function get_sets()
 		body="Ignominy Cuirass +3",
 		hands="Ignominy Gauntlets +3",
 		legs="Ignominy Flanchard +3",
-		left_ring="Chirich ring +1",})
+		left_ring="Hetairoi ring",})
 	
 	-- Caladbolg(AM Up: High Haste) TP Sets -- /SAM
 	sets.TP.Caladbolg.SAM.AM.HighHaste = set_combine(sets.TP.Caladbolg.SAM.AM,{waist="Sailfi belt +1",})
@@ -1050,11 +1069,11 @@ function get_sets()
 		legs="Fallen's flanchard +3",
 		feet="Sulevia's Leggings +2",
 		neck="Abyssal bead necklace +1",
-		waist="Fotia Belt",
+		waist="Fotia belt",
 		left_ear="Moonshade earring",
 		right_ear="Thrud earring",
 		left_ring="Epaminondas's ring",
-		right_ring="Karieyh ring",
+		right_ring="Niqmaddu ring",
 		back=Ankou.WSDVIT}
 		
     sets.WS.Torcleaver.MidACC = set_combine(sets.WS.Torcleaver,{})
