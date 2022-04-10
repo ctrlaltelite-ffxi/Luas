@@ -263,19 +263,19 @@ function get_sets()
 
     sets.Midshot.LowACC = {
         head = "Arcadian Beret +3",
-        body = "Ikenga's vest",
+        body = "Mummu Jacket +1",
         hands = "Malignance Gloves",
-        legs = "Ikenga's Trousers",
+        legs = "Adhemar Kecks +1",
         feet = "Ikenga's clogs",
-        neck = "Anu Torque",
+        neck = "Iskur gorget",
         ear1 = "Sherida Earring",
         ear2 = "Volley Earring",
         ring1 = "Ilabrat Ring",
-        ring2 = "Rajas Ring",
+        ring2 = "Regal ring",
         back = {
             name = "Belenus's Cape",
             augments = {
-                'AGI+20', 'Rng. Acc.+20 Rng.Atk.+20', 'Weapon skill damage +10%'
+                'AGI+20', 'Rng. Acc.+20 Rng.Atk.+20', '"Store TP"+10'
             }
         },
         waist = "K. Kachina Belt +1"
@@ -815,17 +815,17 @@ function get_sets()
     sets.Melee = {}
 
     sets.Melee.LowHaste = {
-        head = "Adhemar Bonnet +1",
-        body = "Adhemar Jacket +1",
+        head = "Adhemar Bonnet",
+        body = "Adhemar Jacket",
         hands = "Adhemar Wristbands",
         legs = "Samnuha Tights",
         feet = {
             name = "Herculean Boots",
             augments = {'"Triple Atk."+3', 'AGI+9', 'Accuracy+12'}
         },
-        neck = "Anu Torque",
+        neck = "Clotharius Torque",
         ear1 = "Sherida Earring",
-        ear2 = "Cessance Earring",
+        ear2 = "Suppanomimi",
         ring1 = "Ilabrat ring",
         ring2 = "Hetairoi ring",
         back = {
@@ -838,15 +838,15 @@ function get_sets()
     }
 
     sets.Melee.CapHaste = {
-        head = "Adhemar Bonnet +1",
-        body = "Adhemar Jacket +1",
+        head = "Adhemar Bonnet",
+        body = "Adhemar Jacket",
         hands = "Adhemar Wristbands",
         legs = "Samnuha Tights",
         feet = {
             name = "Herculean Boots",
             augments = {'"Triple Atk."+3', 'AGI+9', 'Accuracy+12'}
         },
-        neck = "Anu Torque",
+        neck = "Clotharius Torque",
         ear1 = "Cessance Earring",
         ear2 = "Suppanomimi",
         ring1 = "Ilabrat ring",
@@ -861,15 +861,15 @@ function get_sets()
     }
 
     sets.Melee.Accuracy = {
-        head = "Adhemar Bonnet +1",
-        body = "Adhemar Jacket +1",
+        head = "Adhemar Bonnet",
+        body = "Adhemar Jacket",
         hands = "Adhemar Wristbands",
         legs = "Samnuha Tights",
         feet = {
             name = "Herculean Boots",
             augments = {'"Triple Atk."+3', 'AGI+9', 'Accuracy+12'}
         },
-        neck = "Anu Torque",
+        neck = "Clotharius Torque",
         ear1 = "Cessance Earring",
         ear2 = "Suppanomimi",
         ring1 = "Ilabrat ring",
@@ -908,7 +908,7 @@ function get_sets()
         waist = "Fotia Belt",
         ear1 = "Moonshade Earring",
         ear2 = "Ishvara Earring",
-        ring1 = "Dingir Ring",
+        ring1 = "Regal Ring",
         ring2 = "Epaminondas's ring",
         back = {
             name = "Belenus's Cape",
@@ -917,25 +917,6 @@ function get_sets()
             }
         }
     })
-
-    sets.WS["Evisceration"] = {		
-		head="Adhemar Bonnet +1",
-		body="Agony Jerkin +1",
-		hands="Malignance gloves",
-		legs = "Arc. Braccae +3",
-		feet = "Mummu Gamash. +1",
-		neck="Fotia Gorget",
-		waist="Fotia Belt",
-		left_ear="Moonshade earring",
-		right_ear="Lugra Earring +1",
-		left_ring="Epaminondas's ring",
-		right_ring="Ilabrat ring",
-        back = {
-            name = "Belenus's Cape",
-            augments = {
-                'AGI+20', 'Rng.Acc.+20 Rng.Atk.+20', 'Weapon skill damage +10%'
-            }
-        }}
 
     sets.WS['Last Stand'].None = sets.WS["Last Stand"]
     sets.WS['Last Stand'].Half = set_combine(sets.WS['Last Stand'],
@@ -988,8 +969,7 @@ function get_sets()
 
     -- Coronach--
     sets.WS['Coronach'] = set_combine(sets.WS['Last Stand'], {
-        ear2 = "Odr Earring",
-        left_ring = "Ilabrat Ring"
+        ear2 = "Sherida Earring",
     })
     sets.WS['Coronach'].None = sets.WS['Coronach']
     sets.WS['Coronach'].Half = set_combine(sets.WS['Coronach'].None,
@@ -1012,7 +992,7 @@ function get_sets()
         neck = "Scout's Gorget +1",
         ear1 = "Moonshade Earring",
         ear2 = "Friomisi Earring",
-        ring1 = "Weatherspoon ring",
+        ring1 = "Dingir Ring",
         ring2 = "Epaminondas's ring",
         back = {
             name = "Belenus's Cape",

@@ -23,7 +23,7 @@ function get_sets()
     MaccArray = {"Potency", "Resist", "Duration"}
     -- Can Delete Any Weapons/Sets That You Don't Need Or Replace/Add The New Weapons That You Want To Use. --
     WeaponIndex = 1
-    WeaponArray = {"Naegling", "Shining One", "Minos", "Zulfiqar"} -- ,"Liberator"
+    WeaponArray = {"Caladbolg", "Naegling", "Sakpata's Sword"} -- ,"Liberator"
     IdleIndex = 1
     IdleArray = {"Movement", "Regen", "Refresh", "Regain"} -- Default Idle Set Is Movement --
     DarkSealIndex = 0 -- Index for Dark Seal headpiece Potency(0) vs Duration(1)
@@ -72,15 +72,15 @@ function get_sets()
     }
 
     sets.Idle = {
-        ammo="Coiste Bodhar",
+        ammo = "Coiste Bodhar",
         neck = "Twilight torque",
         ear1 = "Genmei Earring",
         ear2 = "Infused Earring",
         head = "Sakpata's helm",
-        body = "Sakpata's breastplate",
+        body = "Chozoron coselete",
         hands = "Sakpata's gauntlets",
         left_ring = "Karieyh ring",
-        right_ring = "Defending ring",
+        right_ring = "Stikini ring +1",
         back = Ankou.DA,
         waist = "Flume belt",
         legs = "Carmine cuisses +1",
@@ -92,6 +92,8 @@ function get_sets()
     sets.Idle.Regen.Liberator = set_combine(sets.Idle.Regen,
                                             {main = "Liberator"})
     sets.Idle.Regen.Ragnarok = set_combine(sets.Idle.Regen, {main = "Ragnarok"})
+    sets.Idle.Regen.Caladbolg = set_combine(sets.Idle.Regen,
+                                            {main = "Caladbolg"})
     sets.Idle.Regen.Apocalypse = set_combine(sets.Idle.Regen,
                                              {main = "Apocalypse"})
     sets.Idle.Regen.Anguta = set_combine(sets.Idle.Regen, {main = "Anguta"})
@@ -102,6 +104,8 @@ function get_sets()
                                                {main = "Liberator"})
     sets.Idle.Movement.Ragnarok = set_combine(sets.Idle.Movement,
                                               {main = "Ragnarok"})
+    sets.Idle.Movement.Caladbolg = set_combine(sets.Idle.Movement,
+                                               {main = "Caladbolg"})
     sets.Idle.Movement.Apocalypse = set_combine(sets.Idle.Movement,
                                                 {main = "Apocalypse"})
     sets.Idle.Movement.Anguta = set_combine(sets.Idle.Movement,
@@ -116,6 +120,8 @@ function get_sets()
                                               {main = "Liberator"})
     sets.Idle.Refresh.Ragnarok = set_combine(sets.Idle.Refresh,
                                              {main = "Ragnarok"})
+    sets.Idle.Refresh.Caladbolg = set_combine(sets.Idle.Refresh,
+                                              {main = "Caladbolg"})
     sets.Idle.Refresh.Apocalypse = set_combine(sets.Idle.Refresh,
                                                {main = "Apocalypse"})
     sets.Idle.Refresh.Anguta = set_combine(sets.Idle.Refresh, {main = "Anguta"})
@@ -140,34 +146,218 @@ function get_sets()
                                              {main = "Liberator"})
     sets.Idle.Regain.Ragnarok = set_combine(sets.Idle.Regain,
                                             {main = "Ragnarok"})
+    sets.Idle.Regain.Caladbolg = set_combine(sets.Idle.Regain,
+                                             {main = "Caladbolg"})
     sets.Idle.Regain.Apocalypse = set_combine(sets.Idle.Regain,
                                               {main = "Apocalypse"})
     sets.Idle.Regain.Anguta = set_combine(sets.Idle.Regain, {main = "Anguta"})
 
     -- JA Sets --
     sets.JA = {}
-    sets.JA['Warcry'] = {Head = "Agoge Mask +3"}
-    sets.JA["Berserk"] = {Feet="Agoge Calligae +3"}
+    sets.JA['Diabolic Eye'] = {hands = "Fallen's finger gauntlets +1"}
+    sets.JA['Arcane Circle'] = {
+        feet = "Ignominy Sollerets +3",
+        body = "Founder's Breastplate"
+    }
+    sets.JA['Nether Void'] = {legs = "Heath. Flanchard +1"}
+    sets.JA['Souleater'] = {head = "Ignominy Burgonet +3"}
+    sets.JA['Weapon Bash'] = {hands = "Ignominy Gauntlets +3"}
+    sets.JA['Last Resort'] = {
+        back = "Ankou's Mantle",
+        feet = "Fallen's Sollerets"
+    }
+    sets.JA['Dark Seal'] = {head = "Fallen's Burgeonet +1"}
+    sets.JA['Blood Weapon'] = {body = "Fallen's Cuirass +1"}
 
     sets.Precast = {}
-    -- TP Base Set --
-    sets.TP = {
-        ammo = "Coiste Bodhar",
-        head = "Flamma Zucchetto +2",
-        body = "Sakpata's breastplate",
-        hands = "Sakpata's gauntlets",
-        legs = "Sakpata's cuisses",
-        feet = "Flamma Gambieras +2",
-        neck = "Clotharius Torque",
-        waist = "Sailfi belt +1",
-        left_ear = "Cessance earring",
-        right_ear = "Brutal earring",
+    -- Fastcast Set --
+    sets.Precast.FastCast = {
+        ammo = "Impatiens",
+        head = "Carmine Mask +1", -- 14
+        neck = "Voltsurge Torque", -- 4
+        ear1 = "Loquacious Earring", -- 2
+        ear2 = "Eabani Earring",
+        body = "Ignominy cuirass +3", -- 10
+        hands = "Leyline Gloves", -- 8
+        ring1 = "Kishar Ring", -- 4
+        ring2 = "Weatherspoon Ring", -- 5
+        back = Ankou.FC, -- 10
+        waist = "Tempus Fugit",
+        legs = "Eschite cuisses", -- 8
+        feet = "Flamma gambieras +2"
+    } -- 11
+    -- 72 FC
+
+    -- Precast Dark Magic --
+    sets.Precast['Dark Magic'] = set_combine(sets.Precast.FastCast, {})
+
+    -- Midcast Base Set --
+    sets.Midcast = {}
+
+    -- Magic Haste Set --
+    sets.Midcast.Haste = set_combine(sets.PDT, {})
+
+    -- Dark Magic Set --
+    sets.Midcast['Dark Magic'] = {
+        ammo = "Pemphredo Tathlum",
+        head = "Ignominy Burgonet +3",
+        body = "Carmine Scale Mail",
+        hands = "Fallen's finger gauntlets +1",
+        legs = "Eschite cuisses",
+        feet = "Ignominy Sollerets +3",
+        neck = "Erra Pendant",
+        waist = "Casso sash",
+        left_ear = "Hermetic Earring",
+        right_ear = "Dark Earring",
+        left_ring = "Stikini Ring",
+        right_ring = "Evanescence Ring",
+        back = "Niht Mantle"
+    }
+
+    -- Absorb Set --
+    sets.Midcast.Absorb = {
+        ammo = "Pemphredo Tathlum",
+        head = "Ignominy Burgonet +3",
+        body = "Carmine Scale Mail",
+        legs = "Eschite cuisses",
+        feet = "Ratri Sollerets",
+        neck = "Erra Pendant",
+        waist = "Casso Sash",
+        left_ear = "Hermetic Earring",
+        right_ear = "Dark Earring",
+        right_ring = "Kishar Ring",
+        hands = "Pavor Gauntlets",
+        left_ring = "Evanescence Ring",
+        back = "Chuparrosa Mantle"
+    }
+    sets.Midcast.Absorb.Resist = set_combine(sets.Midcast.Absorb, {
+        head = "Carmine Mask +1",
+        hands = "Leyline Gloves",
+        left_ring = "Chirich ring +1",
+        right_ring = "Stikini Ring",
+        waist = "Eschan Stone",
+        feet = "Ignominy Sollerets +3",
+        back = Ankou.FC
+    })
+    sets.Midcast.Absorb.Duration = set_combine(sets.Midcast.Absorb, {
+        hands = "Onyx Gadlings",
+        legs = "Black Cuisses"
+    })
+
+    -- Absorb-TP Set --
+    sets.Midcast['Absorb-TP'] = set_combine(sets.Midcast.Absorb,
+                                            {hands = "Heathen's Gauntlets +1"})
+
+    -- Stun Sets --
+    sets.Midcast.Stun = set_combine(sets.Midcast['Dark Magic'], {
+        head = "Carmine Mask +1",
+        hands = "Leyline Gloves",
+        left_ring = "Chirich ring +1",
+        waist = "Eschan Stone",
+        legs = "Eschite cuisses",
+        feet = "Ignominy Sollerets +3",
+        back = Ankou.FC
+    })
+    sets.Midcast.Stun.Resist = set_combine(sets.Midcast.Stun, {})
+    sets.Midcast.Stun.Duration = set_combine(sets.Midcast.Stun, {
+        left_ring = "Stikini Ring",
+        feet = "Ratri Sollerets"
+    })
+
+    -- Endark Set --
+    sets.Midcast['Flash'] = {
+        ammo="Staunch Tathlum +1",
+        neck = "Homeric Gorget",
+        ear2 = "Friomisi earring",
+        ear1 = "Loquacious Earring",
+        body = "Souveran cuirass +1",
+        hands = "Fallen's finger gauntlets +1",
         left_ring = "Petrov Ring",
-        right_ring = "Niqmaddu ring",
-        back="Cichol's mantle"}
+        right_ring = "Begrudging Ring",
+        waist = "Casso sash",
+        legs = "Odyssean Cuisses",
+        feet = "Eschite Greaves",
+        back = "Niht Mantle"
+    }
+
+    -- Enfeebling Magic Set --
+    sets.Midcast['Enfeebling Magic'] = {
+        ammo = "Pemphredo Tathlum",
+        head = "Carmine Mask +1",
+        body = "Ignominy Cuirass +3",
+        hands = "Leyline Gloves",
+        legs = "Eschite cuisses",
+        feet = "Ignominy Sollerets +3",
+        neck = "Sanctity necklace",
+        waist = "Eschan Stone",
+        left_ear = "Loquacious Earring",
+        right_ear = "Hermetic Earring",
+        left_ring = "Stikini Ring",
+        right_ring = "Stikini Ring",
+        back = Ankou.FC
+    }
+
+    -- Elemental Magic Set --
+    sets.Midcast['Elemental Magic'] = {
+        ammo = "Pemphredo Tathlum",
+        head = "Carmine Mask +1",
+        body = "Carmine Scale Mail",
+        hands = "Leyline gloves",
+        legs = "Eschite Cuisses",
+        feet = "Ignominy Sollerets +3",
+        neck = "Sanctity necklace",
+        waist = "Eschan Stone",
+        left_ear = "Hecate's Earring",
+        right_ear = "Friomisi Earring",
+        left_ring = "Stikini Ring",
+        right_ring = "Shiva Ring",
+        back = Ankou.FC
+    }
+
+    -- Dread Spikes Set --
+    sets.Midcast['Dread Spikes'] = {
+        ammo = "Happy Egg",
+        head = "Ratri Sallet",
+        body = "Heathen's Cuirass +1",
+        hands = "Ratri Gadlings",
+        legs = "Ratri Cuisses",
+        feet = "Ratri Sollerets",
+        neck = "Sanctity necklace",
+        waist = "Silver moogle belt",
+        left_ear = "Insomnia earring",
+        right_ear = "Assuage Earring",
+        left_ring = "Griffon Ring",
+        right_ring = "Moonbeam Ring",
+        back = "Moonbeam Cape"
+    }
+
+    sets.Midcast.Drain = {
+        ammo = "Pemphredo Tathlum",
+        neck = "Erra Pendant",
+        left_ear = "Hermetic Earring", -- higer macc earring if you got
+        right_ear = "Hirudinea Earring",
+        head = "Pixie Hairpin +1",
+        body = "Carmine Scale Mail",
+        hands = "Fallen's finger gauntlets +1",
+        left_ring = "Archon Ring", -- use archon if you have it
+        right_ring = "Evanescence Ring",
+        back = "Niht Mantle",
+        waist = "Austerity belt +1",
+        legs = "Eschite cuisses",
+        feet = "Ratri Sollerets"
+    }
+
+    sets.Midcast.Aspir = set_combine(sets.Midcast.Drain, {})
+
+    sets.MAXDrain = {main = "Misanthropy"}
+
+    -- TP Base Set --
+    sets.TP = {}
     -------------------------------------------------------------------------------------------------------------------------------------------------------------------	
-    ---------------------------------------------------------------- CALADBOLG SETS -----------------------------------------------------------------------------------
+    ---------------------------------------------------------------- LIBERATOR SETS -----------------------------------------------------------------------------------
     -------------------------------------------------------------------------------------------------------------------------------------------------------------------	
+
+    -- Caladbolg /SAM TP Sets -------------------------------------------------------------------
 
     -- Caladbolg(AM Down) TP Sets --
     sets.TP.Naegling = {
@@ -175,69 +365,24 @@ function get_sets()
         sub = "Blurred Shield +1",
         ammo = "Coiste Bodhar",
         head = "Flamma Zucchetto +2",
-        body = "Sakpata's breastplate",
         hands = "Sakpata's gauntlets",
-        legs = "Sakpata's cuisses",
+        legs = "Sakpata's Cuisses",
         feet = "Flamma Gambieras +2",
         neck = "Clotharius Torque",
+        body = "Sakpata's breastplate",
         waist = "Sailfi belt +1",
-        left_ear = "Cessance earring",
-        right_ear = "Brutal earring",
-        left_ring = "Hetairoi Ring",
-        right_ring = "Niqmaddu ring",
-        back="Cichol's mantle"}
+        right_ear = "Cessance earring",
+        left_ear = "Brutal earring",
+        left_ring = "Chirich ring +1",
+        right_ring = "Petrov ring",
+        back = Ankou.DA}
 
-    -- Caladbolg(AM Down) TP Sets --
-    sets.TP.Minos = {
-        main = "Minos",
-        sub = "Utu grip",
-        ammo = "Coiste Bodhar",
-        head = "Flamma Zucchetto +2",
-        body = "Sakpata's breastplate",
-        hands = "Sakpata's gauntlets",
-        legs = "Sakpata's cuisses",
-        feet = "Flamma Gambieras +2",
-        neck = "Clotharius Torque",
-        waist = "Sailfi belt +1",
-        left_ear = "Cessance earring",
-        right_ear = "Brutal earring",
-        left_ring = "Hetairoi ring",
-        right_ring = "Niqmaddu ring",
-        back="Cichol's mantle"}
-
-    sets.TP["Shining One"] = {
-        main = "Shining One",
-        sub = "Utu grip",
-        ammo = "Coiste Bodhar",
-        head = "Flamma Zucchetto +2",
-        body = "Sakpata's breastplate",
-        hands = "Sakpata's gauntlets",
-        legs = "Sakpata's cuisses",
-        feet = "Flamma Gambieras +2",
-        neck = "Clotharius Torque",
-        waist = "Sailfi belt +1",
-        left_ear = "Cessance earring",
-        right_ear = "Brutal earring",
-        left_ring = "Petrov Ring",
-        right_ring = "Niqmaddu ring",
-        back="Cichol's mantle"}
-
-    sets.TP["Zulfiqar"] = {
-        main = "Zulfiqar",
-        sub = "Utu grip",
-        ammo = "Coiste Bodhar",
-        head = "Flamma Zucchetto +2",
-        body = "Sakpata's breastplate",
-        hands = "Sakpata's gauntlets",
-        legs = "Sakpata's cuisses",
-        feet = "Flamma Gambieras +2",
-        neck = "Clotharius Torque",
-        waist = "Sailfi belt +1",
-        left_ear = "Cessance earring",
-        right_ear = "Brutal earring",
-        left_ring = "Petrov Ring",
-        right_ring = "Niqmaddu ring",
-        back="Cichol's mantle"}
+        sets.TP["Sakpata's Sword"] = set_combine(sets.TP.Naegling, {
+            main="Sakpata's Sword",
+            neck="Knight's bead necklace +1",
+            sub = "Priwen"
+        })
+   
     ----------------------------------------------------------------------------------------------------------------------
     ----------------------------------------------------------------------------------------------------------------------
     ----------------------------------------------------------------------------------------------------------------------
@@ -269,6 +414,7 @@ function get_sets()
 
     -- Hybrid Set --
     sets.TP.Hybrid = set_combine(sets.PDT, {
+		waist="Sailfi Belt +1",
         right_ring = "Moonbeam Ring",
     })
 
@@ -278,6 +424,10 @@ function get_sets()
     })
     sets.TP.Hybrid.Ragnarok = set_combine(sets.TP.Hybrid, {
         main = "Ragnarok",
+        ammo = "Coiste Bodhar"
+    })
+    sets.TP.Hybrid.Caladbolg = set_combine(sets.TP.Hybrid, {
+        main = "Caladbolg",
         ammo = "Coiste Bodhar"
     })
     sets.TP.Hybrid.Apocalypse = set_combine(sets.TP.Hybrid, {
@@ -302,29 +452,110 @@ function get_sets()
         feet = "Sakpata's Cuisses"
     })
 
+    --[[ Scythe Light:
+    Insurgency > Vorpal Scythe > Entropy > Guillotine > Entropy > Insurgency
+    Vorpal Scythe > Entropy > Guillotine > Entropy > Insurgency
+    Entropy > Guillotine > Entropy > Insurgency
+    Guillotine > Entropy > Insurgency
+   
+-- Scythe Darkness:
+    Insurgency (M) > Vorpal Scythe > Vorpal Scythe > Insurgency (M) > Entropy (MM) > Cross Reaper
+    Entropy (MM) > Guillotine > Entropy (MM) > Cross Reaper > Entropy (MM)
+    Cross Reaper > Insurgency (M) > Entropy (MM) > Cross Reaper
+    Insurgency (M) > Entropy (MM) > Cross Reaper
+    Cross Reaper > Entropy (MM)
+    Entropy (MM) > Cross Reaper
+ 
+-- Apoc Darkness
+    Entropy (MM) > Guillotine > Entropy (MM) > Cross Reaper > Entropy (MM) > Catastrophe (R)
+    Entropy (MM) > Guillotine > Entropy (MM) > Cross Reaper > Entropy (MM)
+    Insurgency (M) > Entropy (MM) > Cross Reaper > Catastrophe (R)
+    Insurgency (M) > Catastrophe (R) > Cross Reaper > Catastrophe (R)
+    Cross Reaper > Insurgency (M) > Catastrophe (R) > Cross Reaper
+    Catastrophe (R) > Cross Reaper > Catastrophe (R)
+    Insurgency (M) > Catastrophe (R) > Cross Reaper
+    Cross Reaper > Catastrophe (R) > Catastrophe (R)
+    Cross Reaper > Entropy (MM) > Catastrophe (R)
+    Entropy (MM) > Cross Reaper > Catastrophe (R)
+    Catastrophe (R) > Catastrophe (R)
+    Catastrophe (R) > Cross Reaper
+    Cross Reaper > Catastrophe (R)
+ 
+-- Other Light
+    Catastrophe (R) > Savage Blade (Q) > Insurgency (M)
+    Entropy (MM) > Savage Blade (Q) > Insurgency (M)
+    Savage Blade (Q) > Insurgency (M)
+    Chant du Cygne (E) > Torcleaver (E)
+ 
+-- Other Dark
+    Atonement (M) > Entropy (MM) > Cross Reaper
+    Savage Blade (Q) > Cross Reaper > Entropy (MM)
+    Chant du Cygne (E) > Catastrophe (R)
+    Chant du Cygne (E) > Entropy (MM)
+    Requiescat (MM) > Cross Reaper
+    Requiescat (MM) > Torcleaver (E)
+ 
+-- GreatSword
+    Resolution (MM) > Torcleaver (E) > Scourge (R) > Resolution (MM) > Torcleaver (E)
+    Resolution (MM) > Torcleaver (E) > Scourge (R) > Resolution (MM)
+    Resolution (MM) > Scourge (R) > Torcleaver (E)
+    Scourge (R) > Resolution (MM) > Torcleaver (E)
+    Torcleaver (E) > Torcleaver (E)
+    Scourge (R) > Resolution (MM)
+--]]
+
     -- WS Base Set --
     sets.WS = {
         ammo = "Knobkierrie",
-        head = "Agoge Mask +3",
-        body = "Pummeler's lorica +2",
+        head = "Flamma Zucchetto +2",
+        body = "Ignominy Cuirass +3",
         hands = "Sakpata's gauntlets",
-        legs = "Sakpata's cuisses",
-        feet = "Sulev. Leggings +2",
+        legs = "Ignominy Flanchard +3",
+        feet = "Argosy Sollerets +1",
         neck = "Fotia Gorget",
         waist = "Fotia Belt",
         left_ear = "Moonshade earring",
-        right_ear = "Thrud Earring",
-        left_ring = "Epaminondas's ring",
+        right_ear = "Cessance earring",
+        left_ring = "Chirich ring +1",
         right_ring = "Niqmaddu ring",
-        back = "Cichol's Mantle"
+        back = Ankou.WSDSTR
     }
 
-    sets.WS["Savage Blade"] = {
-        ammo = "Knobkierrie",
-        head = "Agoge Mask +3",
-        body = "Pummeler's lorica +2",
+    -- Resolution Sets --
+    -- Description:	Delivers a fivefold attack. Damage varies with TP.
+    -- Stat Modifier:	73~85% STR fTP:	0.71875	1.5	2.25
+    sets.WS.Resolution = {
+        ammo = "Coiste Bodhar",
+        head = "Flamma Zucchetto +2",
+        body = "Ignominy Cuirass +3",
         hands = "Sakpata's gauntlets",
-        legs = "Sakpata's cuisses",
+        legs = "Ignominy Flanchard +3",
+        feet = "Argosy Sollerets +1",
+        neck = "Fotia Gorget",
+        waist = "Fotia Belt",
+        left_ear = "Moonshade earring",
+        right_ear = "Brutal earring",
+        left_ring = "Chirich ring +1",
+        right_ring = "Niqmaddu ring",
+        back = Ankou.DA
+    }
+
+    sets.WS.Resolution.MidACC = set_combine(sets.WS.Resolution, {
+        hands = "Ignominy Gauntlets +3",
+        back = Ankou.DA
+    })
+
+    sets.WS.Resolution.HighACC = set_combine(sets.WS.Resolution.MidACC, {})
+
+    -- Torcleaver Sets --
+    -- Description:	Deals triple damage. Damage varies with TP.
+    -- Stat Modifier:	80% VIT fTP:	4.75	7.5	10
+    sets.WS.Torcleaver = {
+        ammo = "Knobkierrie",
+        head = "Odyssean Helm",
+        body = "Ignominy Cuirass +3",
+        hands = "Odyssean gauntlets",
+        legs = "Fallen's flanchard +3",
         feet = "Sulevia's Leggings +2",
         neck = "Abyssal bead necklace +1",
         waist = "Fotia Belt",
@@ -332,19 +563,204 @@ function get_sets()
         right_ear = "Thrud earring",
         left_ring = "Epaminondas's ring",
         right_ring = "Niqmaddu ring",
+        back = Ankou.WSDVIT
+    }
+
+    sets.WS["Savage Blade"] = {
+        ammo = "Knobkierrie",
+        head = "Sakpata's Helm",
+        body = "Sakpata's breastplate",
+        hands = "Odyssean gauntlets",
+        legs = "Sakpata's cuisses",
+        feet = "Sulevia's Leggings +2",
+        neck = "Abyssal bead necklace +1",
+        waist = "Sailfi Belt +1",
+        left_ear = "Moonshade earring",
+        right_ear = "Thrud earring",
+        left_ring = "Epaminondas's ring",
+        right_ring = "Regal ring",
         back = "Cichol's mantle"
     }
 
-    sets.WS["Impulse Drive"] = set_combine(sets.WS["Savage Blade"], {})
-    sets.WS["Upheaval"] = set_combine(sets.WS["Savage Blade"], {})
-    sets.WS["Ukko's Fury"] = set_combine(sets.WS["Savage Blade"], {
-        body = "Sakpata's breastplate",
-        waist = "Sailfi belt +1",
-        left_ear = "Brutal Earring",
-        ammo = "Seething Bomblet"
+    sets.WS.Torcleaver.MidACC = set_combine(sets.WS.Torcleaver, {})
+
+    sets.WS.Torcleaver.HighACC = set_combine(sets.WS.Torcleaver.MidACC, {})
+
+    -- Scourge Sets --
+    -- Relic Aftermath: +5% Critical Hit Rate 15 acc
+    -- Stat Modifier:	40% STR / 40% VIT	fTP:	3.0
+    sets.WS.Scourge = {
+        ammo = "Knobkierrie",
+        head = "Odyssean Helm",
+        body = "Ignominy Cuirass +3",
+        hands = "Odyssean gauntlets",
+        legs = "Fallen's flanchard +3",
+        feet = "Sulevia's Leggings +2",
+        neck = "Fotia Gorget",
+        waist = "Fotia Belt",
+        left_ear = "Brutal earring",
+        right_ear = "Ishvara Earring",
+        left_ring = "Chirich ring +1",
+        right_ring = "Niqmaddu ring",
+        back = Ankou.WSDSTR
+    }
+
+    sets.WS.Scourge.MidACC = set_combine(sets.WS.Scourge, {
+        hands = "Odyssean gauntlets",
+        legs = "Fallen's flanchard +3",
+        left_ear = "Cessance earring",
+        right_ear = "Cessance earring"
     })
 
-    sets.WS["Resolution"] = sets.WS["Ukko's Fury"]
+    sets.WS.Scourge.HighACC = set_combine(sets.WS.Scourge.MidACC, {})
+
+    sets.WS.Shockwave = {
+        ammo = "Pemphredo Tathlum",
+        head = "Carmine Mask +1",
+        body = "Carmine Scale Mail",
+        hands = "Leyline Gloves",
+        legs = "Eschite cuisses",
+        feet = "Ignominy Sollerets +3",
+        neck = "Erra Pendant",
+        waist = "Eschan Stone",
+        left_ear = "Hermetic Earring",
+        right_ear = "Cessance earring",
+        left_ring = "Chirich ring +1",
+        right_ring = "Stikini Ring",
+        back = Ankou.INTDA
+    }
+
+    -- Catastrophe Sets --
+    -- Stat Modifier:	40% STR / 40% INT	fTP:	2.75
+    -- Relic Aftermath: 10% Equipment Haste (+102/1024) AG 10% Ability
+    sets.WS.Catastrophe = {
+        ammo = "Knobkierrie",
+        head = "Stinger helm +1",
+        body = "Ignominy Cuirass +3",
+        hands = "Ratri Gadlings",
+        legs = "Ratri Cuisses",
+        feet = "Ratri Sollerets",
+        neck = "Fotia Gorget",
+        waist = "Fotia Belt",
+        left_ear = "Brutal earring",
+        right_ear = "Ishvara Earring",
+        left_ring = "Chirich ring +1",
+        right_ring = "Niqmaddu ring",
+        back = Ankou.WSDSTR
+    }
+
+    sets.WS.Catastrophe.MidACC = set_combine(sets.WS.Catastrophe,
+                                             {right_ear = "Cessance earring"})
+
+    sets.WS.Catastrophe.HighACC = set_combine(sets.WS.Catastrophe.MidACC, {})
+
+    -- Entropy Sets --
+    -- Delivers a fourfold attack. Converts some of the damage into MP. Damage varies with TP.
+    -- Stat Modifier:	73~85% INT fTP:	0.75	1.25	2.0
+    sets.WS.Entropy = {
+        ammo = "Pemphredo Tathlum",
+        head = "Ignominy Burgonet +3",
+        body = "Ignominy cuirass +3",
+        hands = "Ignominy Gauntlets +3",
+        legs = "Ignominy Flanchard +3",
+        feet = "Flamma Gambieras +2",
+        neck = "Fotia Gorget",
+        waist = "Fotia Belt",
+        left_ear = "Moonshade earring",
+        right_ear = "Brutal Earring",
+        left_ring = "Shiva Ring",
+        right_ring = "Shiva Ring",
+        back = Ankou.INTDA
+    }
+
+    sets.WS.Entropy.MidACC = set_combine(sets.WS.Entropy,
+                                         {right_ear = "Cessance earring"})
+
+    sets.WS.Entropy.HighACC = set_combine(sets.WS.Entropy.MidACC, {
+        ammo = "Coiste Bodhar",
+        body = "Ignominy Cuirass +3"
+    })
+
+    -- CrossReaper Sets --
+    -- Delivers a two-hit attack. Damage varies with TP.
+    -- Stat Modifier:	60% STR / 60% MND fTP:	2.0	4.0	7.0
+    sets.WS['Cross Reaper'] = {
+        ammo = "Knobkierrie",
+        head = "Ratri Sallet",
+        body = "Ignominy Cuirass +3",
+        hands = "Ratri Gadlings",
+        legs = "Ratri Cuisses",
+        feet = "Ratri Sollerets",
+        neck = "Fotia Gorget",
+        waist = "Fotia Belt",
+        left_ear = "Moonshade earring",
+        right_ear = "Ishvara earring",
+        left_ring = "Chirich ring +1",
+        right_ring = "Niqmaddu ring",
+        back = Ankou.WSDSTR
+    }
+
+    sets.WS['Cross Reaper'].MidACC = set_combine(sets.WS['Cross Reaper'], {
+        legs = "Ignominy Flanchard +3",
+        hands = "Ignominy Gauntlets +3"
+    })
+
+    sets.WS['Cross Reaper'].HighACC = set_combine(
+                                          sets.WS['Cross Reaper'].MidACC, {
+            head = "Ignominy Burgonet +3",
+            right_ear = "Cessance earring"
+        })
+
+    -- Insurgency Sets --
+    -- Delivers a fourfold attack. Damage varies with TP.
+    -- Stat Modifier:	20% STR / 20% INT fTP:	0.5	3.25	6.0
+    sets.WS.Insurgency = {
+        ammo = "Coiste Bodhar",
+        head = "Stinger Helm +1",
+        body = "Ignominy Cuirass +3",
+        hands = "Sakpata's gauntlets",
+        legs = "Ignominy Flanchard +3",
+        feet = "Argosy Sollerets +1",
+        neck = "Fotia Gorget",
+        waist = "Fotia Belt",
+        left_ear = "Moonshade earring",
+        right_ear = "Brutal earring",
+        left_ring = "Chirich ring +1",
+        right_ring = "Niqmaddu ring",
+        back = Ankou.DA
+    }
+
+    sets.WS.Insurgency.MidACC = set_combine(sets.WS.Insurgency, {
+        hands = "Ignominy Gauntlets +3",
+        feet = "Ratri Sollerets"
+    })
+
+    sets.WS.Insurgency.HighACC = set_combine(sets.WS.Insurgency.MidACC,
+                                             {right_ear = "Cessance earring"})
+
+    -- Quietus Sets --
+    -- Delivers a triple damage attack that ignores target's defense. Amount ignored varies with TP.
+    -- Stat Modifier:	60% STR / 60% MND Defense ignored:	10%	30%	50% fTP:	3.0
+    sets.WS.Quietus = {
+        ammo = "Knobkierrie",
+        head = "Ratri Sallet",
+        body = "Ignominy Cuirass +3",
+        hands = "Ratri Gadlings",
+        legs = "Ratri Cuisses",
+        feet = "Ratri Sollerets",
+        neck = "Fotia Gorget",
+        waist = "Fotia Belt",
+        left_ear = "Moonshade earring",
+        right_ear = "Ishvara earring",
+        left_ring = "Chirich ring +1",
+        right_ring = "Niqmaddu ring",
+        back = Ankou.WSDSTR
+    }
+
+    sets.WS.Quietus.MidACC = set_combine(sets.WS.Quietus,
+                                         {right_ear = "Cessance earring"})
+
+    sets.WS.Quietus.HighACC = set_combine(sets.WS.Quietus.MidACC, {})
 
     -----------------------------------------------------------------------------------------------------------------
     -- works in motes based, not sure how to get it to work here
