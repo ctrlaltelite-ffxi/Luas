@@ -150,6 +150,7 @@ function get_sets()
     sets.JA["Berserk"] = {Feet="Agoge Calligae +3"}
 
     sets.Precast = {}
+    sets.Midcast = {}
     -- TP Base Set --
     sets.TP = {
         ammo = "Coiste Bodhar",
@@ -158,10 +159,10 @@ function get_sets()
         hands = "Sakpata's gauntlets",
         legs = "Sakpata's cuisses",
         feet = "Flamma Gambieras +2",
-        neck = "Clotharius Torque",
+        neck = "Warrior's bead necklace +1",
         waist = "Sailfi belt +1",
         left_ear = "Cessance earring",
-        right_ear = "Brutal earring",
+        right_ear = "Schere earring",
         left_ring = "Petrov Ring",
         right_ring = "Niqmaddu ring",
         back="Cichol's mantle"}
@@ -179,7 +180,7 @@ function get_sets()
         hands = "Sakpata's gauntlets",
         legs = "Sakpata's cuisses",
         feet = "Flamma Gambieras +2",
-        neck = "Clotharius Torque",
+        neck = "War. Beads +1",
         waist = "Sailfi belt +1",
         left_ear = "Cessance earring",
         right_ear = "Brutal earring",
@@ -197,7 +198,7 @@ function get_sets()
         hands = "Sakpata's gauntlets",
         legs = "Sakpata's cuisses",
         feet = "Flamma Gambieras +2",
-        neck = "Clotharius Torque",
+        neck = "Warrior's bead necklace +1",
         waist = "Sailfi belt +1",
         left_ear = "Cessance earring",
         right_ear = "Brutal earring",
@@ -214,7 +215,7 @@ function get_sets()
         hands = "Sakpata's gauntlets",
         legs = "Sakpata's cuisses",
         feet = "Flamma Gambieras +2",
-        neck = "Clotharius Torque",
+        neck = "Warrior's bead necklace +1",
         waist = "Sailfi belt +1",
         left_ear = "Cessance earring",
         right_ear = "Brutal earring",
@@ -231,7 +232,7 @@ function get_sets()
         hands = "Sakpata's gauntlets",
         legs = "Sakpata's cuisses",
         feet = "Flamma Gambieras +2",
-        neck = "Clotharius Torque",
+        neck = "Warrior's bead necklace +1",
         waist = "Sailfi belt +1",
         left_ear = "Cessance earring",
         right_ear = "Brutal earring",

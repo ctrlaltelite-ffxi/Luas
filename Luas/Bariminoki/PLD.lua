@@ -79,7 +79,7 @@ function get_sets()
         head = "Sakpata's helm",
         body = "Chozoron coselete",
         hands = "Sakpata's gauntlets",
-        left_ring = "Karieyh ring",
+        left_ring = "Apeile ring +1",
         right_ring = "Stikini ring +1",
         back = Ankou.DA,
         waist = "Flume belt",
@@ -183,13 +183,12 @@ function get_sets()
         ring2 = "Weatherspoon Ring", -- 5
         back = Ankou.FC, -- 10
         waist = "Tempus Fugit",
-        legs = "Eschite cuisses", -- 8
-        feet = "Flamma gambieras +2"
+        legs = "Eschite cuisses" -- 8
     } -- 11
     -- 72 FC
 
     -- Precast Dark Magic --
-    sets.Precast['Dark Magic'] = set_combine(sets.Precast.FastCast, {})
+    sets.Precast['Healing Magic'] = set_combine(sets.Precast.FastCast, {})
 
     -- Midcast Base Set --
     sets.Midcast = {}
@@ -197,87 +196,38 @@ function get_sets()
     -- Magic Haste Set --
     sets.Midcast.Haste = set_combine(sets.PDT, {})
 
-    -- Dark Magic Set --
-    sets.Midcast['Dark Magic'] = {
-        ammo = "Pemphredo Tathlum",
-        head = "Ignominy Burgonet +3",
-        body = "Carmine Scale Mail",
-        hands = "Fallen's finger gauntlets +1",
-        legs = "Eschite cuisses",
-        feet = "Ignominy Sollerets +3",
-        neck = "Erra Pendant",
-        waist = "Casso sash",
-        left_ear = "Hermetic Earring",
-        right_ear = "Dark Earring",
-        left_ring = "Stikini Ring",
-        right_ring = "Evanescence Ring",
-        back = "Niht Mantle"
-    }
-
-    -- Absorb Set --
-    sets.Midcast.Absorb = {
-        ammo = "Pemphredo Tathlum",
-        head = "Ignominy Burgonet +3",
-        body = "Carmine Scale Mail",
-        legs = "Eschite cuisses",
-        feet = "Ratri Sollerets",
-        neck = "Erra Pendant",
-        waist = "Casso Sash",
-        left_ear = "Hermetic Earring",
-        right_ear = "Dark Earring",
-        right_ring = "Kishar Ring",
-        hands = "Pavor Gauntlets",
-        left_ring = "Evanescence Ring",
-        back = "Chuparrosa Mantle"
-    }
-    sets.Midcast.Absorb.Resist = set_combine(sets.Midcast.Absorb, {
-        head = "Carmine Mask +1",
-        hands = "Leyline Gloves",
-        left_ring = "Chirich ring +1",
-        right_ring = "Stikini Ring",
-        waist = "Eschan Stone",
-        feet = "Ignominy Sollerets +3",
-        back = Ankou.FC
-    })
-    sets.Midcast.Absorb.Duration = set_combine(sets.Midcast.Absorb, {
-        hands = "Onyx Gadlings",
-        legs = "Black Cuisses"
-    })
-
-    -- Absorb-TP Set --
-    sets.Midcast['Absorb-TP'] = set_combine(sets.Midcast.Absorb,
-                                            {hands = "Heathen's Gauntlets +1"})
-
-    -- Stun Sets --
-    sets.Midcast.Stun = set_combine(sets.Midcast['Dark Magic'], {
-        head = "Carmine Mask +1",
-        hands = "Leyline Gloves",
-        left_ring = "Chirich ring +1",
-        waist = "Eschan Stone",
-        legs = "Eschite cuisses",
-        feet = "Ignominy Sollerets +3",
-        back = Ankou.FC
-    })
-    sets.Midcast.Stun.Resist = set_combine(sets.Midcast.Stun, {})
-    sets.Midcast.Stun.Duration = set_combine(sets.Midcast.Stun, {
-        left_ring = "Stikini Ring",
-        feet = "Ratri Sollerets"
-    })
-
-    -- Endark Set --
-    sets.Midcast['Flash'] = {
-        ammo="Staunch Tathlum +1",
+    sets.HighEnmity = {
+        ammo = "Staunch Tathlum +1",
         neck = "Homeric Gorget",
         ear2 = "Friomisi earring",
         ear1 = "Loquacious Earring",
         body = "Souveran cuirass +1",
-        hands = "Fallen's finger gauntlets +1",
         left_ring = "Petrov Ring",
-        right_ring = "Begrudging Ring",
-        waist = "Casso sash",
+        right_ring = "Apeile Ring +1",
+        waist = "Creed Baudrier",
         legs = "Odyssean Cuisses",
+        hands = "Souveran handschuhs +1",
         feet = "Eschite Greaves",
-        back = "Niht Mantle"
+    }
+    -- Endark Set --
+    sets.Midcast['Flash'] = set_combine(sets.HighEnmity, {})
+
+    sets.JA['Provoke'] = set_combine(sets.HighEnmity, {})
+
+    -- Precast Healing Magic --
+    sets.Precast['Healing Magic'] = set_combine(sets.Precast.FastCast,
+                                                {neck = "Diemer gorget"})
+
+    -- Dark Magic Set --
+    sets.Midcast['Healing Magic'] = {
+        ammo = "Staunch Tathlum +1",
+        body = "Souveran cuirass +1",
+        feet = "Eschite Greaves",
+        left_ear = "Nourish. Earring",
+        right_ear = "Magnetic Earring",
+        left_ring = "Menelaus's ring",
+        right_ring = "Lebeche ring",
+        hands = "Souveran handschuhs +1"
     }
 
     -- Enfeebling Magic Set --
@@ -375,14 +325,35 @@ function get_sets()
         left_ear = "Brutal earring",
         left_ring = "Chirich ring +1",
         right_ring = "Petrov ring",
-        back = Ankou.DA}
+        back = "Rudiano's Mantle"
+    }
 
-        sets.TP["Sakpata's Sword"] = set_combine(sets.TP.Naegling, {
-            main="Sakpata's Sword",
-            neck="Knight's bead necklace +1",
-            sub = "Priwen"
-        })
-   
+    sets.TP.Caladbolg = {
+        main = "Caladbolg",
+        sub = "Pole Grip",
+        ammo = "Coiste Bodhar",
+        head = "Flamma Zucchetto +2",
+        hands = "Sakpata's gauntlets",
+        legs = "Sakpata's Cuisses",
+        feet = "Flamma Gambieras +2",
+        neck = "Clotharius Torque",
+        body = "Sakpata's breastplate",
+        waist = "Sailfi belt +1",
+        right_ear = "Cessance earring",
+        left_ear = "Brutal earring",
+        left_ring = "Chirich ring +1",
+        right_ring = "Petrov ring",
+        back = "Rudiano's Mantle"
+    }
+
+    sets.TP["Sakpata's Sword"] = set_combine(sets.TP.Naegling, {
+        main = "Sakpata's Sword",
+        neck = "Homeric Gorget",
+        head = "Sakpata's Helm",
+        feet = "Sakpata's leggings",
+        sub = "Priwen"
+    })
+
     ----------------------------------------------------------------------------------------------------------------------
     ----------------------------------------------------------------------------------------------------------------------
     ----------------------------------------------------------------------------------------------------------------------
@@ -396,7 +367,7 @@ function get_sets()
         feet = "Sakpata's leggings",
         waist = "Flume belt +1",
         left_ring = "Defending ring",
-		back=Ankou.DA
+        back = Ankou.DA
     })
 
     sets.Twilight = set_combine(sets.PDT, {
@@ -414,8 +385,8 @@ function get_sets()
 
     -- Hybrid Set --
     sets.TP.Hybrid = set_combine(sets.PDT, {
-		waist="Sailfi Belt +1",
-        right_ring = "Moonbeam Ring",
+        waist = "Sailfi Belt +1",
+        right_ring = "Moonbeam Ring"
     })
 
     sets.TP.Hybrid.Liberator = set_combine(sets.TP.Hybrid, {
@@ -568,9 +539,9 @@ function get_sets()
 
     sets.WS["Savage Blade"] = {
         ammo = "Knobkierrie",
-        head = "Sakpata's Helm",
+        head = "Odyssean Helm",
         body = "Sakpata's breastplate",
-        hands = "Odyssean gauntlets",
+        hands = "Sakpata's gauntlets",
         legs = "Sakpata's cuisses",
         feet = "Sulevia's Leggings +2",
         neck = "Abyssal bead necklace +1",
@@ -889,12 +860,7 @@ function midcast(spell, action)
     equipSet = {}
     if spell.action_type == 'Magic' then
         equipSet = sets.Midcast
-        if spell.english:startswith('Absorb') and spell.english ~= "Absorb-TP" then
-            equipSet = sets.Midcast.Absorb
-            if equipSet[MaccArray[MaccIndex]] then
-                equipSet = equipSet[MaccArray[MaccIndex]]
-            end
-        elseif spell.english:startswith('Drain') or
+        if spell.english:startswith('Drain') or
             spell.english:startswith('Aspir') or spell.english:startswith('Bio') then
             if world.day == "Darksday" or world.weather_element == "Dark" then -- Equip Hachirin-no-Obi On Darksday or Dark Weather --
                 equipSet = set_combine(equipSet, {waist = "Hachirin-no-Obi"})
@@ -1199,8 +1165,8 @@ end
 function select_default_macro_book()
     -- Default macro set/book
     if player.sub_job == 'SAM' then
-        set_macro_page(2, 5)
+        set_macro_page(2, 7)
     else
-        set_macro_page(1, 5)
+        set_macro_page(1, 7)
     end
 end

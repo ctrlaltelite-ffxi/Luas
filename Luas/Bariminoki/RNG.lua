@@ -3,6 +3,8 @@ function get_sets()
     AccArray = {"LowHaste", "CapHaste", "Accuracy"}
     RaccIndex = 1
     RaccArray = {"LowACC", "HighACC", "Aftermath"}
+    WeaponIndex = 1
+    WeaponArray = {"Trueflight", "Last Stand", "Savage"}
     PDLIndex = 1
     PDLArray = {"None", "Half", "Full"}
     IdleIndex = 1
@@ -60,6 +62,29 @@ function get_sets()
         legs = "Meg. Chausses +2",
         feet = "Meg. Jam. +2"
     }
+
+    sets.Loadouts = {}
+    sets.Loadouts.Trueflight = {
+        main = "Malevolence",
+        sub = "Malevolence",
+        range = "Annihilator",
+        ammo = "Eradicating bullet"
+    }
+
+    sets.Loadouts.Savage = {
+        main = "Naegling",
+        sub="Blurred knife +1",
+        range = "Sparrowhawk +2",
+        ammo = "Hauksbok arrow"
+    }
+
+    sets.Loadouts["Last Stand"] = {
+        main="Perun +1",
+        sub="Nusku shield",
+        range = "Annihilator",
+        ammo = "Eradicating bullet"
+    }
+
     sets.Idle.Movement = {
         head = "Nyame Helm",
         body = "Malignance Tabard",
@@ -74,6 +99,7 @@ function get_sets()
         right_ring = "Defending Ring",
         back = "Moonlight Cape"
     }
+
     sets.Idle.Town = {
         main = "",
         sub = "",
@@ -815,8 +841,8 @@ function get_sets()
     sets.Melee = {}
 
     sets.Melee.LowHaste = {
-        head = "Adhemar Bonnet",
-        body = "Adhemar Jacket",
+        head = "adhemar bonnet +1",
+        body = "adhemar jacket +1",
         hands = "Adhemar Wristbands",
         legs = "Samnuha Tights",
         feet = {
@@ -838,8 +864,8 @@ function get_sets()
     }
 
     sets.Melee.CapHaste = {
-        head = "Adhemar Bonnet",
-        body = "Adhemar Jacket",
+        head = "adhemar bonnet +1",
+        body = "adhemar jacket +1",
         hands = "Adhemar Wristbands",
         legs = "Samnuha Tights",
         feet = {
@@ -861,8 +887,8 @@ function get_sets()
     }
 
     sets.Melee.Accuracy = {
-        head = "Adhemar Bonnet",
-        body = "Adhemar Jacket",
+        head = "adhemar bonnet +1",
+        body = "adhemar jacket +1",
         hands = "Adhemar Wristbands",
         legs = "Samnuha Tights",
         feet = {
@@ -979,6 +1005,7 @@ function get_sets()
 
     -- Trueflight --
     sets.WS['Trueflight'] = {
+        ammo="Orichalcum Bullet",
         body = "Cohort Cloak +1",
         hands = "Carmine Fin. Ga. +1",
         legs = "Arcadian Braccae +3",
@@ -992,7 +1019,7 @@ function get_sets()
         neck = "Scout's Gorget +1",
         ear1 = "Moonshade Earring",
         ear2 = "Friomisi Earring",
-        ring1 = "Dingir Ring",
+        ring1 = "Weatherspoon Ring",
         ring2 = "Epaminondas's ring",
         back = {
             name = "Belenus's Cape",
@@ -1388,8 +1415,12 @@ end
 function aftercast(spell, action) status_change(player.status) end
 
 function status_change(new, old)
+    equipSet = sets.Loadouts
     if Armor == 'PDT' then
         equip(sets.PDT)
+    elseif equipSet[WeaponArray[WeaponIndex]] then
+        equipSet = equipSet[WeaponArray[WeaponIndex]]
+        equip(equipSet)
     elseif Armor == 'TH' then
         equip(sets.TH)
     elseif new == 'Engaged' then
@@ -1408,6 +1439,10 @@ function self_command(command)
     if command == 'acc' then -- Accuracy Level Toggle --
         AccIndex = (AccIndex % #AccArray) + 1
         add_to_chat(158, 'Accuracy Level: ' .. AccArray[AccIndex])
+        status_change(player.status)
+    elseif command == 'C17' then -- Main Weapon Toggle --
+        WeaponIndex = (WeaponIndex % #WeaponArray) + 1
+        add_to_chat(158, 'Main Weapon: ' .. WeaponArray[WeaponIndex])
         status_change(player.status)
     elseif command == 'racc' then -- Ranged Accuracy Level Toggle --
         RaccIndex = (RaccIndex % #RaccArray) + 1

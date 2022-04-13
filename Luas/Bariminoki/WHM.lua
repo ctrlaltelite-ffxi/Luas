@@ -266,7 +266,7 @@ function get_sets()
         neck="Nodens gorget",
         waist="Witful belt",
         left_ear="Nourish. Earring",
-        right_ear="Glorious Earring",
+        right_ear="Magnetic Earring",
         left_ring="Menelaus's ring",
         right_ring="Lebeche ring",
         back="Alaunus's Cape",
