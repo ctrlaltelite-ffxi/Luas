@@ -18,13 +18,13 @@ function get_sets()
 	
 -- 3 Levels Of Accuracy Sets For TP/WS/Hybrid/Stun. First Set Is LowACC. 
 --Add More ACC Sets If Needed Then Create Your New ACC Below. 
-	AccIndex = 1
-	AccArray = {"LowACC","MidACC","HighACC"} 
+	AccIndex = 2
+	AccArray = {"LowHaste","HighHaste"} 
 	MaccIndex = 1
 	MaccArray = {"Potency","Resist","Duration"} 
 --Can Delete Any Weapons/Sets That You Don't Need Or Replace/Add The New Weapons That You Want To Use. --
 	WeaponIndex = 1
-	WeaponArray = {"Heishi Shorinken","Apocalypse"} --,"Liberator"
+	WeaponArray = {"Heishi Shorinken"} --,"Liberator"
 	IdleIndex = 1
 	IdleArray = {"Movement","Regen","Refresh","Regain"} -- Default Idle Set Is Movement --
 	DarkSealIndex = 0 --Index for Dark Seal headpiece Potency(0) vs Duration(1)
@@ -40,11 +40,11 @@ function get_sets()
 	
 	sets.Idle = {			
 		ammo="Seki shuriken",
-		neck="Ninja nodawa +1",
+		neck="Twilight Torque",
 		ear1="Cessance Earring",
 		ear2="Suppanomimi",
-		head="Adhemar bonnet",
-		body="Kendatsuba samue",
+		head="Adhemar Bonnet +1",
+		body="Adhemar Jacket +1",
 		hands="Malignance gloves",
 		left_ring="Defending ring",
 		right_ring="Karieyh ring",
@@ -82,13 +82,21 @@ function get_sets()
 	sets.Precast.FastCast = {
 		head="Herculean Helm",
 		left_ring="Kishar Ring",
+		right_ring="Weatherspoon Ring",
 		hands="Leyline Gloves",
-
+		body="Samnuha coat",
+		ear1="Hermetic earring",
+		ear2="Friomisi earring",
+		feet ="Adhemar Gamashes",
+		waist="Skrymir Cord",
+		neck="Stoicheion medal"
 	} -- 11
 		--72 FC
 
 	-- Precast Dark Magic --
-	sets.Precast['Dark Magic'] = set_combine(sets.Precast.FastCast,{})
+	sets.Precast['Utsusemi'] = set_combine(sets.Precast.FastCast,{
+		neck="Magoraga Beads"
+	})
 
 	-- Midcast Base Set --
 	sets.Midcast = {}
@@ -112,14 +120,35 @@ function get_sets()
 ---------------------------------------------------------------- Heishi Shorinken SETS -----------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------	
 	
+sets.TP["Heishi Shorinken"] = {}
+
 	-- Caladbolg(AM Down) TP Sets --
-sets.TP["Heishi Shorinken"] = {
+sets.TP["Heishi Shorinken"].LowHaste = {
+	ammo="Seki shuriken",
+	neck="Ninja nodawa +1",
+	ear1="Cessance Earring",
+	ear2="Suppanomimi",
+	head="Adhemar Bonnet +1",
+	body="Adhemar Jacket +1",
+	hands="Malignance gloves",
+	left_ring="Hetairoi ring",
+	right_ring="Ilabrat ring",
+	back=Andartia.DA,
+	waist="Sailfi belt +1",
+	legs="Samnuha tights",
+	feet = {
+		name = "Herculean Boots",
+		augments = {'"Triple Atk."+3', 'AGI+9', 'Accuracy+12'}
+	}
+} 
+
+sets.TP["Heishi Shorinken"].HighHaste = {
 	ammo="Seki shuriken",
 	neck="Ninja nodawa +1",
 	ear1="Cessance Earring",
 	ear2="Brutal Earring",
-	head="Adhemar bonnet",
-	body="Kendatsuba samue +1",
+	head="Adhemar Bonnet +1",
+	body="Kendatsuba Samue +1",
 	hands="Malignance gloves",
 	left_ring="Hetairoi ring",
 	right_ring="Ilabrat ring",
@@ -169,7 +198,7 @@ sets.TP["Heishi Shorinken"] = {
 	--Stat Modifier:	73~85% STR fTP:	0.71875	1.5	2.25
 	sets.WS["Blade: Shun"] = {		
 		ammo="Seki shuriken",
-		head="Adhemar bonnet",
+		head="Adhemar Bonnet +1",
 		body="Agony Jerkin +1",
 		hands="Malignance gloves",
 		legs="Rao Haidate +1",
@@ -183,10 +212,54 @@ sets.TP["Heishi Shorinken"] = {
 		neck="Fotia Gorget",
 		waist="Fotia Belt",
 		left_ear="Moonshade earring",
-		right_ear="Odr earring",
-		left_ring="Petrov ring",
+		right_ear="Lugra Earring +1",
+		left_ring="Regal ring",
 		right_ring="Ilabrat ring",
 		back="Yokaze mantle"}
+
+	sets.WS["Blade: Ten"] = {		
+		ammo="Seki shuriken",
+		head="Adhemar Bonnet +1",
+		body="Agony Jerkin +1",
+		hands="Malignance gloves",
+		legs="Mochi. Hakama +3",
+		feet = {
+			name = "Herculean Boots",
+			augments = {
+				'Rng. Acc.+19', 'Rng. Atk.+12', 'DEX+7',
+				'Weapon skill damage +4%'
+			}
+		},
+		neck="Ninja Nodawa +1",
+		waist="Sailfi belt +1",
+		left_ear="Moonshade earring",
+		right_ear="Lugra Earring +1",
+		left_ring="Epaminondas's ring",
+		right_ring="Ilabrat ring",
+		back="Yokaze mantle"}
+
+	-- Trueflight --
+	sets.WS['Aeolian Edge'] = {
+		head="Herculean helm",
+		body = "Samnuha coat",
+		hands = "Leyline gloves",
+		feet = {
+			name = "Herculean Boots",
+			augments = {
+				'Rng. Acc.+19', 'Rng. Atk.+12', 'DEX+7',
+				'Weapon skill damage +4%'
+			}
+		},
+		legs="Mochi. Hakama +3",
+		neck = "Ninja Nodawa +1",
+		ear1 = "Moonshade Earring",
+		ear2 = "Friomisi Earring",
+		ring1 = "Dingir Ring",
+		ring2 = "Epaminondas's ring",
+		back = "Yokaze mantle",
+		ammo="Seething bomblet",
+		waist = "Eschan stone"
+	}
 	
 	-----------------------------------------------------------------------------------------------------------------
 	-- works in motes based, not sure how to get it to work here
@@ -226,6 +299,10 @@ function pretarget(spell,action)
 	end
 end
 
+function string.starts(String,Start)
+	return string.sub(String,1,string.len(Start))==Start
+ end
+
 function precast(spell,action)
 	if spell.type == "WeaponSkill" then
 			equipSet = sets.WS
@@ -256,13 +333,13 @@ function precast(spell,action)
 			add_to_chat(123, spell.name..' Canceled: [Silenced or Out of Casting Range]')
 			return
 		else
-			if spell.english == 'Utsusemi: Ni' then
+			if string.starts(spell.english, "Utsusemi") then
 				if buffactive['Copy Image (3)'] then
 					cancel_spell()
 					add_to_chat(123, spell.name .. ' Canceled: [3 Images]')
 					return
 				else
-					equip(sets.Precast.FastCast)
+					equip(sets.Precast.Utsusemi)
 				end
 			elseif sets.Precast[spell.skill] then
 				equip(sets.Precast[spell.skill])
@@ -304,7 +381,7 @@ function midcast(spell,action)
 			end
 			equipSet = equipSet.Haste
 		elseif spell.english:startswith('Utsusemi') then
-			if spell.english == 'Utsusemi: Ichi' and (buffactive['Copy Image'] or buffactive['Copy Image (2)'] or buffactive['Copy Image (3)']) then
+			if (buffactive['Copy Image'] or buffactive['Copy Image (2)'] or buffactive['Copy Image (3)']) then
 				send_command('@wait 1.7;cancel Copy Image*')
 			end
 			equipSet = equipSet.Haste
@@ -449,7 +526,7 @@ function self_command(command)
 	if command == 'C1' then -- Accuracy Level Toggle --
 		AccIndex = (AccIndex % #AccArray) + 1
 		status_change(player.status)
-		add_to_chat(158,'Accuracy Level: '..AccArray[AccIndex])
+		add_to_chat(158,'Haste Level: '..AccArray[AccIndex])
 	elseif command == 'C17' then -- Main Weapon Toggle --
 		WeaponIndex = (WeaponIndex % #WeaponArray) + 1
 		add_to_chat(158,'Main Weapon: '..WeaponArray[WeaponIndex])

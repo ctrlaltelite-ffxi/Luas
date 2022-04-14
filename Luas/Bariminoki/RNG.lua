@@ -1037,8 +1037,7 @@ function get_sets()
 
     -- Wildfire --
     sets.WS['Wildfire'] = set_combine(sets.WS['Trueflight'], {
-        left_ring = "Ilabrat Ring",
-        right_ear = "Novio earring"
+        ring1 = "Dingir Ring",
     })
     sets.WS['Wildfire'].None = sets.WS['Wildfire']
     sets.WS['Wildfire'].Half = sets.WS['Wildfire'].None
@@ -1139,7 +1138,6 @@ function get_sets()
             name = "Herculean vest",
             augments = {'STR+2', 'Attack+15', 'Weapon skill damage +4%'}
         },
-        ammo = "Hauksbok Arrow",
         waist = "Sailfi Belt +1"
     })
 
