@@ -579,7 +579,20 @@ sets.precast.WS['Hexa Strike'] =
     sets.midcast['Banish II'] = set_combine(sets.midcast.MAB, {right_ring="Fenian Ring"})
 
     sets.midcast.Holy = sets.midcast.MAB
-    sets.midcast['Holy II'] = sets.midcast.Holy
+    sets.midcast['Holy II'] = {	
+		head="Nyame Helm",
+		neck="Baeytl Pendant",
+		ear1="Hecate's Earring",
+		ear2="Friomisi Earring",
+		body="Nyame Mail",
+		hands="Nyame Gauntlets",
+		ring1="Weatherspoon Ring",
+		ring2="Metamorph Ring +1",
+		back={ name="Rudianos's Mantle", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','Magic Damage +10','"Mag.Atk.Bns."+10',}},
+		waist="Orpheus's Sash",
+		legs="Nyame Flanchard",
+		feet="Nyame Sollerets",
+}
 
     sets.midcast.Crusade = 
 {
