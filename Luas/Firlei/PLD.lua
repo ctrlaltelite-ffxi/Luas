@@ -547,7 +547,7 @@ sets.precast.WS['Hexa Strike'] =
 	head={ name="Odyssean Helm", augments={'Mag. Acc.+25','MND+6','Phalanx +5','Accuracy+18 Attack+18',}},
     body={ name="Odyss. Chestplate", augments={'Pet: Mag. Acc.+26','"Fast Cast"+1','Phalanx +5','Mag. Acc.+2 "Mag.Atk.Bns."+2',}},
     hands="Souv. Handsch. +1",
-    legs={ name="Odyssean Cuisses", augments={'INT+1','MND+3','Phalanx +5','Accuracy+5 Attack+5','Mag. Acc.+7 "Mag.Atk.Bns."+7',}},
+    legs="Sakpata's Cuisses",
     feet="Souveran Schuhs +1",
     neck="Incanter's Torque",
     waist="Rumination Sash",
@@ -579,20 +579,7 @@ sets.precast.WS['Hexa Strike'] =
     sets.midcast['Banish II'] = set_combine(sets.midcast.MAB, {right_ring="Fenian Ring"})
 
     sets.midcast.Holy = sets.midcast.MAB
-    sets.midcast['Holy II'] = {	
-		head="Nyame Helm",
-		neck="Baeytl Pendant",
-		ear1="Hecate's Earring",
-		ear2="Friomisi Earring",
-		body="Nyame Mail",
-		hands="Nyame Gauntlets",
-		ring1="Weatherspoon Ring",
-		ring2="Metamorph Ring +1",
-		back={ name="Rudianos's Mantle", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','Magic Damage +10','"Mag.Atk.Bns."+10',}},
-		waist="Orpheus's Sash",
-		legs="Nyame Flanchard",
-		feet="Nyame Sollerets",
-}
+    sets.midcast['Holy II'] = sets.midcast.Holy
 
     sets.midcast.Crusade = 
 {
@@ -1130,7 +1117,7 @@ sets.precast.WS['Hexa Strike'] =
     body="Cab. Surcoat +3",
     hands="Souv. Handsch. +1",
     legs="Souv. Diechlings +1",
-    feet="Souv. Cuisses +1",
+    feet="Rev. Leggings +3",
     neck="Unmoving Collar +1",
     waist="Flume Belt +1",
     left_ear="Thureous Earring",

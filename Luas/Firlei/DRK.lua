@@ -159,6 +159,7 @@ function init_gear_sets()
     sets.TreasureHunter = { 
         head="White rarab cap +1", 
         waist="Chaac Belt",
+		ammo="Per. Lucky Egg",
         feet=Valorous.Feet.TH
      }
  
@@ -173,7 +174,7 @@ function init_gear_sets()
     -- Precast sets to enhance JAs
     sets.precast.JA['Diabolic Eye'] = {hands="Fallen's Finger Gauntlets +3"}
     sets.precast.JA['Nether Void']  = {legs="Fallen's Flanchard +3"}
-    sets.precast.JA['Dark Seal']    = {head="Fallen's burgeonet +1"}
+    sets.precast.JA['Dark Seal']    = {head="Fallen's burgeonet +3"}
     sets.precast.JA['Souleater']    = {head="Ignominy Burgeonet +2"}
     sets.precast.JA['Weapn Bash']   = {hands="Ignominy Gauntlets +2"}
     sets.precast.JA['Blood Weapon'] = {body="Fallen's Cuirass +3"}
@@ -215,7 +216,7 @@ function init_gear_sets()
 }
     
     sets.precast.FC['Drain'] = set_combine(sets.precast.FC, {
-        feet="Ratri Sollerets +1" -- macc 33
+        feet="Nyame Sollerets" -- macc 33
     })
 
     sets.precast.FC['Elemental Magic'] = set_combine(sets.precast.FC, { 
@@ -232,20 +233,20 @@ function init_gear_sets()
     -- Midcast Sets
     sets.midcast.FastRecast = {
         ammo="Impatiens",
-        head="Fallen's Burgeonet +1",
+        head="Fallen's Burgeonet +3",
         back="Grounded Mantle +1",
         waist="Sailfi Belt +1",
         legs="Carmine Cuisses +1",
         ring2="Weatherspoon Ring", -- 10 macc
         feet=Odyssean.Feet.FC
     }
-    -- sets.midcast.Trust =  {
-    --     head="Fallen's Burgeonet +1",
-    --     hands="Odyssean Gauntlets",
-    --     body="Fallen's Cuirass +3",
-    --     legs="Carmine Cuisses +1",
-    --     feet=Odyssean.Feet.FC
-    -- }
+     sets.midcast.Trust =  {
+         head="Fallen's Burgeonet +3",
+         hands="Odyssean Gauntlets",
+         body="Fallen's Cuirass +3",
+         legs="Carmine Cuisses +1",
+         feet=Odyssean.Feet.FC
+     }
     sets.midcast["Apururu (UC)"] = set_combine(sets.midcast.Trust, {
         body="Apururu Unity shirt",
     })
@@ -263,28 +264,28 @@ function init_gear_sets()
 
     sets.midcast['Dark Magic'] = {
         ammo="Pemphredo Tathlum", 
-        head="Ratri Sallet", -- 45 macc
-        head="Ignominy Burgonet +2", -- 19
+        head="Ratri Sallet +1", -- 45 macc
+        head="Ignominy Burgeonet +2", -- 19
         neck="Erra Pendant", -- 10 dark + 17 macc
         ear1="Malignance Earring",
         ear2="Dark Earring", -- 3
-        body="	ale Mail",
+        body="Carm. Sc. Mail +1",
         hands="Flamma Manopolas +2",
         waist="Casso Sash", -- 5
         ring1="Evanescence Ring", -- 10
         ring2="Archon Ring", 
         back={ name="Niht Mantle", augments={'Attack+5','Dark magic skill +2','"Drain" and "Aspir" potency +23',}}, -- 10
         legs="Fallen's Flanchard +3",  -- 18 + 39macc
-        feet="Ratri Sollerets", -- macc 33
+        feet="Nyame Sollerets", -- macc 33
     }
 	
     sets.midcast.Endark =  {
     ammo="Pemphredo Tathlum",
-    head="Ig. Burgonet +3",
+    head="Ig. Burgeonet +3",
     neck="Erra Pendant",
     ear1="Mani Earring",
     ear2="Dark Earring",
-    body="Carm. Scale Mail",
+    body="Carm. Sc. Mail +1",
     hands="Fall. Fin. Gaunt. +3",
     ring1="Stikini Ring +1",
     ring2="Evanescence Ring",
@@ -308,10 +309,25 @@ function init_gear_sets()
         feet="Flamma Gambieras +2",
     }
 
+ 	
+    sets.midcast['Poisonga'] = {
+        ammo="Per. Lucky Egg", 
+        head="Befouled Crown",
+        neck="Erra Pendant", -- 10 + 17 macc
+        body="Odyssean chestplate",
+        hands="Flamma Manopolas +2",
+        ring1="Kishar Ring",
+        ring2="Regal Ring", -- 10 macc
+        waist="Chaac Belt",
+        legs="Fallen's Flanchard +3",  -- 18 + 39macc
+        back="Aput Mantle",
+        feet="Flamma Gambieras +2",
+    }
+	
     sets.midcast['Elemental Magic'] = {
         ammo="Pemphredo Tathlum", 
-        head="Ratri Sallet", -- 45 macc
-        neck="Eddy Necklace", -- 11 matk
+        head="Ratri Sallet +1", -- 45 macc
+        neck="Baetyl Pendant", -- 11 matk
         ear1="Malignance Earring",
         ear2="Friomisi Earring", -- 10 matk
         body="Fallen's Cuirass +3",
@@ -330,14 +346,14 @@ function init_gear_sets()
 		head={ name="Fall. Burgeonet +3", augments={'Enhances "Dark Seal" effect',}},
 		neck={ name="Unmoving Collar +1", augments={'Path: A',}},
 		body="Heath. Cuirass +1",
-		hands="Ratri Gadlings +1",
+		hands="Nyame Gauntlets",
 		waist="Trance Belt",
 		left_ear="Tuisto Earring",
 		right_ear="Odnowa Earring +1",
 		left_ring={ name="Gelatinous Ring +1", augments={'Path: A',}},
 		right_ring="Moonbeam Ring",
-		legs="Ratri Cuisses +1",
-		feet="Ratri Sollerets +1",
+		legs="Fall. Flanchard +3",
+		feet="Nyame Sollerets",
 		back="Moonbeam Cape",
 		}
 
@@ -347,7 +363,7 @@ function init_gear_sets()
     neck="Erra Pendant",
     ear1="Hirudinea Earring",
     ear2="Nehalennia Earring",
-    body="Carm. Scale Mail",
+    body="Carm. Sc. Mail +1",
     hands="Fall. Fin. Gaunt. +3",
     ring1="Archon Ring",
     ring2="Evanescence Ring",
@@ -359,11 +375,11 @@ function init_gear_sets()
     -- Absorbs
    sets.midcast.Absorb = {
     ammo="Pemphredo Tathlum",
-    head="Ig. Burgonet +2",
+    head="Ig. Burgeonet +2",
     neck="Erra Pendant",
     ear1="Mani Earring",
     ear2="Dark Earring",
-    body="Carm. Scale Mail",
+    body="Carm. Sc. Mail +1",
     hands="Heath. Gauntlets +1",
     ring1="Kishar Ring",
     ring2="Stikini Ring +1",
@@ -380,7 +396,7 @@ function init_gear_sets()
         ring2="Weatherspoon Ring", -- 10 macc
         back="Aput Mantle",
         legs="Fallen's Flanchard +3",  -- 18 + 39macc
-        feet="Ratri Sollerets" -- macc 33
+        feet="Nyame Sollerets" -- macc 33
     })
     -- Ranged for xbow
     sets.precast.RA = {
@@ -409,7 +425,7 @@ function init_gear_sets()
         back={ name="Ankou's Mantle", augments={'VIT+20','Accuracy+20 Attack+20','VIT+10','Weapon skill damage +10%',}},
         waist="Fotia Belt",
         legs="Fallen's Flanchard +3",
-        feet="Ratri Sollerets +1"
+        feet="Nyame Sollerets"
     }
 
     -- RESOLUTION
@@ -452,23 +468,24 @@ function init_gear_sets()
     -- 20% STR / 20% INT 
     -- Base set only used at 3000TP to put AM3 up
     sets.precast.WS['Insurgency'] = {
-      ammo="Knobkierrie",
-		head="Ratri Sallet +1",
+		ammo="Knobkierrie",
+		head="Sakpata's Helm",
 		neck="Abyssal Beads +2",
-		ear1="Ishvara Earring",
-		ear2="Moonshade Earring",
-		body="Ignominy Cuirass +3",
-		hands="Rat. Gadlings +1",
-		ring1="Regal Ring",
-		ring2="Niqmaddu Ring",
-		 back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
+		ear1="Moonshade Earring",
+		ear2="Thrud Earring",
+		body="Sakpata's Plate",
+		hands="Sakpata's Gauntlets",
+		ring1="Niqmaddu Ring",
+		ring2="Regal Ring",
+		back="Ankou's Mantle",
 		waist="Fotia Belt",
-		legs="Fall. Flanchard +3",
-		feet="Rat. Sollerets +1"
+		legs="Sakpata's Cuisses",
+		feet="Sakpata's Leggings"
 }
+
     sets.precast.WS['Fell Cleave'] = {
 		ammo="Knobkierrie",
-		head="Ratri Sallet +1",
+		head="Nyame Helm",
 		body="Ignominy Cuirass +3",
 		hands={ name="Odyssean Gauntlets", augments={'Spell interruption rate down -9%','Enmity+4','Weapon skill damage +5%','Accuracy+19 Attack+19',}},
 		legs={ name="Fall. Flanchard +3", augments={'Enhances "Muted Soul" effect',}},
@@ -485,8 +502,8 @@ function init_gear_sets()
     -- CROSS REAPER
     -- 60% STR / 60% MND
     sets.precast.WS['Cross Reaper'] = {
-        ammo="Knobkierrie",
-    head="Ratri Sallet +1",
+    ammo="Knobkierrie",
+    head="Nyame Helm",
     neck="Abyssal Beads +2",
     ear1="Moonshade Earring",
     ear2="Thrud Earring",
@@ -496,8 +513,8 @@ function init_gear_sets()
     ring2="Regal Ring",
     back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
     waist="Sailfi Belt +1",
-    legs="Ratri Cuisses +1",
-    feet="Rat. Sollerets +1"
+    legs="Fall. Flanchard +3",
+    feet="Nyame Sollerets"
 }
  
     -- ENTROPY
@@ -509,7 +526,7 @@ function init_gear_sets()
 		hands="Sulev. Gauntlets +2",
 		legs="Sulev. Cuisses +2",
 		feet="Flam. Gambieras +2",
-		neck="Abyssal Beads +1",
+		neck="Abyssal Beads +2",
 		waist={ name="Sailfi Belt +1", augments={'Path: A',}},
 		left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
 		right_ear={ name="Lugra Earring +1", augments={'Path: A',}},
@@ -521,8 +538,8 @@ function init_gear_sets()
     -- Quietus
     -- 60% STR / MND 
     sets.precast.WS['Quietus'] = {
-       ammo="Knobkierrie",
-    head="Ratri Sallet +1",
+    ammo="Knobkierrie",
+    head="Nyame Helm",
     neck="Abyssal Beads +2",
     ear1="Moonshade Earring",
     ear2="Thrud Earring",
@@ -532,15 +549,15 @@ function init_gear_sets()
     ring2="Epaminondas's Ring",
     back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
     waist="Sailfi Belt +1",
-    legs="Ratri Cuisses +1",
-    feet="Rat. Sollerets +1"
+    legs="Fall. Flanchard +3",
+    feet="Nyame Sollerets",
 }
 
     -- SPIRAL HELL
     -- 50% STR / 50% INT 
     sets.precast.WS['Spiral Hell'] = set_combine(sets.precast.WS['Entropy'], {
-        neck="Abyssal Bead Necklace +1",
-        body="Ignominy cuirass +1",
+        neck="Abyssal Beads +2",
+        body="Ignominy cuirass +3",
         legs="Fallen's Flanchard +3",  
         waist="Metalsinger belt",
     })
@@ -558,7 +575,7 @@ function init_gear_sets()
         legs="Fallen's Flanchard +3",  
         feet="Ratri Cuisses",
         waist="Eschan Stone", -- macc/matk 7
-        feet="Ratri Sollerets"
+        feet="Nyame Sollerets"
     })
 
     -- Sword WS's
@@ -566,7 +583,7 @@ function init_gear_sets()
     -- 50% MND / 50% STR Darkness Elemental
     sets.precast.WS['Sanguine Blade'] = set_combine(sets.precast.WS, {
         head="Pixie Hairpin +1",
-        neck="Abyssal Bead Necklace +1",
+        neck="Abyssal Beads +2",
         ear1="Friomisi Earring",
         body="Fallen's Cuirass +3",
         hands="Founder's Gauntlets",
@@ -579,8 +596,8 @@ function init_gear_sets()
     -- 73% MND - breath damage
     sets.precast.WS.Requiescat = set_combine(sets.precast.WS, {
         head="Flamma Zucchetto +2",
-        neck="Abyssal Bead Necklace +1",
-        body="Ignominy cuirass +1",
+        neck="Abyssal Beads +2",
+        body="Ignominy cuirass +3",
         hands="Odyssean Gauntlets",
         waist="Soil Belt",
     })
@@ -588,13 +605,13 @@ function init_gear_sets()
     -- Idle sets
     sets.idle = {
         ammo="Staunch Tathlum",
-		head="Ratri Sallet",
+		head="Ratri Sallet +1",
 		body="Sulevia's Plate. +2",
 		hands="Sulev. Gauntlets +2",
 		legs="Carmine Cuisses +1",
 		feet="Sulev. Leggings +2",
 		neck="Sanctity Necklace",
-		waist="Flume Belt",
+		waist="Flume Belt +1",
 		left_ear="Etiolation Earring",
 		right_ear={ name="Odnowa Earring +1", augments={'Path: A',}},
 		left_ring="Karieyh Ring",
@@ -606,20 +623,20 @@ function init_gear_sets()
         head="Ratri Sallet +1",
         neck="Abyssal Bead Necklace +2",
         ear1="Dedition Earring",
-        ear2="TelosEarring",
+        ear2="Telos Earring",
         body="Tartarus Platemail",
         --body="Ratri Breastplate +1",
-        hands="Ratri Gadlings",
+        hands="aNwryame Gauntlets",
         ring1="Niqmaddu Ring",
         ring2="Regal Ring",
         back=Ankou.DA,
         waist="Sailfi Belt +1",
         legs="Carmine Cuisses +1",
-        feet="Ratri Sollerets +1"
+        feet="Nyame Sollerets"
     })
 
     sets.idle.Field = set_combine(sets.idle, { 
-        head="Ratri Sallet"
+        head="Ratri Sallet +1"
     })
     sets.idle.Regen = set_combine(sets.idle.Field, {
         head="",
@@ -642,7 +659,7 @@ function init_gear_sets()
         ring1="Paguroidea Ring",
         ring2="Defending Ring",
         back=Ankou.STP,
-        waist="Flume Belt",
+        waist="Flume Belt +1",
         legs="Sulevia's Cuisses +2",
         feet="Volte Sollerets"
     })
@@ -656,24 +673,32 @@ function init_gear_sets()
     hands="Sakpata's Gauntlets",
     legs="Sakpata's Cuisses",
     feet="Sakpata's Leggings",
-    neck="Twilight Torque",
+    neck="Elite Royal Collar",
     waist="Flume Belt +1",
-    left_ear="Thrud Earring",
-    right_ear="Impreg. Earring",
-    left_ring="Defending Ring",
-    right_ring="Sulevia's Ring",
+    left_ear="Schere Earring",
+    right_ear="Brutal Earring",
+    left_ring="Regal Ring",
+    right_ring="Niqmaddu Ring",
     back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-3%',}},
     }
 	
     sets.defense.Reraise = sets.idle.Weak
 
-    sets.defense.MDT = set_combine(sets.defense.PDT, {
-        head="Hjarrandi Helm", -- no haste
-        neck="Twilight Torque",
-        body="Tartarus Platemail",
-        ear1="Etiolation Earring",
-        back="Impassive Mantle",
-    })
+    sets.defense.MDT =  {
+        ammo="Coiste Bodhar",
+        head="Sakpata's Helm",
+        neck="Abyssal Beads +2",
+        ear1="Schere Earring",
+        ear2="Brutal Earring",
+        body="Sakpata's Plate",
+        hands="Sakpata's Gauntlets",
+        ring1="Niqmaddu Ring",
+        ring2="Petrov Ring",
+        back="Ankou's Mantle",
+        waist="Sailfi Belt +1",
+        legs="Sakpata's Cuisses",
+        feet="Sakpata's Leggings"
+}
 
     sets.Kiting = {
         legs="Carmine Cuisses +1",
@@ -693,7 +718,7 @@ function init_gear_sets()
         --sub="Gracile grip",
         ammo="Hasty Pinion +1",
         head="Hjarrandi Helm", -- 10% dt
-        neck="Agitator's Collar", -- 4% pdt
+        neck="Elite Royal Collar", -- 4% pdt
         body="Tartarus Platemail", -- 10% dt
         hands="Volte Moufles",
         ring1="Niqmaddu Ring", 
@@ -704,7 +729,7 @@ function init_gear_sets()
     sets.Defensive_Mid = {
         ammo="Hasty Pinion +1",
         head="Hjarrandi Helm", -- no haste
-        neck="Agitator's Collar", -- 4% pdt
+        neck="Elite Royal Collar", -- 4% pdt
         body="Tartarus Platemail",
         hands="Volte Moufles",
         ring1="Patricius Ring",
@@ -756,10 +781,24 @@ function init_gear_sets()
         ear1="Telos Earring",
         ear2="Dignitary's Earring",
         body="Flamma Korazin +2",
-        waist="Ioskeha Belt",
+        waist="Ioskeha Belt +1",
         back=Ankou.STP,
     })
-
+	sets.engaged.Redemption = {
+		ammo="Coiste Bodhar",
+		head="Sakpata's Helm",
+		neck="Abyssal Beads +2",
+		ear1="Schere Earring",
+		ear2="Brutal Earring",
+		body="Sakpata's Plate",
+		hands="Sakpata's Gauntlets",
+		ring1="Niqmaddu Ring",
+		ring2="Petrov Ring",
+		back="Ankou's Mantle",
+		waist="Sailfi Belt +1",
+		legs="Sakpata's Cuisses",
+		feet="Sakpata's Leggings"
+}
     -- These only apply when delay is capped.
     sets.engaged.Haste = set_combine(sets.engaged, {
         waist="Sailfi Belt +1",
@@ -790,21 +829,21 @@ function init_gear_sets()
     -- Liberator AM3
     sets.engaged.Liberator.AM3 = set_combine(sets.engaged.Liberator, {
         ammo="Aurgelmir Orb",
-        head="Flamma Zucchetto +2",
-        body="Flamma Korazin +2",
-        neck="Abyssal Bead Necklace +2",
-        hands="Flamma Manopolas +2",
-        ear1="Dedition Earring",
-        ear2="Telos Earring",
-        ring1="Niqmaddu Ring",
-        ring2="Hetairoi Ring",
-        back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-3%',}},
-        waist="Sailfi Belt +1",
-        legs="Odyssean Cuisses",
-        feet="Flamma Gambieras +2",
+		head="Flam. Zucchetto +2",
+		neck="Abyssal Beads +2",
+		ear1="Telos Earring",
+		ear2="Dedition Earring",
+		body="Valorous Mail",
+		hands="Sakpata's Gauntlets",
+		ring1="Chirich Ring +1",
+		ring2="Chirich Ring",
+		back="Ankou's Mantle",
+		waist="Sailfi Belt +1",
+		legs="Odyssean Cuisses",
+		feet="Valorous Greaves"
     })
     sets.engaged.Liberator.Mid.AM3 = set_combine(sets.engaged.Liberator.AM3, {
-        neck="Abyssal Bead Necklace +1",
+        neck="Abyssal Beads +2",
         ear1="Telos Earring",
         legs=Odyssean.Legs.TP,
     })
@@ -814,8 +853,8 @@ function init_gear_sets()
         ear2="Telos Earring",
         body="Flamma Korazin +2",
         ring2="Regal Ring",
-        waist="Ioskeha Belt",
-        legs="Ignominy Flanchard +1",
+        waist="Ioskeha Belt +1",
+        legs="Ignominy Flanchard +2",
         feet="Flamma Gambieras +2"
     })
     sets.engaged.Haste.Liberator = set_combine(sets.engaged.Liberator, {
@@ -839,7 +878,7 @@ function init_gear_sets()
         ammo="Hasty Pinion +1",
         head="Hjarrandi Helm",
         body="Tartarus Platemail",
-        neck="Abyssal Bead Necklace +1",
+        neck="Abyssal Beads +2",
         hands="Volte Moufles",
         ring2="Defending Ring",
         back=Ankou.STP,
@@ -874,7 +913,7 @@ function init_gear_sets()
     })
     sets.engaged.Apocalypse.Mid = set_combine(sets.engaged.Mid, {
         ear1="Telos Earring",
-        ear2="TelosEarring",
+        ear2="Telos Earring",
         ring2="Regal Ring",
         hands="Sulevia's Gauntlets +2",
         back=Ankou.DA
@@ -882,7 +921,7 @@ function init_gear_sets()
     sets.engaged.Apocalypse.Acc = set_combine(sets.engaged.Acc, {
         ammo="Seething Bomblet +1",
         ear1="Telos Earring",
-        ear2="TelosEarring",
+        ear2="Telos Earring",
         body="Flamma Korazin +2",
         hands="Sulevia's Gauntlets +2",
         back=Ankou.DA
@@ -904,7 +943,7 @@ function init_gear_sets()
     -- Hybrid
     sets.engaged.Apocalypse.PDT = set_combine(sets.engaged.Apocalypse, {
         head="Hjarrandi Helm",
-        neck="Abyssal Bead Necklace +1",
+        neck="Abyssal Beads +2",
         body="Tartarus Platemail",
         hands="Volte Moufles",
         ring2="Defending Ring",
@@ -951,7 +990,7 @@ function init_gear_sets()
     sets.engaged.GreatSword.Mid = set_combine(sets.engaged.Mid, {})
     sets.engaged.GreatSword.Acc = set_combine(sets.engaged.Acc, {
         body="Flamma Korazin +2",
-        legs="Ignominy Flanchard +1",
+        legs="Ignominy Flanchard +2",
     })
 
     sets.engaged.GreatSword.PDT = set_combine(sets.engaged.GreatSword, sets.Defensive)
@@ -983,7 +1022,7 @@ function init_gear_sets()
     })
     sets.engaged.Caladbolg.Mid = set_combine(sets.engaged.GreatSword.Mid, {
         hands="Sulevia's Gauntlets +2",
-        ear2="TelosEarring",
+        ear2="Telos Earring",
         ring2="Regal Ring",
         back=Ankou.DA
     })
@@ -991,7 +1030,7 @@ function init_gear_sets()
         ammo="Seething Bomblet +1",
         hands="Flamma Manopolas +2",
         body="Flamma Korazin +2",
-        legs="Ignominy Flanchard +1",
+        legs="Ignominy Flanchard +2",
         back=Ankou.DA
     })
     
@@ -1014,6 +1053,7 @@ function init_gear_sets()
     sets.engaged.Haste.Caladbolg.Mid.PDT = set_combine(sets.engaged.Caladbolg.Mid.PDT, sets.DefensiveHigh)
     sets.engaged.Haste.Caladbolg.Acc.PDT = set_combine(sets.engaged.Caladbolg.Acc.PDT, sets.DefensiveHigh)
     
+
     -- dual wield
     sets.engaged.DW = set_combine(sets.engaged, {
         ear1="Eabani Earring",
@@ -1023,15 +1063,15 @@ function init_gear_sets()
         legs="Carmine Cuisses +1",
     })
     sets.engaged.DW.Mid = set_combine(sets.engaged.DW, {
-        neck="Abyssal Bead Necklace +1",
+        neck="Abyssal Beads +2",
     })
     sets.engaged.DW.Acc = set_combine(sets.engaged.DW.Mid, {
-        ear2="TelosEarring",
+        ear2="Telos Earring",
     })
 
     -- single wield (sword + shield possibly)
     sets.engaged.SW = set_combine(sets.engaged, {
-        ammo="Yetshila",
+        ammo="Yetshila +1",
     })
     sets.engaged.SW.Mid = set_combine(sets.engaged.Mid, {})
     sets.engaged.SW.Acc = set_combine(sets.engaged.Acc, {})
@@ -1043,7 +1083,7 @@ function init_gear_sets()
     })
 
     sets.buff.Souleater = { 
-        head="Ignominy Burgonet +2 +2",
+        head="Ignominy Burgeonet +2",
         --body="Ratri Breastplate",
     }
     sets.MadrigalBonus = {
