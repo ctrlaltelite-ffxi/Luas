@@ -67,16 +67,16 @@ function get_sets()
 
     -- Load and initialize the include file.
     include('Mote-Include.lua')
-	include('organizer-lib')
-	organizer_items = {
-    ss_16="Storage Slip 16",
-	ss_18="Storage Slip 18",
-	ss_21="Storage Slip 21",
-	ss_23="Storage Slip 23",
-    ss_24="Storage Slip 24",
-	ss_26="Storage Slip 26",
-	ss_27="Storage Slip 27",
-	}
+	--include('organizer-lib')
+	--organizer_items = {
+    --ss_16="Storage Slip 16",
+	--ss_18="Storage Slip 18",
+	--ss_21="Storage Slip 21",
+	--ss_23="Storage Slip 23",
+    --ss_24="Storage Slip 24",
+	--ss_26="Storage Slip 26",
+	--ss_27="Storage Slip 27",
+	--}
 end
 
 -- Setup vars that are user-independent.  state.Buff vars initialized here will automatically be tracked.
@@ -209,22 +209,22 @@ function init_gear_sets()
     -- Fast cast sets for spells
 
     sets.precast.FC = {
-    --  /SCH --3
-        main="Gada", -- 5
-		sub="Sors Shield",
-		ammo="Impatiens",
+    --  /SCH -- 88
+        main="Grioavolr", -- 10
+		sub="Clerisy Strap +1", -- 3
+		ammo="Impatiens", -- Q 2
 		head="Bunzi's Hat", -- 10
 		body="Inyanga Jubbah +2", -- 14
 		hands="Gendewitha Gages +1", -- 7
 		legs="Aya. Cosciales +2", -- 6
 		feet="Regal Pumps +1", -- 5 or 6/7
-		neck="Cleric's Torque", 
-		waist="Witful Belt", -- 3
+		neck="Cleric's Torque +2", -- 10
+		waist="Witful Belt", -- 3 Q 3
 		left_ear="Loquac. Earring", -- 2
 		right_ear="Malignance Earring", -- 4
 		left_ring="Kishar Ring", -- 4
-		right_ring="Weather. Ring", -- 5
-		back={ name="Alaunus's Cape", augments={'MND+18','Eva.+20 /Mag. Eva.+20','MND+2','"Cure" potency +10%','Spell interruption rate down-10%',}},
+		right_ring="Lebeche Ring", -- 5
+		back={ name="Alaunus's Cape", augments={'MND+20','Eva.+20 /Mag. Eva.+20','MND+10','"Fast Cast"+10','Spell interruption rate down-10%',}},
         }
 		-- 68%-70% FC 5% Quick Magic -- Can Add 10% on Ambu Cape
     sets.precast.FC['Enhancing Magic'] = set_combine(sets.precast.FC, {
@@ -232,15 +232,15 @@ function init_gear_sets()
         })
 
     sets.precast.FC.Cure = set_combine(sets.precast.FC, {
-        main="Queller Rod",
+        main="Queller Rod", -- 7
 		sub="Sors Shield",   -- 3%     
 		ammo="Impatiens", --(2)
         head="Vanya Hood", --10
-		legs="Ebers pantaloons +1", -- 6
-        feet="Vanya Clogs", --7
-		ear1="Mendi. Earring",
+		legs="Ebers pantaloons +2", -- 14
+        feet="Vanya Clogs", --15
+		ear1="Mendi. Earring", --5
 		right_ring="Lebeche Ring", --3%
-        back="Perimede Cape", --(4)
+        back={ name="Alaunus's Cape", augments={'MND+20','Eva.+20 /Mag. Eva.+20','MND+10','"Fast Cast"+10','Spell interruption rate down-10%',}}, --"Perimede Cape", --(4)
         waist="Witful Belt", --5
         })
 
@@ -331,26 +331,26 @@ function init_gear_sets()
     -- Cure sets
 
     sets.midcast.CureSolace = {
-        main="Chatoyant Staff", -- 10%
-		sub="Enki Strap",
+        main="Raetic Rod +1", -- I 23%, II 10%
+		sub="Sors Shield", -- I 3%
 		ammo="Pemphredo Tathlum", 
-		head="Ebers Cap +1", -- 16%
-		body="Ebers Bliaut +1", 
-		hands="Theophany Mitts +2", 
-		legs="Ebers pantaloons +1", 
-		feet={ name="Vanya Clogs", augments={'"Cure" potency +5%','"Cure" spellcasting time -15%','"Conserve MP"+6',}}, -- 10%
+		head={ name="Kaykaus Mitra +1", augments={'MP+80','MND+12','Mag. Acc.+20',}},-- "Ebers Cap +2", -- I 19% or Kay I 11 & II 4%
+		body="Ebers Bliaut +2", -- Afflatus +16
+		hands="Theophany Mitts +2", -- II 2%
+		legs="Ebers pantaloons +2", -- 
+		feet={ name="Kaykaus Boots +1", augments={'Mag. Acc.+20','"Cure" potency +6%','"Fast Cast"+4',}},--{ name="Vanya Clogs", augments={'"Cure" potency +5%','"Cure" spellcasting time -15%','"Conserve MP"+6',}}, -- 10% or Kay I 17%, II 4%
 		neck="Incanter's Torque",
-		waist="Hachirin-no-Obi",
-		left_ear="Glorious Earring", -- 3%
-		right_ear={ name="Nourish. Earring +1", augments={'Path: A',}}, -- 2% II
+		waist="Shinjutsu-no-obi +1",--"Hachirin-no-Obi",
+		left_ear="Glorious Earring", -- I 3%
+		right_ear={ name="Nourish. Earring +1", augments={'Path: A',}}, -- I 6%
 		left_ring={ name="Mephitas's Ring +1", augments={'Path: A',}}, 
-		right_ring="Lebeche Ring", -- 3%
-		back={ name="Alaunus's Cape", augments={'MND+18','Eva.+20 /Mag. Eva.+20','MND+2','"Cure" potency +10%','Spell interruption rate down-10%',}}, -- 10%
+		right_ring="Lebeche Ring", -- I 3%
+		back={ name="Alaunus's Cape", augments={'MND+20','Eva.+20 /Mag. Eva.+20','MND+10','"Fast Cast"+10','Spell interruption rate down-10%',}}, 
       }
 		-- Cure Potency: 54%, Cure Potency II: 2% 
 		
     sets.midcast.CureSolaceWeather = set_combine(sets.midcast.CureSolace, {
-        back={ name="Alaunus's Cape", augments={'MND+18','Eva.+20 /Mag. Eva.+20','MND+2','"Cure" potency +10%','Spell interruption rate down-10%',}},
+        back={ name="Alaunus's Cape", augments={'MND+20','Eva.+20 /Mag. Eva.+20','MND+10','"Fast Cast"+10','Spell interruption rate down-10%',}},
         waist="Hachirin-no-Obi",
         })
 
@@ -360,7 +360,7 @@ function init_gear_sets()
 
     sets.midcast.CureWeather = set_combine(sets.midcast.CureNormal, {
         --hands="Kaykaus Cuffs +1", --11/(-6)
-        back={ name="Alaunus's Cape", augments={'MND+18','Eva.+20 /Mag. Eva.+20','MND+2','"Cure" potency +10%','Spell interruption rate down-10%',}},
+        back={ name="Alaunus's Cape", augments={'MND+20','Eva.+20 /Mag. Eva.+20','MND+10','"Fast Cast"+10','Spell interruption rate down-10%',}},
         waist="Hachirin-no-Obi",
         })
 
@@ -368,7 +368,7 @@ function init_gear_sets()
         body="Theo. Bliaut +2", --0(+6)/(-6)
         ring1={ name="Mephitas's Ring +1", augments={'Path: A',}},
         ring2="Lebeche Ring",
-        waist="Luminary Sash",
+        waist="Shinjutsu-no-obi +1",--"Luminary Sash",
         })
 
     sets.midcast.CuragaWeather = {
@@ -376,7 +376,7 @@ function init_gear_sets()
         --hands="Kaykaus Cuffs +1", --11/(-6)
         ring1={ name="Mephitas's Ring +1", augments={'Path: A',}},
         ring2="Metamor. Ring +1",
-        back={ name="Alaunus's Cape", augments={'MND+18','Eva.+20 /Mag. Eva.+20','MND+2','"Cure" potency +10%','Spell interruption rate down-10%',}},
+        back={ name="Alaunus's Cape", augments={'MND+20','Eva.+20 /Mag. Eva.+20','MND+10','"Fast Cast"+10','Spell interruption rate down-10%',}},
         waist="Hachirin-no-Obi",
         }
 
@@ -390,11 +390,11 @@ function init_gear_sets()
         hands="Fanatic Gloves",
         legs="Aya. Cosciales +2",
         feet="Medium's Sabots",
-        neck="Orunmila's Torque",
+        neck="Cleric's Torque +2",
         ear1="Loquacious Earring",
         ear2="Etiolation Earring",
         ring1="Kishar Ring",
-        ring2="Weather. Ring",
+        --ring2="Weather. Ring",
         back="Fi Follet Cape +1",
         waist="Embla Sash",
         }
@@ -402,9 +402,10 @@ function init_gear_sets()
     sets.midcast.Cursna = set_combine(sets.midcast.StatusRemoval, {
         main="Yagrush",
         sub="Chanter's Shield",
-        body="Ebers Bliaut +1",
+        head={ name="Kaykaus Mitra +1", augments={'MP+80','MND+12','Mag. Acc.+20',}},
+        body="Ebers Bliaut +2",
         hands="Fanatic Gloves", --15
-        legs="Th. Pant. +2", --21
+        legs="Th. Pantaloons +2", --21
         feet="Vanya Clogs", --5
         --feet="Gende. Galosh. +1", --10
         neck="Malison Medallion", --15
@@ -416,22 +417,22 @@ function init_gear_sets()
         waist="Bishop's Sash",
         })
 
-    sets.midcast.Erase = set_combine(sets.midcast.StatusRemoval, {neck="Cleric's Torque"})
+    sets.midcast.Erase = set_combine(sets.midcast.StatusRemoval, {neck="Cleric's Torque +2"})
 
     -- 110 total Enhancing Magic Skill; caps even without Light Arts
     sets.midcast['Enhancing Magic'] = {
         main="Gada",
         sub="Ammurapi Shield",
-        head="Befouled Crown",--gear.Telchine_ENH_head,
+        head={ name="Telchine Cap", augments={'Enh. Mag. eff. dur. +9',}},--"Befouled Crown",--gear.Telchine_ENH_head,
         body={ name="Telchine Chas.", augments={'Enh. Mag. eff. dur. +9',}},--gear.Telchine_ENH_body,
         hands="Inyan. Dastanas +2",
-        legs="Th. Pant. +2",
-        feet="Ebers Duckbills +1",
+        legs="Th. Pantaloons +2",
+        feet="Ebers Duckbills +2",
         neck="Incanter's Torque",
         ear1="Mimir Earring",
         ear2="Andoaa Earring",
-        ring1="Stikini Ring",
-        ring2="Stikini Ring",
+        ring1="Stikini Ring +1",
+        ring2="Stikini Ring +1",
         back="Fi Follet Cape +1",
         waist="Olympus Sash",
         }
@@ -459,8 +460,8 @@ function init_gear_sets()
 
     sets.midcast.RegenDuration = set_combine(sets.midcast.EnhancingDuration, {
         body={ name="Telchine Chas.", augments={'Enh. Mag. eff. dur. +9',}}, --gear.Telchine_ENH_body,
-        hands="Ebers Mitts +1",
-        legs="Th. Pant. +2",
+        hands="Ebers Mitts +2",
+        legs="Th. Pantaloons +2",
         feet="Theo. Duckbills +2",
         })
 
@@ -487,21 +488,21 @@ function init_gear_sets()
         })
 
     sets.midcast.Auspice = set_combine(sets.midcast.EnhancingDuration, {
-        feet="Ebers Duckbills +1",
+        feet="Ebers Duckbills +2",
         })
 
     sets.midcast.BarElement = set_combine(sets.midcast['Enhancing Magic'], {
         main="Beneficus",
         sub="Ammurapi Shield",
-        head="Ebers Cap +1",
-        body="Ebers Bliaut +1",
-        hands="Ebers Mitts +1",
+        head="Ebers Cap +2",
+        body="Ebers Bliaut +2",
+        hands="Ebers Mitts +2",
         legs="Piety Pantaln. +3",
-        feet="Ebers Duckbills +1",
+        feet="Ebers Duckbills +2",
         })
 
     sets.midcast.BoostStat = set_combine(sets.midcast['Enhancing Magic'], {
-        feet="Ebers Duckbills +1"
+        feet="Ebers Duckbills +2"
         })
 
     sets.midcast.Protect = set_combine(sets.midcast.ConserveMP, sets.midcast.EnhancingDuration, {
@@ -524,8 +525,8 @@ function init_gear_sets()
         neck="Erra Pendant",
         ear1="Digni. Earring",
         ear2="Regal Earring",
-        ring1="Stikini Ring",
-        ring2="Stikini Ring",
+        ring1="Stikini Ring +1",
+        ring2="Stikini Ring +1",
         back="Aurist's Cape +1",
         waist="Acuity Belt +1",
         }
@@ -566,19 +567,19 @@ function init_gear_sets()
 
     -- Custom spell classes
     sets.midcast.MndEnfeebles = {
-        main="Yagrush",
+        main="Daybreak",
         sub="Ammurapi Shield",
         ammo="Pemphredo Tathlum",
-        head=empty;
+        --head=empty;
         body="Cohort Cloak +1",
-        hands="Theophany Mitts +2",
-        legs="Chironic Hose",
+        hands="Regal Cuffs",
+        legs="Ebers pantaloons +2",--"Chironic Hose",
         feet="Theo. Duckbills +2",
         neck="Erra Pendant",
         ear1="Malignance Earring",
         ear2="Regal Earring",
         ring1="Kishar Ring",
-        ring2="Stikini Ring",
+        ring2="Stikini Ring +1",
         back="Aurist's Cape +1",
         waist="Luminary Sash",
         }
@@ -595,7 +596,7 @@ function init_gear_sets()
         head=empty,
         body="Twilight Cloak",
         hands="Raetic Bangles",
-        legs="Th. Pant. +2",
+        legs="Th. Pantaloons +2",
         feet="Theo. Duckbills +2",
         ring1="Freke Ring",
         ring2="Archon Ring",
@@ -627,8 +628,8 @@ function init_gear_sets()
 		left_ear="Hearty Earring",
 		right_ear="Etiolation Earring",
 		left_ring="Defending Ring",
-		right_ring="Inyanga Ring",
-		back={ name="Alaunus's Cape", augments={'MND+18','Eva.+20 /Mag. Eva.+20','MND+2','"Cure" potency +10%','Spell interruption rate down-10%',}},
+		right_ring="Shneddick Ring",
+		back={ name="Alaunus's Cape", augments={'MND+20','Eva.+20 /Mag. Eva.+20','MND+10','"Fast Cast"+10','Spell interruption rate down-10%',}},
         }
 
     sets.idle.DT = set_combine(sets.idle, {
@@ -645,8 +646,8 @@ function init_gear_sets()
 		left_ear="Eabani Earring",
 		right_ear="Etiolation Earring",
 		left_ring="Defending Ring",
-		right_ring="Inyanga Ring",
-		back={ name="Alaunus's Cape", augments={'MND+18','Eva.+20 /Mag. Eva.+20','MND+2','"Cure" potency +10%','Spell interruption rate down-10%',}},
+		right_ring="Shneddick Ring",
+		back={ name="Alaunus's Cape", augments={'MND+20','Eva.+20 /Mag. Eva.+20','MND+10','"Fast Cast"+10','Spell interruption rate down-10%',}},
         })
 
     sets.idle.MEva = set_combine(sets.idle.DT, {
@@ -663,8 +664,8 @@ function init_gear_sets()
 		left_ear="Eabani Earring",
 		right_ear="Etiolation Earring",
 		left_ring="Defending Ring",
-		right_ring="Inyanga Ring",
-		back={ name="Alaunus's Cape", augments={'MND+18','Eva.+20 /Mag. Eva.+20','MND+2','"Cure" potency +10%','Spell interruption rate down-10%',}},
+		right_ring="Shneddick Ring",
+		back={ name="Alaunus's Cape", augments={'MND+20','Eva.+20 /Mag. Eva.+20','MND+10','"Fast Cast"+10','Spell interruption rate down-10%',}},
         })
 
     sets.idle.Town = set_combine(sets.idle, {
@@ -679,6 +680,7 @@ function init_gear_sets()
 		waist="Carrier's Sash",
         ear1="Glorious Earring",
         ear2="Etiolation Earring",
+        right_ring="Shneddick Ring",
         })
 
     -- Defense sets
@@ -752,7 +754,7 @@ function init_gear_sets()
         }
 
     -- Buff sets: Gear that needs to be worn to actively enhance a current player buff.
-    sets.buff['Divine Caress'] = {hands="Ebers Mitts +1", back="Mending Cape"}
+    sets.buff['Divine Caress'] = {hands="Ebers Mitts +2", back="Mending Cape"}
     sets.buff['Devotion'] = {head="Piety Cap +3"}
     sets.buff.Sublimation = {waist="Embla Sash"}
 
