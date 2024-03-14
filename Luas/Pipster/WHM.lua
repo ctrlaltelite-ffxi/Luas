@@ -276,7 +276,7 @@ function init_gear_sets()
         ear1="Cessance Earring",
         ear2="Ishvara Earring",
         ring1="Epaminondas's Ring",
-        ring2="Metamor. Ring +1",
+        ring2={ name="Metamor. Ring +1", augments={'Path: A',}},
 		waist="Fotia Belt",
         })
 
@@ -296,7 +296,7 @@ function init_gear_sets()
         ear1="Malignance Earring",
         ear2="Friomisi Earring",
         ring1="Epaminondas's Ring",
-        ring2="Metamor. Ring +1",
+        ring2={ name="Metamor. Ring +1", augments={'Path: A',}},
 		waist="Orpheus's Sash",
         })
 		
@@ -307,7 +307,7 @@ function init_gear_sets()
         ear1="Malignance Earring",
         ear2="Friomisi Earring",
         ring1="Epaminondas's Ring",
-        ring2="Metamor. Ring +1",
+        ring2={ name="Metamor. Ring +1", augments={'Path: A',}},
 		waist="Orpheus's Sash",
         })
 
@@ -375,7 +375,7 @@ function init_gear_sets()
         body="Theo. Bliaut +2", --0(+6)/(-6)
         --hands="Kaykaus Cuffs +1", --11/(-6)
         ring1={ name="Mephitas's Ring +1", augments={'Path: A',}},
-        ring2="Metamor. Ring +1",
+        ring2={ name="Metamor. Ring +1", augments={'Path: A',}},
         back={ name="Alaunus's Cape", augments={'MND+20','Eva.+20 /Mag. Eva.+20','MND+10','"Fast Cast"+10','Spell interruption rate down-10%',}},
         waist="Hachirin-no-Obi",
         }
@@ -479,7 +479,7 @@ function init_gear_sets()
     sets.midcast.Aquaveil = set_combine(sets.midcast.EnhancingDuration, {
         main="Vadose Rod",
         sub="Ammurapi Shield",
-        ammo="Staunch Tathlum",
+        ammo="Staunch Tathlum +1",
         hands="Regal Cuffs",
         ear1="Halasz Earring",
         ring1="Freke Ring",
@@ -514,21 +514,21 @@ function init_gear_sets()
     sets.midcast.Shellra = sets.midcast.Protect
 
     sets.midcast['Divine Magic'] = {
-        main="Yagrush",
+        main="Daybreak",
         sub="Ammurapi Shield",
-        ammo="Ghastly Tathlum +1",
-        head="Theophany Cap +1",
-        body="Theo. Bliaut +2",
-        hands="Piety Mitts +3",
-        legs="Chironic Hose",
-        feet="Theo. Duckbills +2",
-        neck="Erra Pendant",
-        ear1="Digni. Earring",
+        ammo="Pemphredo Tathlum",
+        head="Bunzi's Hat",
+        body="Bunzi's Robe",
+        hands="Bunzi's gloves",
+        legs="Bunzi's Pants",
+        feet="Bunzi's sabots",
+        neck="Saevus Pendant +1",
+        ear1="Malignance Earring",
         ear2="Regal Earring",
-        ring1="Stikini Ring +1",
-        ring2="Stikini Ring +1",
+        ring1="Freke Ring",
+        ring2={ name="Metamor. Ring +1", augments={'Path: A',}},
         back="Aurist's Cape +1",
-        waist="Acuity Belt +1",
+        waist="Sacro Cord",
         }
 
     sets.midcast.Banish = set_combine(sets.midcast['Divine Magic'], {
@@ -541,8 +541,8 @@ function init_gear_sets()
         neck="Sanctity Necklace",
         ear1="Malignance Earring",
         ring1="Freke Ring",
-        ring2="Weather. Ring",
-        waist="Refoccilation Stone",
+        ring2={ name="Metamor. Ring +1", augments={'Path: A',}},
+        waist="Sacro Cord",
         })
 
     sets.midcast.Holy = sets.midcast.Banish
@@ -554,7 +554,7 @@ function init_gear_sets()
         head="Pixie Hairpin +1",
         body="Theo. Bliaut +2",
         hands="Theophany Mitts +2",
-        legs="Chironic Hose",
+        legs="Bunzi's Pants",
         feet="Theo. Duckbills +2",
         neck="Erra Pendant",
         ear1="Malignance Earring",
@@ -567,13 +567,13 @@ function init_gear_sets()
 
     -- Custom spell classes
     sets.midcast.MndEnfeebles = {
-        main="Daybreak",
+        main="Bunzi's Rod",
         sub="Ammurapi Shield",
         ammo="Pemphredo Tathlum",
         --head=empty;
         body="Cohort Cloak +1",
         hands="Regal Cuffs",
-        legs="Ebers pantaloons +2",--"Chironic Hose",
+        legs="Ebers pantaloons +2",--"Bunzi's Pants",
         feet="Theo. Duckbills +2",
         neck="Erra Pendant",
         ear1="Malignance Earring",
@@ -617,7 +617,7 @@ function init_gear_sets()
     sets.idle = {
         main="Daybreak",
 		sub="Genmei Shield",
-		ammo="Staunch Tathlum",
+		ammo="Staunch Tathlum +1",
 		head="Inyanga Tiara +2",
 		body="Inyanga Jubbah +2",
 		hands="Inyan. Dastanas +2",
@@ -635,7 +635,7 @@ function init_gear_sets()
     sets.idle.DT = set_combine(sets.idle, {
         main="Daybreak",
 		sub="Genmei Shield",
-		ammo="Staunch Tathlum",
+		ammo="Staunch Tathlum +1",
 		head="Bunzi's Hat",
 		body="Bunzi's Robe",
 		hands="Bunzi's Gloves",
@@ -653,7 +653,7 @@ function init_gear_sets()
     sets.idle.MEva = set_combine(sets.idle.DT, {
         main="Daybreak",
 		sub="Genmei Shield",
-		ammo="Staunch Tathlum",
+		ammo="Staunch Tathlum +1",
 		head="Bunzi's Hat",
 		body="Bunzi's Robe",
 		hands="Bunzi's Gloves",
