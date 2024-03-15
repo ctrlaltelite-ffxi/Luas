@@ -47,11 +47,11 @@ function get_sets()
         body="Sakpata Breastplate",
         hands="Sakpata's Gauntlets",
         legs="Sakpata Cuisses",     
-        feet="Pumm. Calligae +3",
+        feet="Sakpata's Leggings",
         neck="Loricate Torque +1",
-        waist="Ioskeha Belt +1",
+        waist="Engraved Belt",
         left_ear="Telos Earring",
-        right_ear="Cessance Earring",
+        right_ear={ name="Odnowa Earring +1", augments={'Path: A',}},
         left_ring="Moonbeam Ring",
         right_ring="Defending Ring",
         back={ name="Cichol's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
@@ -98,34 +98,43 @@ function get_sets()
     sets.Idle.Movement = set_combine(sets.Idle.Regen,{})
     sets.Idle.Movement.Fencer = set_combine(sets.Idle.Movement,{
 			main="Naegling",
-			sub="Blurred Shield +1"})
+			sub="Blurred Shield +1",
+            right_ring="Shneddick Ring"})
     sets.Idle.Movement.Club = set_combine(sets.Idle.Movement,{
 			main={ name="Loxotic Mace +1", augments={'Path: A',}},
-			sub="Blurred Shield +1"})		
+			sub="Blurred Shield +1",
+            right_ring="Shneddick Ring"})		
     sets.Idle.Movement.KajaKnuckles = set_combine(sets.Idle.Movement,{
             main="Kaja Knuckles",
-								})
+            right_ring="Shneddick Ring"})
     sets.Idle.Movement.Ragnarok = set_combine(sets.Idle.Movement,{
             main="Ragnarok",
-            sub="Utu Grip"})
+            sub="Utu Grip",
+            right_ring="Shneddick Ring"})
     sets.Idle.Movement.Montante = set_combine(sets.Idle.Regen,{
             main="Agwu's Claymore",
-            sub="Utu Grip"})
+            sub="Utu Grip",
+            right_ring="Shneddick Ring"})
     sets.Idle.Movement.Shiningone = set_combine(sets.Idle.Movement,{
             main="Shining One",
-            sub="Utu Grip"})
+            sub="Utu Grip",
+            right_ring="Shneddick Ring"})
     sets.Idle.Movement.Chango = set_combine(sets.Idle.Movement,{
             main="Chango",
-            sub="Utu Grip"})
+            sub="Utu Grip",
+            right_ring="Shneddick Ring"})
 	sets.Idle.Movement.Staff = set_combine(sets.Idle.Movement,{
             main="Kaja Staff",
-            sub="Utu Grip"})
+            sub="Utu Grip",
+            right_ring="Shneddick Ring"})
     sets.Idle.Movement.DWSword = set_combine(sets.Idle.Movement,{
 			main="Naegling",
-			sub="Ternion Dagger +1"})
+			sub="Ternion Dagger +1",
+            right_ring="Shneddick Ring"})
     sets.Idle.Movement.DWAxe = set_combine(sets.Idle.Movement,{
             main="Dolichenus",
-            sub={ name="Sangarius +1", augments={'Path: A',}}})
+            sub={ name="Sangarius +1", augments={'Path: A',}},
+            right_ring="Shneddick Ring"})
  
  
  
