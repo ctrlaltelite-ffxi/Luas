@@ -3,13 +3,13 @@
 -- All Credit goes to Bokura and her Credit notes, I Simply altered a few things to make it work for me and simplify it slightly--
  
 function get_sets()
-    include('organizer-lib')
-	organizer_items = {
-	ss_23="Storage Slip 23",
-	ss_24="Storage Slip 24",
-	ss_25="Storage Slip 25",
-	ss_27="Storage Slip 27",
-	}
+    --include('organizer-lib')
+	--organizer_items = {
+	--ss_23="Storage Slip 23",
+	--ss_24="Storage Slip 24",
+	--ss_25="Storage Slip 25",
+	--ss_27="Storage Slip 27",
+	--}
  
 --KeyBinds
     send_command('wait 5; input /lockstyleset 5')
@@ -24,7 +24,7 @@ function get_sets()
     AccIndex = 1
     AccArray = {"LowACC","MidACC","HighACC"} -- 3 Levels Of Accuracy Sets For TP/WS/Hybrid. First Set Is LowACC. Add More ACC Sets If Needed Then Create Your New ACC Below. Most of These Sets Are Empty So You Need To Edit Them On Your Own. Remember To Check What The Combined Set Is For Each Sets. --
     WeaponIndex = 1
-    WeaponArray = {"Chango","Montante","Shiningone", "Fencer", "Club", "KajaKnuckles", "DWSword", "DWAxe", "Staff" } --"DWSword","Ragnarok","DWSword"Default Main Weapon Is Ukonvasara. Can Delete Any Weapons/Sets That You Don't Need Or Replace/Add The New Weapons That You Want To Use. --
+    WeaponArray = {"Chango", "Shiningone", "Fencer", "Club", "DWAxe", "Staff" } -- "KajaKnuckles", "DWSword","Montante","Ragnarok", Default Main Weapon Is Ukonvasara. Can Delete Any Weapons/Sets That You Don't Need Or Replace/Add The New Weapons That You Want To Use. --
     IdleIndex = 1
     IdleArray = {"Movement","Regen"} -- Default Idle Set Is Movement --
     Armor = 'None'
@@ -42,14 +42,14 @@ function get_sets()
     sets.Idle = {}
     -- Idle/Town Sets --
     sets.Idle.Regen = {
-        ammo="Staunch Tathlum",
+        ammo="Staunch Tathlum +1",
         head="Sakpata's Helm",
-        body={ name={ name="Souv. Cuirass +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}}, augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
+        body="Sakpata Breastplate",
         hands="Sakpata's Gauntlets",
-        legs={ name={ name="Souv. Diechlings +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}}, augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},     
+        legs="Sakpata Cuisses",     
         feet="Pumm. Calligae +3",
         neck="Loricate Torque +1",
-        waist="Ioskeha Belt",
+        waist="Ioskeha Belt +1",
         left_ear="Telos Earring",
         right_ear="Cessance Earring",
         left_ring="Moonbeam Ring",
@@ -137,14 +137,14 @@ function get_sets()
     -- Ukonvasara TP Sets --
 		sets.TP.KajaKnuckles = { 
 		main="Kaja Knuckles",
-		ammo="Aurgelmir Orb",
+		ammo="Aurgelmir Orb +1",
 		head="Flam. Zucchetto +2",
 		body={ name="Agoge Lorica +3", augments={'Enhances "Aggressive Aim" effect',}},
 		hands="Sakpata's Gauntlets",
 		legs="Pumm. Cuisses +3",
 		feet="Pumm. Calligae +3",
-		neck={ name="War. Beads +1", augments={'Path: A',}},
-		waist="Ioskeha Belt",
+		neck={ name="War. Beads +2", augments={'Path: A',}},
+		waist="Ioskeha Belt +1",
 		left_ear="Mache Earring +1",
 		right_ear="Cessance Earring",
 		left_ring="Petrov Ring",
@@ -167,14 +167,14 @@ function get_sets()
     sets.TP.Ragnarok = {
         main="Ragnarok",
         sub="Utu Grip",
-        ammo="Aurgelmir Orb",
+        ammo="Aurgelmir Orb +1",
         head="Flam. Zucchetto +2",
         body="Sakpata's Plate",
         hands="Sakpata's Gauntlets",
         legs="Pumm. Cuisses +3",
         feet="Pumm. Calligae +3",
         neck="Ainia Collar",
-        waist="Ioskeha Belt",
+        waist="Ioskeha Belt +1",
         left_ear="Telos Earring",
         right_ear="Cessance Earring",
         left_ring="Chirich Ring +1",
@@ -189,7 +189,7 @@ function get_sets()
         legs="Pumm. Cuisses +3",
         feet="Pumm. Calligae +3",
         neck="Combatant's Torque",
-        waist="Ioskeha Belt",
+        waist="Ioskeha Belt +1",
         left_ear="Telos Earring",
         right_ear="Zennaroi Earring",
         left_ring="Ramuh Ring",
@@ -204,17 +204,17 @@ function get_sets()
     sets.TP.Montante = {
         main="Agwu's Claymore",
         sub="Utu Grip",
-        ammo="Aurgelmir Orb",
+        ammo="Aurgelmir Orb +1",
         head="Flam. Zucchetto +2",
         body="Sakpata's Plate",
         hands="Sakpata's Gauntlets",
         legs="Pumm. Cuisses +3",
         feet="Pumm. Calligae +3",
         neck="Ainia Collar",
-        waist="Ioskeha Belt",
+        waist="Ioskeha Belt +1",
         left_ear="Brutal Earring",
         right_ear="Cessance Earring",
-        left_ring="Flamma Ring",
+        left_ring="Chirich Ring +1",
         right_ring="Niqmaddu Ring",
         back={ name="Cichol's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
     }
@@ -235,17 +235,17 @@ function get_sets()
     sets.TP.Shiningone = { 
         main="Shining One",
         sub="Utu Grip",
-        ammo="Aurgelmir Orb",
+        ammo="Aurgelmir Orb +1",
         head="Flam. Zucchetto +2",
         body="Sakpata's Plate",
         hands="Sakpata's Gauntlets",
         legs="Pumm. Cuisses +3",
         feet="Pumm. Calligae +3",
-        neck={ name="War. Beads +1", augments={'Path: A',}},
-        waist="Ioskeha Belt",
+        neck={ name="War. Beads +2", augments={'Path: A',}},
+        waist="Ioskeha Belt +1",
         left_ear="Brutal Earring",
         right_ear="Cessance Earring",
-        left_ring="Flamma Ring",
+        left_ring="Chirich Ring +1",
         right_ring="Niqmaddu Ring",
         back={ name="Cichol's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
         }
@@ -257,7 +257,7 @@ function get_sets()
         legs="Pumm. Cuisses +3",
         feet="Pumm. Calligae +3",
         neck="Combatant's Torque",
-        waist="Ioskeha Belt",
+        waist="Ioskeha Belt +1",
         left_ear="Telos Earring",
         right_ear="Cessance Earring",
         left_ring="Regal Ring",
@@ -271,17 +271,17 @@ function get_sets()
     sets.TP.Chango = {
         main="Chango",
         sub="Utu Grip",
-        ammo="Aurgelmir Orb",
+        ammo="Aurgelmir Orb +1",
         head="Flam. Zucchetto +2",
         body="Sakpata's Plate",
         hands="Sakpata's Gauntlets",
         legs="Pumm. Cuisses +3",
         feet="Pumm. Calligae +3",
-        neck={ name="War. Beads +1", augments={'Path: A',}},
-        waist="Ioskeha Belt",
+        neck={ name="War. Beads +2", augments={'Path: A',}},
+        waist="Ioskeha Belt +1",
         left_ear="Brutal Earring",
         right_ear="Cessance Earring",
-        left_ring="Flamma Ring",
+        left_ring="Chirich Ring +1",
         right_ring="Niqmaddu Ring",
         back={ name="Cichol's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
         }
@@ -300,14 +300,14 @@ function get_sets()
     sets.TP.DWSword = {
         main="Naegling",
         sub="Ternion Dagger +1",
-        ammo="Aurgelmir Orb",
+        ammo="Aurgelmir Orb +1",
         head="Flam. Zucchetto +2",
         body="Agoge Lorica +3",
         hands={ name="Emicho Gauntlets", augments={'Accuracy+20','"Dual Wield"+5','Pet: Accuracy+20',}},
         legs="Pumm. Cuisses +3",
         feet="Pumm. Calligae +3",
-        neck={ name="War. Beads +1", augments={'Path: A',}},
-        waist="Ioskeha Belt",
+        neck={ name="War. Beads +2", augments={'Path: A',}},
+        waist="Ioskeha Belt +1",
         left_ear="Suppanomimi",
         right_ear="Brutal Earring",
         left_ring="Petrov Ring",
@@ -327,14 +327,14 @@ function get_sets()
     sets.TP.DWAxe = {
         main="Dolichenus",
 		sub={ name="Sangarius +1", augments={'Path: A',}},
-        ammo="Aurgelmir Orb",
+        ammo="Aurgelmir Orb +1",
         head="Flam. Zucchetto +2",
         body="Agoge Lorica +3",
         hands={ name="Emicho Gauntlets", augments={'Accuracy+20','"Dual Wield"+5','Pet: Accuracy+20',}},
         legs="Pumm. Cuisses +3",
         feet="Pumm. Calligae +3",
-        neck={ name="War. Beads +1", augments={'Path: A',}},
-        waist="Ioskeha Belt",
+        neck={ name="War. Beads +2", augments={'Path: A',}},
+        waist="Ioskeha Belt +1",
         left_ear="Suppanomimi",
         right_ear="Brutal Earring",
         left_ring="Petrov Ring",
@@ -355,14 +355,14 @@ function get_sets()
     sets.TP.Fencer = {
         main="Naegling",
         sub="Blurred Shield +1",
-        ammo="Aurgelmir Orb",
+        ammo="Aurgelmir Orb +1",
         head="Flam. Zucchetto +2",
         body="Sakpata's Plate",
         hands="Sakpata's Gauntlets",
         legs="Pumm. Cuisses +3",
         feet="Pumm. Calligae +3",
-        neck={ name="War. Beads +1", augments={'Path: A',}},
-        waist="Ioskeha Belt",
+        neck={ name="War. Beads +2", augments={'Path: A',}},
+        waist="Ioskeha Belt +1",
         left_ear="Brutal Earring",
         right_ear="Cessance Earring",
         left_ring="Chirich Ring +1",
@@ -384,14 +384,14 @@ function get_sets()
 	    sets.TP.Club = {
         main={ name="Loxotic Mace +1", augments={'Path: A',}},
         sub="Blurred Shield +1",
-        ammo="Aurgelmir Orb",
+        ammo="Aurgelmir Orb +1",
         head="Flam. Zucchetto +2",
         body="Sakpata's Plate",
         hands="Sakpata's Gauntlets",
         legs="Pumm. Cuisses +3",
         feet="Pumm. Calligae +3",
-        neck={ name="War. Beads +1", augments={'Path: A',}},
-        waist="Ioskeha Belt",
+        neck={ name="War. Beads +2", augments={'Path: A',}},
+        waist="Ioskeha Belt +1",
         left_ear="Brutal Earring",
         right_ear="Cessance Earring",
         left_ring="Chirich Ring +1",
@@ -413,14 +413,14 @@ function get_sets()
 	sets.TP.Staff = {
         main="Kaja Staff",
         sub="Utu Grip",
-        ammo="Aurgelmir Orb",
+        ammo="Aurgelmir Orb +1",
         head="Flam. Zucchetto +2",
         body="Sakpata's Plate",
         hands="Sakpata's Gauntlets",
         legs="Pumm. Cuisses +3",
         feet="Pumm. Calligae +3",
-        neck={ name="War. Beads +1", augments={'Path: A',}},
-        waist="Ioskeha Belt",
+        neck={ name="War. Beads +2", augments={'Path: A',}},
+        waist="Ioskeha Belt +1",
         left_ear="Brutal Earring",
         right_ear="Cessance Earring",
         left_ring="Chirich Ring +1",
@@ -441,7 +441,7 @@ function get_sets()
  
     -- Conqueror(AM3 Up) TP Sets --
 --    sets.TP.Conqueror.AM3 = set_combine(sets.TP.Conqueror,{
---        ammo="Aurgelmir Orb",
+--        ammo="Aurgelmir Orb +1",
 --        head="Flam. Zucchetto +2",
 --        body="Sakpata's Plate",
 --        hands={ name={ name="Emicho Gauntlets", augments={'Accuracy+20','"Dual Wield"+5','Pet: Accuracy+20',}}, augments={'HP+65','DEX+12','Accuracy+20',}},
@@ -464,14 +464,14 @@ function get_sets()
     }
  
     -- Retaliation Set --
-    --sets.TP.Retaliation = {hands="Pumm. Mufflers +2",feet="Boii Calligae +1"}
+    sets.TP.Retaliation = {hands="Pumm. Mufflers +3",feet="Boii Calligae +2"}
  
     -- AM3 Rancor ON Mantle --
     sets.TP.Rancor = {back=""}
  
     -- PDT/MDT Sets --
     sets.PDT = {
-        ammo="Aurgelmir Orb",
+        ammo="Aurgelmir Orb +1",
         head="Sakpata's Helm",
         body="Sakpata's Plate",
         hands="Sakpata's Gauntlets",
@@ -487,14 +487,14 @@ function get_sets()
     }
     
     sets.MDT = set_combine(sets.PDT,{
-        ammo="Staunch Tathlum",
+        ammo="Staunch Tathlum +1",
         head="Sakpata's Helm",
         body="Sakpata's Plate",
         hands="Sakpata's Gauntlets",
         legs="Sakpata's Cuisses",
         feet="Sakpata's Leggings",
         neck="Loricate Torque +1",
-        waist="Ioskeha Belt",
+        waist="Ioskeha Belt +1",
         left_ear="Telos Earring",
         right_ear={ name="Odnowa Earring +1", augments={'Path: A',}},
         left_ring="Moonbeam Ring",
@@ -505,14 +505,14 @@ function get_sets()
     -- Hybrid/Kiting Sets for me personally this is my Shining One AM set when expecting to take dmg --
     sets.TP.Hybrid = {
         sub="Utu Grip",
-        ammo="Staunch Tathlum",
+        ammo="Staunch Tathlum +1",
         head="Sakpata's Helm",
         body="Sakpata's Plate",
         hands="Sakpata's Gauntlets",
         legs="Sakpata's Cuisses",
         feet="Sakpata's Leggings",
-        neck={ name="War. Beads +1", augments={'Path: A',}},
-        waist="Ioskeha Belt",
+        neck={ name="War. Beads +2", augments={'Path: A',}},
+        waist="Ioskeha Belt +1",
         left_ear="Telos Earring",
         right_ear="Cessance Earring",
         left_ring="Chirich Ring +1",
@@ -552,8 +552,8 @@ function get_sets()
 		hands="Sakpata's Gauntlets",
 		legs="Sakpata's Cuisses",
 		feet="Sakpata's Leggings",
-		neck={ name="War. Beads +1", augments={'Path: A',}},
-		waist="Ioskeha Belt",
+		neck={ name="War. Beads +2", augments={'Path: A',}},
+		waist="Ioskeha Belt +1",
 		left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
 		right_ear="Thrud Earring",
 		left_ring="Regal Ring", --"Epaminondas's Ring",
@@ -591,7 +591,7 @@ function get_sets()
         hands="Sakpata's Gauntlets",
         legs="Pumm. Cuisses +3",
         feet="Pumm. Calligae +3",
-        neck={ name="War. Beads +1", augments={'Path: A',}},
+        neck={ name="War. Beads +2", augments={'Path: A',}},
         waist="Fotia Belt",
         left_ear="Cessance Earring",
         right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
@@ -607,7 +607,7 @@ function get_sets()
         hands={ name={ name="Emicho Gauntlets", augments={'Accuracy+20','"Dual Wield"+5','Pet: Accuracy+20',}}, augments={'HP+65','DEX+12','Accuracy+20',}},
         legs="Pumm. Cuisses +3",
         feet="Pumm. Calligae +3",
-        neck={ name="War. Beads +1", augments={'Path: A',}},
+        neck={ name="War. Beads +2", augments={'Path: A',}},
         waist="Fotia Belt",
         left_ear="Telos Earring",
         right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
@@ -631,7 +631,7 @@ function get_sets()
 		waist="Fotia Belt",
 		left_ear="Cessance Earring",
 		right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
-		left_ring="Flamma Ring",
+		left_ring="Chirich Ring +1",
 		right_ring="Niqmaddu Ring",
 		back={ name="Cichol's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
     }
@@ -648,10 +648,10 @@ function get_sets()
         hands="Sakpata's Gauntlets",
         legs="Sakpata's Cuisses",
         feet="Sakpata's Leggings",
-        neck={ name="War. Beads +1", augments={'Path: A',}},
+        neck={ name="War. Beads +2", augments={'Path: A',}},
         waist="Fotia Belt",
         left_ear="Telos Earring",
-        right_ear="Dignitary's Earring",
+        right_ear="Crepuscular Earring",
         left_ring="Epaminondas's Ring",
         right_ring="Niqmaddu Ring",
         back={ name="Cichol's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
@@ -665,10 +665,10 @@ function get_sets()
 		ammo="Knobkierrie",
 		head={ name="Agoge Mask +3", augments={'Enhances "Savagery" effect',}},
 		body="Pumm. Lorica +3",
-		hands={ name="Odyssean Gauntlets", augments={'Accuracy+7','Weapon skill damage +4%','DEX+8',}},
-		legs={ name="Odyssean Cuisses", augments={'"Fast Cast"+3','DEX+15','Weapon skill damage +7%','Mag. Acc.+6 "Mag.Atk.Bns."+6',}},
-		feet="Sulev. Leggings +2",
-		neck={ name="War. Beads +1", augments={'Path: A',}},
+		hands="Nyame Gauntlets",
+		legs="Nyame Flanchard",
+		feet="Nyame Sollerets",
+		neck={ name="War. Beads +2", augments={'Path: A',}},
 		waist={ name="Sailfi Belt +1", augments={'Path: A',}},
 		left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
 		right_ear="Thrud Earring",
@@ -695,9 +695,9 @@ function get_sets()
         }
     sets.WS.Resolution.MidACC  = set_combine(sets.WS.Resolution,{
         ammo="Knobkierrie",
-        head="Pummeler's Mask +2",
+        head="Pummeler's Mask +3",
         body="Pumm. Lorica +3",
-        hands="Pumm. Mufflers +2",
+        hands="Pumm. Mufflers +3",
         legs="Pumm. Cuisses +3",
         feet="Pumm. Calligae +3",
         neck="Fotia Gorget",
@@ -719,8 +719,8 @@ function get_sets()
         body="Pumm. Lorica +3",
         hands="Sakpata's Gauntlets",
 		legs="Sakpata's Cuisses",
-        feet="Sulev. Leggings +2",
-        neck={ name="War. Beads +1", augments={'Path: A',}},
+        feet="Nyame Sollerets",
+        neck={ name="War. Beads +2", augments={'Path: A',}},
         waist="Caudata Belt",
         left_ear="Thrud Earring",
         right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
@@ -736,10 +736,10 @@ function get_sets()
 		ammo="Knobkierrie",
 		head={ name="Agoge Mask +3", augments={'Enhances "Savagery" effect',}},
 		body="Pumm. Lorica +3",
-		hands={ name="Odyssean Gauntlets", augments={'Accuracy+7','Weapon skill damage +4%','DEX+8',}},
-		legs={ name="Odyssean Cuisses", augments={'"Fast Cast"+3','DEX+15','Weapon skill damage +7%','Mag. Acc.+6 "Mag.Atk.Bns."+6',}},
-		feet="Sulev. Leggings +2",
-		neck={ name="War. Beads +1", augments={'Path: A',}},
+		hands="Nyame Gauntlets",
+		legs="Nyame Flanchard",
+		feet="Nyame Sollerets",
+		neck={ name="War. Beads +2", augments={'Path: A',}},
 		waist={ name="Sailfi Belt +1", augments={'Path: A',}},
 		left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
 		right_ear="Thrud Earring",
@@ -769,10 +769,10 @@ function get_sets()
 		ammo="Knobkierrie",
 		head={ name="Agoge Mask +3", augments={'Enhances "Savagery" effect',}},
 		body="Pumm. Lorica +3",
-		hands={ name="Odyssean Gauntlets", augments={'Accuracy+7','Weapon skill damage +4%','DEX+8',}},
-		legs={ name="Odyssean Cuisses", augments={'"Fast Cast"+3','DEX+15','Weapon skill damage +7%','Mag. Acc.+6 "Mag.Atk.Bns."+6',}},
-		feet="Sulev. Leggings +2",
-		neck={ name="War. Beads +1", augments={'Path: A',}},
+		hands="Nyame Gauntlets",
+		legs="Nyame Flanchard",
+		feet="Nyame Sollerets",
+		neck={ name="War. Beads +2", augments={'Path: A',}},
 		waist={ name="Sailfi Belt +1", augments={'Path: A',}},
 		left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
 		right_ear="Thrud Earring",
@@ -785,10 +785,10 @@ function get_sets()
 		ammo="Knobkierrie",
 		head={ name="Agoge Mask +3", augments={'Enhances "Savagery" effect',}},
 		body="Pumm. Lorica +3",
-		hands={ name="Odyssean Gauntlets", augments={'Accuracy+7','Weapon skill damage +4%','DEX+8',}},
-		legs={ name="Odyssean Cuisses", augments={'"Fast Cast"+3','DEX+15','Weapon skill damage +7%','Mag. Acc.+6 "Mag.Atk.Bns."+6',}},
-		feet="Sulev. Leggings +2",
-		neck={ name="War. Beads +1", augments={'Path: A',}},
+		hands="Nyame Gauntlets",
+		legs="Nyame Flanchard",
+		feet="Nyame Sollerets",
+		neck={ name="War. Beads +2", augments={'Path: A',}},
 		waist={ name="Sailfi Belt +1", augments={'Path: A',}},
 		left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
 		right_ear="Thrud Earring",
@@ -801,10 +801,10 @@ function get_sets()
 	sets.WS["Cataclysm"] = {
 		ammo="Pemphredo Tathlum",
         head="Pixie Hairpin +1",
-        body={ name="Found. Breastplate", augments={'Accuracy+13','Mag. Acc.+14','Attack+13','"Mag.Atk.Bns."+13',}},
-        hands={ name="Valorous Mitts", augments={'Attack+21','Accuracy+9','Weapon skill damage +6%','Accuracy+1 Attack+1','Mag. Acc.+14 "Mag.Atk.Bns."+14',}},
+        body="Nyame Mail",
+        hands="Nyame Gauntlets",
         legs={ name="Augury Cuisses +1", augments={'Path: A',}},
-        feet="Sulev. Leggings +2",
+        feet="Nyame Sollerets",
         neck="Sanctity Necklace",
         waist="Orpheus's Sash",
         left_ear="Friomisi Earring",
@@ -819,10 +819,10 @@ function get_sets()
     sets.WS.Cloudsplitter = {
         ammo="Pemphredo Tathlum",
         head={ name="Agoge Mask +3", augments={'Enhances "Savagery" effect',}},
-        body={ name="Found. Breastplate", augments={'Accuracy+13','Mag. Acc.+14','Attack+13','"Mag.Atk.Bns."+13',}},
-        hands={ name="Valorous Mitts", augments={'Attack+21','Accuracy+9','Weapon skill damage +6%','Accuracy+1 Attack+1','Mag. Acc.+14 "Mag.Atk.Bns."+14',}},
+        body="Nyame Mail",
+        hands="Nyame Gauntlets",
         legs={ name="Augury Cuisses +1", augments={'Path: A',}},
-        feet="Sulev. Leggings +2",
+        feet="Nyame Sollerets",
         neck="Sanctity Necklace",
         waist="Orpheus's Sash",
         left_ear="Friomisi Earring",
@@ -835,10 +835,10 @@ function get_sets()
     sets.WS['Sanguine Blade'] = {
         ammo="Seething Bomblet +1",
         head="Jumalik Helm",
-        body={ name="Found. Breastplate", augments={'Accuracy+14','Mag. Acc.+13','Attack+14','"Mag.Atk.Bns."+14',}},
-        hands={ name="Founder's Gauntlets", augments={'STR+8','Attack+15','"Mag.Atk.Bns."+13','Phys. dmg. taken -3%',}},
+        body="Nyame Mail",
+        hands="Nyame Gauntlets",
         legs={ name="Augury Cuisses +1", augments={'Path: A',}},
-        feet={ name="Odyssean Greaves", augments={'Mag. Acc.+14 "Mag.Atk.Bns."+14','Weapon Skill Acc.+6','STR+4','"Mag.Atk.Bns."+15',}},
+        feet="Nyame Sollerets",
         neck="Sanctity Necklace",
         waist="Orpheus's Sash",
         left_ear="Friomisi Earring",
@@ -858,9 +858,9 @@ function get_sets()
         neck="Sanctity Necklace",
         waist="Orpheus's Sash",
         left_ear="Telos Earring",
-        right_ear="Dignitary's Earring",
+        right_ear="Crepuscular Earring",
         left_ring="Chirich Ring +1",
-        right_ring="Weatherspoon Ring",
+        right_ring="Chirich Ring +1",
         back={ name="Cichol's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
     }
  
@@ -875,9 +875,9 @@ function get_sets()
         neck="Sanctity Necklace",
         waist="Orpheus's Sash",
         left_ear="Telos Earring",
-        right_ear="Dignitary's Earring",
+        right_ear="Crepuscular Earring",
         left_ring="Chirich Ring +1",
-        right_ring="Weatherspoon Ring",
+        right_ring="Chirich Ring +1",
         back={ name="Cichol's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
     }
     
@@ -891,9 +891,9 @@ function get_sets()
         neck="Sanctity Necklace",
         waist="Orpheus's Sash",
         left_ear="Telos Earring",
-        right_ear="Dignitary's Earring",
+        right_ear="Crepuscular Earring",
         left_ring="Chirich Ring +1",
-        right_ring="Weatherspoon Ring",
+        right_ring="Chirich Ring +1",
         back={ name="Cichol's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
     }
     
@@ -907,9 +907,9 @@ function get_sets()
         neck="Sanctity Necklace",
         waist="Orpheus's Sash",
         left_ear="Telos Earring",
-        right_ear="Dignitary's Earring",
+        right_ear="Crepuscular Earring",
         left_ring="Chirich Ring +1",
-        right_ring="Weatherspoon Ring",
+        right_ring="Chirich Ring +1",
         back={ name="Cichol's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
         }
  
@@ -950,13 +950,13 @@ function get_sets()
 	}
 	
 	sets.WS['Impulse Drive'] = {
-		ammo="Aurgelmir Orb",
+		ammo="Aurgelmir Orb +1",
 		head={ name="Agoge Mask +3", augments={'Enhances "Savagery" effect',}},
 		body="Pumm. Lorica +3",
-		hands={ name="Odyssean Gauntlets", augments={'Accuracy+7','Weapon skill damage +4%','DEX+8',}},
-		legs={ name="Odyssean Cuisses", augments={'"Fast Cast"+3','DEX+15','Weapon skill damage +7%','Mag. Acc.+6 "Mag.Atk.Bns."+6',}},
-		feet="Sulev. Leggings +2",
-		neck={ name="War. Beads +1", augments={'Path: A',}},
+		hands="Nyame Gauntlets",
+		legs="Nyame Flanchard",
+		feet="Nyame Sollerets",
+		neck={ name="War. Beads +2", augments={'Path: A',}},
 		waist={ name="Sailfi Belt +1", augments={'Path: A',}},
 		left_ear="Thrud Earring",
 		right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
@@ -984,7 +984,7 @@ function get_sets()
     -- Mighty Strikes WS Set --
     sets.MS_WS = {
         ammo="Yetshila",
-        feet={ name="Valorous Greaves", augments={'Accuracy+26','Crit. hit damage +3%','VIT+7','Attack+12',}},
+        --feet={ name="Valorous Greaves", augments={'Accuracy+26','Crit. hit damage +3%','VIT+7','Attack+12',}},
  
     }
  
@@ -995,8 +995,8 @@ function get_sets()
 		hands="Sakpata's Gauntlets",
 		legs="Sakpata's Cuisses",
 		feet="Sakpata's Leggings",
-		neck={ name="War. Beads +1", augments={'Path: A',}},
-		waist="Ioskeha Belt",
+		neck={ name="War. Beads +2", augments={'Path: A',}},
+		waist="Ioskeha Belt +1",
 		left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
 		right_ear="Thrud Earring",
 		left_ring="Regal Ring",
@@ -1010,8 +1010,8 @@ function get_sets()
 		hands="Sakpata's Gauntlets",
 		legs="Sakpata's Cuisses",
 		feet="Sakpata's Leggings",
-		neck={ name="War. Beads +1", augments={'Path: A',}},
-		waist="Ioskeha Belt",
+		neck={ name="War. Beads +2", augments={'Path: A',}},
+		waist="Ioskeha Belt +1",
 		left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
 		right_ear="Thrud Earring",
 		left_ring="Regal Ring",
@@ -1029,14 +1029,14 @@ function get_sets()
     -- JA Sets --
     sets.JA = {}
     sets.JA.Berserk = {feet="Agoge Calligae +3", body="Pumm. Lorica +3", back={ name="Cichol's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}}}
-    sets.JA.Aggressor = {head="Pummeler's Mask +2",body="Agoge Lorica +3"}
-    sets.JA["Blood Rage"] = {body="Boii Lorica +1"}
+    sets.JA.Aggressor = {head="Pummeler's Mask +3",body="Agoge Lorica +3"}
+    sets.JA["Blood Rage"] = {body="Boii Lorica +2"}
     sets.JA.Warcry = {head="Agoge Mask +3"}
     sets.JA.Tomahawk = {ammo="Thr. Tomahawk",feet="Agoge Calligae +3"}
-    sets.JA["Mighty Strikes"] = {hands="Agoge Mufflers +1"}
+    sets.JA["Mighty Strikes"] = {hands="Agoge Mufflers +3"}
     sets.JA.Provoke = {
         ammo="Sapience Orb",
-        head="Pummeler's Mask +2",
+        head="Pummeler's Mask +3",
         body={ name="Souv. Cuirass +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
         hands={ name="Yorium Gauntlets", augments={'Enmity+10',}},
         legs={ name="Souv. Diechlings +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
@@ -1055,35 +1055,35 @@ function get_sets()
     sets.Precast = {}
     -- Fastcast Set --
     sets.Precast.FastCast = {
-        ammo="Staunch Tathlum",
-        body={ name="Odyss. Chestplate", augments={'Accuracy+17','"Fast Cast"+5','Attack+6',}},
-        hands={ name="Leyline Gloves", augments={'Accuracy+10','Mag. Acc.+7','"Fast Cast"+1',}},
-        legs={ name="Eschite Cuisses", augments={'"Mag.Atk.Bns."+25','"Conserve MP"+6','"Fast Cast"+5',}},
-        feet={ name="Odyssean Greaves", augments={'Mag. Acc.+12','"Fast Cast"+5','"Mag.Atk.Bns."+4',}},
-        neck="Moonlight Necklace",
+        ammo="Staunch Tathlum +1",
+        --body={ name="Odyss. Chestplate", augments={'Accuracy+17','"Fast Cast"+5','Attack+6',}},
+        --hands={ name="Leyline Gloves", augments={'Accuracy+10','Mag. Acc.+7','"Fast Cast"+1',}},
+        --legs={ name="Eschite Cuisses", augments={'"Mag.Atk.Bns."+25','"Conserve MP"+6','"Fast Cast"+5',}},
+        --feet={ name="Odyssean Greaves", augments={'Mag. Acc.+12','"Fast Cast"+5','"Mag.Atk.Bns."+4',}},
+        --neck="Moonlight Necklace",
         left_ear="Loquac. Earring",
         right_ear="Etiolation Earring",
         --left_ring="Rahab Ring",
         --right_ring="Rahab Ring",
-        waist="Ioskeha Belt"
+        --waist="Ioskeha Belt +1"
     }
  
     sets.Midcast = {}
     -- Magic Haste Set --
     sets.Midcast.Haste = set_combine(sets.PDT,{
-        ammo="Staunch Tathlum",
-        head={ name="Souv. Schaller +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
-        body={ name="Odyss. Chestplate", augments={'Accuracy+17','"Fast Cast"+5','Attack+6',}},
-        hands={ name="Leyline Gloves", augments={'Accuracy+10','Mag. Acc.+7','"Fast Cast"+1',}},
-        legs={ name="Founder's Hose", augments={'MND+9','Mag. Acc.+13','Attack+14','Breath dmg. taken -4%',}},
-        feet={ name="Odyssean Greaves", augments={'Mag. Acc.+12','"Fast Cast"+5','"Mag.Atk.Bns."+4',}},
-        neck="Moonlight Necklace",
-        waist="Ioskeha Belt",
+        ammo="Staunch Tathlum +1",
+        --head={ name="Souv. Schaller +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
+        --body={ name="Odyss. Chestplate", augments={'Accuracy+17','"Fast Cast"+5','Attack+6',}},
+        --hands={ name="Leyline Gloves", augments={'Accuracy+10','Mag. Acc.+7','"Fast Cast"+1',}},
+        --legs={ name="Founder's Hose", augments={'MND+9','Mag. Acc.+13','Attack+14','Breath dmg. taken -4%',}},
+        --feet={ name="Odyssean Greaves", augments={'Mag. Acc.+12','"Fast Cast"+5','"Mag.Atk.Bns."+4',}},
+        --neck="Moonlight Necklace",
+        --waist="Ioskeha Belt +1",
         left_ear="Loquac. Earring",
         right_ear="Etiolation Earring",
-        left_ring="Defending Ring",
-        right_ring="Evanescence Ring",
-        back="Moonbeam Cape"
+        --left_ring="Defending Ring",
+        --right_ring="Evanescence Ring",
+        --back="Moonbeam Cape"
     
     })
  
