@@ -545,7 +545,23 @@ function init_gear_sets()
         waist="Sacro Cord",
         })
 
-    sets.midcast.Holy = sets.midcast.Banish
+    sets.midcast.Holy = { -- sets.midcast.Banish
+        main="Daybreak",
+        sub="Ammurapi Shield",
+        ammo="Pemphredo Tathlum",
+        head="Bunzi's Hat",
+        body="Bunzi's Robe",
+        hands="Bunzi's gloves",
+        legs="Bunzi's Pants",
+        feet="Bunzi's sabots",
+        neck="Saevus Pendant +1",
+        ear1="Malignance Earring",
+        ear2="Regal Earring",
+        ring1="Freke Ring",
+        ring2={ name="Metamor. Ring +1", augments={'Path: A',}},
+        back="Aurist's Cape +1",
+        waist="Sacro Cord",
+        }
 
     sets.midcast['Dark Magic'] = {
         main="Rubicundity",
