@@ -194,13 +194,13 @@ function init_gear_sets()
     ------------------------------------------------------------------------------------------------
 
     -- Precast sets to enhance JAs
-    sets.precast.JA['Tabula Rasa'] = {legs="Peda. Pants +1"}
-    sets.precast.JA['Enlightenment'] = {body="Peda. Gown +1"}
+    sets.precast.JA['Tabula Rasa'] = {legs="Peda. Pants +3"}
+    sets.precast.JA['Enlightenment'] = {body="Peda. Gown +2"}
     sets.precast.JA['Sublimation'] = {
         main="Musa",
         sub="Kaja Grip", --"Enki Strap",
         head="Acad. Mortar. +1",
-        body="Acad. Gown +2",
+        body="Acad. Gown +1",
         hands={ name="Telchine Gloves", augments={'Enh. Mag. eff. dur. +10',}},
         legs="Acad. Pants +1", 
         feet="Skaoi Boots",
@@ -233,7 +233,7 @@ function init_gear_sets()
         waist="Witful Belt", --3 / Q 3
         }
 
-    sets.precast.FC.Grimoire = {head="Peda. M.Board +1", feet="Acad. Loafers +1"}
+    sets.precast.FC.Grimoire = {head="Peda. M.Board +2", feet="Acad. Loafers +1"}
     sets.precast.FC['Enhancing Magic'] = set_combine(sets.precast.FC, {waist="Siegel Sash"})
     sets.precast.FC['Elemental Magic'] = set_combine(sets.precast.FC, {})
 
@@ -277,8 +277,8 @@ function init_gear_sets()
     sets.precast.WS['Omniscience'] = set_combine(sets.precast.WS, {
         ammo="Ghastly Tathlum +1",
         head="Pixie Hairpin +1",
-        body="Peda. Gown +1",
-        legs="Peda. Pants +1",
+        body="Peda. Gown +2",
+        legs="Peda. Pants +3",
         feet="Agwu's Pigaches",
         ear1="Malignance Earring",
         ear2="Regal Earring",
@@ -291,7 +291,7 @@ function init_gear_sets()
     sets.precast.WS['Myrkr'] = {
         ammo="Ghastly Tathlum +1",
         head="Pixie Hairpin +1",
-        body="Acad. Gown +2",
+        body="Acad. Gown +1",
         hands="Nyame Gauntlets",
         legs={ name="Psycloth Lappas", augments={'MP+80','Mag. Acc.+15','"Fast Cast"+7',}},
         feet={ name="Psycloth Boots", augments={'MP+50','INT+7','"Conserve MP"+6',}},
@@ -350,7 +350,7 @@ function init_gear_sets()
     --    ammo="Esper Stone +1", --0/(-5)
     --    head={ name="Vanya Hood", augments={'MND+10','Spell interruption rate down +15%','"Conserve MP"+6',}},--"Kaykaus Mitra +1", --11(+2)/(-6)
     --    body="Kaykaus Bliaut +1", --(+4)/(-6)
-    --    hands="Peda. Bracers +1", --(+3)/(-7)
+    --    hands="Peda. Bracers +2", --(+3)/(-7)
     --    legs="Kaykaus Tights +1", --11(+2)/(-6)
     --    feet="Kaykaus Boots +1", --11(+2)/(-12)
     --    neck="Incanter's Torque",
@@ -380,7 +380,7 @@ function init_gear_sets()
         sub="Kaja Grip", -- "Kaja Grip",
         head={ name="Vanya Hood", augments={'MND+10','Spell interruption rate down +15%','"Conserve MP"+6',}},
         body={ name="Vanya Robe", augments={'MND+10','Spell interruption rate down +15%','"Conserve MP"+6',}},
-        hands="Peda. Bracers +1",
+        hands="Peda. Bracers +2",
         legs="Acad. Pants +1", 
         feet={ name="Vanya Clogs", augments={'MND+10','Spell interruption rate down +15%','"Conserve MP"+6',}},
         neck={ name="Loricate Torque +1", augments={'Path: A',}},--"Incanter's Torque",
@@ -409,7 +409,7 @@ function init_gear_sets()
         sub="Ammurapi Shield",
         ammo="Savant's Treatise",
         head={ name="Telchine Cap", augments={'Enh. Mag. eff. dur. +10',}},
-        body="Peda. Gown +1",
+        body="Peda. Gown +2",
         hands={ name="Telchine Gloves", augments={'Enh. Mag. eff. dur. +10',}},
         legs={ name="Telchine Braconi", augments={'Enh. Mag. eff. dur. +10',}},
         feet={ name="Telchine Pigaches", augments={'Enh. Mag. eff. dur. +10',}},
@@ -509,7 +509,7 @@ function init_gear_sets()
         main="Maxentius",
         sub="Ammurapi Shield",
         head="Acad. Mortar. +1",
-        body="Acad. Gown +2",
+        body="Acad. Gown +1",
         legs="Chironic Hose",
         waist="Acuity Belt +1",
         })
@@ -522,9 +522,9 @@ function init_gear_sets()
         sub="Ammurapi Shield",
         ammo="Pemphredo Tathlum",
         head="Acad. Mortar. +1",
-        body="Acad. Gown +2",
+        body="Acad. Gown +1",
         hands="Acad. Bracers +1",
-        legs="Peda. Pants +1",
+        legs="Peda. Pants +3",
         feet="Acad. Loafers +1",
         neck="Argute Stole +1",
         ear1="Malignance Earring",
@@ -587,7 +587,7 @@ function init_gear_sets()
         
         --sub="Enki Strap",
         --ammo="Ghastly Tathlum +1",
-        --head="Agwu's Cap",--"Peda. M.Board +1",
+        --head="Agwu's Cap",--"Peda. M.Board +2",
         --body="Agwu's Robe",
         --hands="Agwu's Gages",
         --legs="Agwu's Slops",
@@ -605,7 +605,7 @@ function init_gear_sets()
         ammo="Pemphredo Tathlum",
         head="Merlinic Hood",
         body="Seidr Cotehardie",
-        legs="Peda. Pants +1",
+        legs="Peda. Pants +3",
         feet="Agwu's Pigaches",
         neck="Erra Pendant",
         waist="Acuity Belt +1",
@@ -699,10 +699,10 @@ function init_gear_sets()
         main="Musa",
         sub="Kaja Grip", -- "Kaja Grip",
         ammo="Ghastly Tathlum +1",
-        head="Agwu's Cap",--"Peda. M.Board +1",
+        head="Agwu's Cap",--"Peda. M.Board +2",
         body="Agwu's Robe",
         hands="Regal Cuffs",
-        legs="Peda. Pants +1",
+        legs="Peda. Pants +3",
         feet="Peda. Loafers +3",
         neck="Argute Stole +1",
         ear1="Malignance Earring",
@@ -734,7 +734,7 @@ function init_gear_sets()
         head="Nyame Helm",--"Blistering Sallet +1",
         body="Nyame Mail",
         hands="Nyame Gauntlets",--"Gazu Bracelet +1",
-        legs="Nyame Flanchard",--"Peda. Pants +1",
+        legs="Nyame Flanchard",--"Peda. Pants +3",
         feet="Nyame Sollerets",
         --neck="Combatant's Torque",
         --ear1="Cessance Earring",
@@ -752,7 +752,7 @@ function init_gear_sets()
 
     sets.magic_burst = {
         main="Marin Staff +1", -- 10
-        head="Agwu's Cap", --"Peda. M.Board +1", --(4)
+        head="Agwu's Cap", --"Peda. M.Board +2", --(4)
         body="Agwu's Robe", --10
         hands="Agwu's Gages", --(6)
         feet="Agwu's Pigaches", --11
@@ -774,7 +774,7 @@ function init_gear_sets()
        main="Daybreak", --"Siriti", --1
        sub="Genmei Shield", --10/0
        head="Acad. Mortar. +1", --4
-       body="Peda. Gown +1", --5
+       body="Peda. Gown +2", --5
        ear1="Savant's Earring", --1
        waist="Embla Sash", --5
        }
@@ -787,7 +787,7 @@ function init_gear_sets()
         }
 
     sets.LightArts = {legs="Acad. Pants +1",  feet="Acad. Loafers +1"}
-    sets.DarkArts = {body="Acad. Gown +2", feet="Acad. Loafers +1"}
+    sets.DarkArts = {body="Acad. Gown +1", feet="Acad. Loafers +1"}
 
     sets.Obi = {waist="Hachirin-no-Obi"}
     sets.Bookworm = {back="Bookworm's Cape"}
