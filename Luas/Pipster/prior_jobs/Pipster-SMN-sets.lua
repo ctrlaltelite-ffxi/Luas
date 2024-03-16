@@ -727,7 +727,7 @@ sets.midcast.CureAurora = {--When you are SCH subjob and cast aurorastorm it wil
 sets.midcast.CureAurora = set_combine(sets.midcast.Cure,sets.midcast.CureAurora)
 --potency: 10+14+5+5+5+5+10=54%  caps at 50%
 --d/w: 25%
---Power = floor(MND÷2) + floor(VIT÷4) + Healing Magic Skill
+--Power = floor(MNDÃ·2) + floor(VITÃ·4) + Healing Magic Skill
 -- 264/2 + 185/4 + 483 = 132 + 46 + 483 = 661  caps at 700 
 sets.midcast.CureSelf = set_combine(sets.midcast.Cure,{--cure recieved gear
 	neck="Phalaina locket",
