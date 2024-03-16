@@ -232,16 +232,21 @@ function init_gear_sets()
         })
 
     sets.precast.FC.Cure = set_combine(sets.precast.FC, {
-        main="Queller Rod", -- 7
-		sub="Sors Shield",   -- 3%     
-		ammo="Impatiens", --(2)
-        head="Vanya Hood", --10
-		legs="Ebers pantaloons +2", -- 14
-        feet="Vanya Clogs", --15
-		ear1="Mendi. Earring", --5
-		right_ring="Lebeche Ring", --3%
-        back={ name="Alaunus's Cape", augments={'MND+20','Eva.+20 /Mag. Eva.+20','MND+10','"Fast Cast"+10','Spell interruption rate down-10%',}}, --"Perimede Cape", --(4)
-        waist="Witful Belt", --5
+        main="Grioavolr", -- 10
+		sub="Clerisy Strap +1", -- 3
+		ammo="Impatiens", -- Q 2
+		head="Bunzi's Hat", -- 10
+		body="Inyanga Jubbah +2", -- 14
+		hands="Gendewitha Gages +1", -- 7
+		legs="Aya. Cosciales +2", -- 6
+		feet="Regal Pumps +1", -- 5 or 6/7
+		neck="Cleric's Torque +2", -- 10
+		waist="Witful Belt", -- 3 Q 3
+		left_ear="Loquac. Earring", -- 2
+		right_ear="Malignance Earring", -- 4
+		left_ring="Kishar Ring", -- 4
+		right_ring="Lebeche Ring", -- 5
+		back={ name="Alaunus's Cape", augments={'MND+20','Eva.+20 /Mag. Eva.+20','MND+10','"Fast Cast"+10','Spell interruption rate down-10%',}},
         })
 
     sets.precast.FC.Curaga = sets.precast.FC.Cure
@@ -338,10 +343,10 @@ function init_gear_sets()
 		body="Ebers Bliaut +2", -- Afflatus +16
 		hands="Theophany Mitts +2", -- II 2%
 		legs="Ebers pantaloons +2", -- 
-		feet={ name="Kaykaus Boots +1", augments={'Mag. Acc.+20','"Cure" potency +6%','"Fast Cast"+4',}},--{ name="Vanya Clogs", augments={'"Cure" potency +5%','"Cure" spellcasting time -15%','"Conserve MP"+6',}}, -- 10% or Kay I 17%, II 4%
+		feet={ name="Kaykaus Boots +1", augments={'Mag. Acc.+20','"Cure" potency +6%','"Fast Cast"+4',}}, -- 17 --{ name="Vanya Clogs", augments={'"Cure" potency +5%','"Cure" spellcasting time -15%','"Conserve MP"+6',}}, -- 10% or Kay I 17%, II 4%
 		neck="Incanter's Torque",
 		waist="Shinjutsu-no-obi +1",--"Hachirin-no-Obi",
-		left_ear="Glorious Earring", -- I 3%
+		left_ear="Glorious Earring", -- II 2%
 		right_ear={ name="Nourish. Earring +1", augments={'Path: A',}}, -- I 6%
 		left_ring={ name="Mephitas's Ring +1", augments={'Path: A',}}, 
 		right_ring="Lebeche Ring", -- I 3%
@@ -395,20 +400,19 @@ function init_gear_sets()
         ear2="Etiolation Earring",
         ring1="Kishar Ring",
         --ring2="Weather. Ring",
-        back="Fi Follet Cape +1",
+        back="Oretan. Cape +1",
         waist="Embla Sash",
         }
 
     sets.midcast.Cursna = set_combine(sets.midcast.StatusRemoval, {
         main="Yagrush",
-        sub="Chanter's Shield",
+        sub="Ammurapi Shield",--"Chanter's Shield",
         head={ name="Kaykaus Mitra +1", augments={'MP+80','MND+12','Mag. Acc.+20',}},
         body="Ebers Bliaut +2",
         hands="Fanatic Gloves", --15
         legs="Th. Pantaloons +2", --21
-        feet="Vanya Clogs", --5
-        --feet="Gende. Galosh. +1", --10
-        neck="Malison Medallion", --15
+        feet={ name="Vanya Clogs", augments={'MND+10','Spell interruption rate down +15%','"Conserve MP"+6',}}, --5
+        neck="Debilis Medallion", --15
         ear1="Beatific Earring",
         ear2="Meili Earring",
         ring1="Haoma's Ring", --15
@@ -545,7 +549,7 @@ function init_gear_sets()
         waist="Sacro Cord",
         })
 
-    sets.midcast.Holy = { -- sets.midcast.Banish
+    sets.midcast.Holy = {  --sets.midcast.Banish
         main="Daybreak",
         sub="Ammurapi Shield",
         ammo="Pemphredo Tathlum",

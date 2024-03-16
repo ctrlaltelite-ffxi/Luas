@@ -96,7 +96,7 @@ function job_setup()
         ['Aspirs'] = {'Aspir','Aspir II'}
         }
 
-    lockstyleset = 01
+    lockstyleset = 83
 
 end
 
@@ -215,22 +215,22 @@ function init_gear_sets()
 
     -- Fast cast sets for spells
     sets.precast.FC = {
-    --    /RDM --15, currently at 81 - Will sell Pinga after Zendik obtained
+    --    /RDM --15, currently at 81 & Q 10%
         main="Musa", -- 10
-        sub="Clerisy Strap +1", -- 3
-        ammo="Incantor Stone", --2
-        head={ name="Psycloth Tiara", augments={'Mag. Acc.+20','"Fast Cast"+10','INT+7',}}, -- 10 --{ name="Vanya Hood", augments={'MP+50','"Fast Cast"+10','Haste+2%',}}, --10
-        body="Pinga Tunic +1", -- 15 --"Zendik Robe", --13
-        hands="Acad. Bracers +2", --7
-        legs={ name="Psycloth Lappas", augments={'MP+80','Mag. Acc.+15','"Fast Cast"+7',}}, -- 7 --"Agwu's Slops", --7
-        feet="Peda. Loafers +1", --6
+        sub="Kaja Grip",
+        ammo="Impatiens", -- Q 2%
+        head="Nahtirah Hat", -- 10
+        body="Zendik Robe", --13
+        hands="Acad. Bracers +1", --7
+        legs="Agwu's Slops", --7
+        feet="Peda. Loafers +3", --8
         neck="Voltsurge Torque", --4
         ear1="Malignance Earring", --4
-        ear2="Loquac. Earring", --2
+        ear2="Etiolation Earring", --1
         ring1="Kishar Ring", --4
-        ring2="Prolix Ring", --2
+        ring2="Lebeche Ring", -- Q 2%
         back="Fi Follet Cape +1", --10
-        waist="Witful Belt", --3 / Occ 3
+        waist="Witful Belt", --3 / Q 3
         }
 
     sets.precast.FC.Grimoire = {head="Peda. M.Board +1", feet="Acad. Loafers +1"}
@@ -238,14 +238,15 @@ function init_gear_sets()
     sets.precast.FC['Elemental Magic'] = set_combine(sets.precast.FC, {})
 
     sets.precast.FC.Cure = set_combine(sets.precast.FC, {
-        main="Raetic Rod +1",
-        sub="Sors Shield", -- 3
-        head="Kaykaus Mitra +1", -- 7
-        hands={ name="Vanya Cuffs", augments={'Healing magic skill +20','"Cure" spellcasting time -7%','Magic dmg. taken -3',}}, -- 7
-        feet="Kaykaus Boots +1", --7
-        ear2="Mendi. Earring", --5
-        ring1="Lebeche Ring", --(2)
+
         })
+        --main="Raetic Rod +1",
+        --sub="Sors Shield", -- 3
+        --head="Kaykaus Mitra +1", -- 7
+        --hands={ name="Vanya Cuffs", augments={'Healing magic skill +20','"Cure" spellcasting time -7%','Magic dmg. taken -3',}}, -- 7
+        --feet="Kaykaus Boots +1", --7
+        --ear2="Mendi. Earring", --5
+        --ring2="Lebeche Ring", --(2)
 
     sets.precast.FC.Curaga = sets.precast.FC.Cure
     sets.precast.FC.Impact = set_combine(sets.precast.FC, {head=empty, body="Twilight Cloak", waist="Shinjutsu-no-Obi +1"})
@@ -327,13 +328,13 @@ function init_gear_sets()
 
     sets.midcast.Cure = {   
         main="Raetic Rod +1",-- 23 "Chatoyant Staff",
-        sub="Sors Shield",-- 3 "Kaja Grip", -- "Kaja Grip"
-        ammo="Staunch Tathlum",--
+        sub="Culminus",--"Sors Shield",-- 3 "Kaja Grip"
+        ammo="Staunch Tathlum +1",--
         head="Kaykaus Mitra +1",-- 11 
-        body={ name="Vanya Robe", augments={'MP+50','"Cure" potency +7%','Enmity-6',}}, -- 7
+        body="Shamash Robe",
         hands="Nyame Gauntlets",
-        legs="Nyame Flanchard", -- 0
-        feet={ name="Kaykaus Boots +1", augments={'MP+80','"Cure" spellcasting time -7%','Enmity-6',}}, -- 11
+        legs={ name="Kaykaus Tights +1", augments={'INT+12','"Mag.Atk.Bns."+20','Enmity-6',}}, -- 7
+        feet={ name="Kaykaus Boots +1", augments={'Mag. Acc.+20','"Cure" potency +6%','"Fast Cast"+4',}}, -- 17
         neck={ name="Loricate Torque +1", augments={'Path: A',}},
         waist="Shinjutsu-no-Obi +1",
         left_ear="Magnetic Earring",
@@ -381,7 +382,7 @@ function init_gear_sets()
         body={ name="Vanya Robe", augments={'MND+10','Spell interruption rate down +15%','"Conserve MP"+6',}},
         hands="Peda. Bracers +1",
         legs="Acad. Pants +1", 
-        feet={ name="Vanya Clogs", augments={'"Cure" potency +5%','"Cure" spellcasting time -15%','"Conserve MP"+6',}},
+        feet={ name="Vanya Clogs", augments={'MND+10','Spell interruption rate down +15%','"Conserve MP"+6',}},
         neck={ name="Loricate Torque +1", augments={'Path: A',}},--"Incanter's Torque",
         ear2="Meili Earring",
         ring1="Ephedra  Ring",
@@ -390,20 +391,21 @@ function init_gear_sets()
         }
 
     sets.midcast.Cursna = set_combine(sets.midcast.StatusRemoval, {
-        main="Kaja Rod",--"Gada",
+        main="Maxentius",--"Gada",
         sub="Ammurapi Shield",
-        hands={ name="Vanya Cuffs", augments={'Healing magic skill +20','"Cure" spellcasting time -7%','Magic dmg. taken -3',}},--"Hieros Mittens",
-        feet="Regal Pumps +1", --{ name="Vanya Clogs", augments={'"Cure" potency +5%','"Cure" spellcasting time -15%','"Conserve MP"+6',}},
-        --feet="Gende. Galosh. +1",
+        hands="Regal Cuffs",--"Hieros Mittens",
+        feet={ name="Vanya Clogs", augments={'MND+10','Spell interruption rate down +15%','"Conserve MP"+6',}}, -- "Regal Pumps +1",
         neck="Debilis Medallion",
         ear1="Beatific Earring",
-        ring1="Ephedra  Ring",--ring1="Haoma's Ring",
+        ear2="Meili Earring",
+        ring1="Haoma's Ring",
         ring2="Menelaus's Ring",
         back="Oretan. Cape +1",
+        waist="Bishop's Sash",
         })
 
     sets.midcast['Enhancing Magic'] = {
-        main="Kaja Rod",--"Gada",
+        main="Maxentius",--"Gada",
         sub="Ammurapi Shield",
         ammo="Savant's Treatise",
         head={ name="Telchine Cap", augments={'Enh. Mag. eff. dur. +10',}},
@@ -466,7 +468,7 @@ function init_gear_sets()
     sets.midcast.Aquaveil = set_combine(sets.midcast.EnhancingDuration, {
         main="Vadose Rod",
         sub="Ammurapi Shield",
-        ammo="Staunch Tathlum",
+        ammo="Staunch Tathlum +1",
         head="Agwu's Cap",
         hands="Regal Cuffs",
         ear1="Magnetic Earring",
@@ -477,7 +479,7 @@ function init_gear_sets()
 
     sets.midcast.Storm = sets.midcast.EnhancingDuration
 
-    sets.midcast.Stormsurge = set_combine(sets.midcast.Storm, {feet="Peda. Loafers +1"})
+    sets.midcast.Stormsurge = set_combine(sets.midcast.Storm, {feet="Peda. Loafers +3"})
 
     sets.midcast.Protect = set_combine(sets.midcast.EnhancingDuration, {ring2="Sheltered Ring"})
     sets.midcast.Protectra = sets.midcast.Protect
@@ -486,7 +488,7 @@ function init_gear_sets()
 
     -- Custom spell classes
     sets.midcast.MndEnfeebles = {
-        main="Kaja Rod",--"Daybreak",
+        main="Maxentius",--"Daybreak",
         sub="Ammurapi Shield",
         ammo="Pemphredo Tathlum",
         head=empty;
@@ -504,7 +506,7 @@ function init_gear_sets()
         }
 
     sets.midcast.IntEnfeebles = set_combine(sets.midcast.MndEnfeebles, {
-        main="Kaja Rod",
+        main="Maxentius",
         sub="Ammurapi Shield",
         head="Acad. Mortar. +1",
         body="Acad. Gown +2",
@@ -516,12 +518,12 @@ function init_gear_sets()
     sets.midcast.Dispelga = set_combine(sets.midcast.IntEnfeebles, {main="Daybreak", sub="Ammurapi Shield", waist="Shinjutsu-no-Obi +1"})
 
     sets.midcast['Dark Magic'] = {
-        main="Kaja Rod",--main="Rubicundity",
+        main="Maxentius",--main="Rubicundity",
         sub="Ammurapi Shield",
         ammo="Pemphredo Tathlum",
         head="Acad. Mortar. +1",
         body="Acad. Gown +2",
-        hands="Acad. Bracers +2",
+        hands="Acad. Bracers +1",
         legs="Peda. Pants +1",
         feet="Acad. Loafers +1",
         neck="Argute Stole +1",
@@ -674,9 +676,9 @@ function init_gear_sets()
         }
 
     sets.idle.DT = set_combine(sets.idle, {
-        main="Marin Staff +1", --"Daybreak",
-        sub="Kaja Grip",--"Genmei Shield", --10/0
-        ammo="Staunch Tathlum", --3/3
+        main="Daybreak", -- "Marin Staff +1"
+        sub="Genmei Shield", --10/0 -- "Kaja Grip",--
+        ammo="Staunch Tathlum +1", --3/3
         head="Nyame Helm",
         body="Nyame Mail",
         hands="Nyame Gauntlets",
@@ -687,7 +689,7 @@ function init_gear_sets()
         right_ear="Hearty Earring",
         left_ring="Shneddick Ring",
         right_ring="Defending Ring",
-        back="Aurist's Cape +1", --Moonbeam Cape 6/6
+        back="Moonbeam Cape", -- "Aurist's Cape +1", -- 6/6
         waist="Carrier's Sash",
         })
 
@@ -701,7 +703,7 @@ function init_gear_sets()
         body="Agwu's Robe",
         hands="Regal Cuffs",
         legs="Peda. Pants +1",
-        feet="Peda. Loafers +1",
+        feet="Peda. Loafers +3",
         neck="Argute Stole +1",
         ear1="Malignance Earring",
         ear2="Regal Earring",
@@ -758,18 +760,18 @@ function init_gear_sets()
         ring2="Mujin Band", --(5)
         }
 
-    --sets.buff['Ebullience'] = {head="Arbatel Bonnet +1"}
+    sets.buff['Ebullience'] = {head="Arbatel Bonnet +1"}
     sets.buff['Rapture'] = {head="Arbatel Bonnet +1"}
     sets.buff['Perpetuance'] = {hands="Arbatel Bracers +1"}
     sets.buff['Immanence'] = {hands="Arbatel Bracers +1", "Lugh's Cape"}
     sets.buff['Penury'] = {legs="Arbatel Pants +1"}
     sets.buff['Parsimony'] = {legs="Arbatel Pants +1"}
-    sets.buff['Celerity'] = {feet="Peda. Loafers +1"}
-    sets.buff['Alacrity'] = {feet="Peda. Loafers +1"}
+    sets.buff['Celerity'] = {feet="Peda. Loafers +3"}
+    sets.buff['Alacrity'] = {feet="Peda. Loafers +3"}
     sets.buff['Klimaform'] = {feet="Arbatel Loafers +1"}
 
     sets.buff.FullSublimation = {
-       main="Siriti", --1
+       main="Daybreak", --"Siriti", --1
        sub="Genmei Shield", --10/0
        head="Acad. Mortar. +1", --4
        body="Peda. Gown +1", --5
