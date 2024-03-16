@@ -17,9 +17,9 @@ function get_sets()
     send_command('bind ^f1 gs c C7')
     send_command('bind ^f2 gs c C15')
     send_command('bind ^f3 gs c C16')
-    send_command('bind !f1 gs c C2')
-    send_command('bind !f2 gs c C1')
-    send_command('bind !f3 gs c C3')
+    send_command('bind ^f4 gs c C2') -- weapon
+    send_command('bind ^f5 gs c C1') -- twlight
+    send_command('bind ^f6 gs c C3')
  
     AccIndex = 1
     AccArray = {"LowACC","MidACC","HighACC"} -- 3 Levels Of Accuracy Sets For TP/WS/Hybrid. First Set Is LowACC. Add More ACC Sets If Needed Then Create Your New ACC Below. Most of These Sets Are Empty So You Need To Edit Them On Your Own. Remember To Check What The Combined Set Is For Each Sets. --
