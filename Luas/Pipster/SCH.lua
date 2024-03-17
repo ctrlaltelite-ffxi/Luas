@@ -438,7 +438,7 @@ function init_gear_sets()
     sets.midcast.Regen = set_combine(sets.midcast.EnhancingDuration, {
         main="Musa",
         sub="Kaja Grip", -- "Kaja Grip",
-        head={ name="Telchine Cap", augments={'Enh. Mag. eff. dur. +10',}},
+        head="Arbatel Bonnet +2",--{ name="Telchine Cap", augments={'Enh. Mag. eff. dur. +10',}},
         body={ name="Telchine Chas.", augments={'Enh. Mag. eff. dur. +10',}},
         hands={ name="Telchine Gloves", augments={'Enh. Mag. eff. dur. +10',}},--{ name="Telchine Gloves", augments={'"Regen" potency+3',}},
         legs={ name="Telchine Braconi", augments={'Enh. Mag. eff. dur. +10',}},
@@ -447,7 +447,7 @@ function init_gear_sets()
         })
 
     sets.midcast.RegenDuration = set_combine(sets.midcast.EnhancingDuration, {
-        head={ name="Telchine Cap", augments={'Enh. Mag. eff. dur. +10',}},
+        head="Arbatel Bonnet +2",--{ name="Telchine Cap", augments={'Enh. Mag. eff. dur. +10',}},
         back="Lugh's Cape",
         })
 
@@ -780,8 +780,8 @@ function init_gear_sets()
         ring2="Mujin Band", --(5)
         }
 
-    sets.buff['Ebullience'] = {head="Arbatel Bonnet +1"}
-    sets.buff['Rapture'] = {head="Arbatel Bonnet +1"}
+    sets.buff['Ebullience'] = {head="Arbatel Bonnet +2"}
+    sets.buff['Rapture'] = {head="Arbatel Bonnet +2"}
     sets.buff['Perpetuance'] = {hands="Arbatel Bracers +2"}
     sets.buff['Immanence'] = {hands="Arbatel Bracers +2", "Lugh's Cape"}
     sets.buff['Penury'] = {legs="Arbatel Pants +1"}
