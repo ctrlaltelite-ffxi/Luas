@@ -328,7 +328,7 @@ function init_gear_sets()
 
     sets.midcast.Cure = {   
         main="Raetic Rod +1",-- 23 "Chatoyant Staff",
-        sub="Culminus",--"Sors Shield",-- 3 "Kaja Grip"
+        sub="Ammurapi Shield",--"Sors Shield",-- 3 "Kaja Grip"
         ammo="Staunch Tathlum +1",--
         head="Kaykaus Mitra +1",-- 11 
         body="Shamash Robe",
@@ -391,7 +391,7 @@ function init_gear_sets()
         }
 
     sets.midcast.Cursna = set_combine(sets.midcast.StatusRemoval, {
-        main="Maxentius",--"Gada",
+        main="Bunzi's Rod",--"Gada",
         sub="Ammurapi Shield",
         hands="Regal Cuffs",--"Hieros Mittens",
         feet={ name="Vanya Clogs", augments={'MND+10','Spell interruption rate down +15%','"Conserve MP"+6',}}, -- "Regal Pumps +1",
@@ -405,7 +405,7 @@ function init_gear_sets()
         })
 
     sets.midcast['Enhancing Magic'] = {
-        main="Maxentius",--"Gada",
+        main="Bunzi's Rod",--"Gada",
         sub="Ammurapi Shield",
         ammo="Savant's Treatise",
         head={ name="Telchine Cap", augments={'Enh. Mag. eff. dur. +10',}},
@@ -488,7 +488,7 @@ function init_gear_sets()
 
     -- Custom spell classes
     sets.midcast.MndEnfeebles = {
-        main="Maxentius",--"Daybreak",
+        main="Daybreak",
         sub="Ammurapi Shield",
         ammo="Pemphredo Tathlum",
         head=empty;
@@ -496,17 +496,17 @@ function init_gear_sets()
         hands="Regal Cuffs",
         legs="Acad. Pants +1", 
         feet="Acad. Loafers +1",
-        neck="Argute Stole +1",
+        neck="Argute Stole +2",
         ear1="Malignance Earring",
         ear2="Vor Earring",
         ring1="Kishar Ring",
         ring2={ name="Metamor. Ring +1", augments={'Path: A',}},
-        back="Aurist's Cape +1",
+        back={ name="Lugh's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','MND+10','"Cure" potency +10%','Spell interruption rate down-10%',}},--"Aurist's Cape +1",
         waist="Luminary Sash",
         }
 
     sets.midcast.IntEnfeebles = set_combine(sets.midcast.MndEnfeebles, {
-        main="Maxentius",
+        main="Bunzi's Rod",
         sub="Ammurapi Shield",
         head="Acad. Mortar. +1",
         body="Acad. Gown +1",
@@ -518,7 +518,7 @@ function init_gear_sets()
     sets.midcast.Dispelga = set_combine(sets.midcast.IntEnfeebles, {main="Daybreak", sub="Ammurapi Shield", waist="Shinjutsu-no-Obi +1"})
 
     sets.midcast['Dark Magic'] = {
-        main="Maxentius",--main="Rubicundity",
+        main="Bunzi's Rod",--main="Rubicundity",
         sub="Ammurapi Shield",
         ammo="Pemphredo Tathlum",
         head="Acad. Mortar. +1",
@@ -526,7 +526,7 @@ function init_gear_sets()
         hands="Acad. Bracers +1",
         legs="Peda. Pants +3",
         feet="Acad. Loafers +1",
-        neck="Argute Stole +1",
+        neck="Argute Stole +2",
         ear1="Malignance Earring",
         ear2="Mani Earring",
         ring1="Stikini Ring +1",
@@ -536,20 +536,20 @@ function init_gear_sets()
         }
 
     sets.midcast.Kaustra = {
-        main="Marin Staff +1", --10
-        sub="Kaja Grip", --"Enki Strap",
+        main="Bunzi's Rod", --"Marin Staff +1", --10
+        sub="Ammurapi Shield", --"Enki Strap",
         ammo="Ghastly Tathlum +1",
         head="Pixie Hairpin +1",
         body="Agwu's Robe", --10
-        hands="Agwu's Gages", --(5)
-        legs="Mallquis Trews +2", --6
+        hands="Agwu's Gages",--"Amalric Gages +1", --
+        legs="Agwu's Slops", --6 - Amalric Slops +1 -- Path A
         feet="Agwu's Pigaches", --11
-        neck="Argute Stole +1", --10
+        neck="Argute Stole +2", --10
         ear1="Malignance Earring",
         ear2="Regal Earring",
         ring1="Freke Ring",
         ring2="Archon Ring",
-        back="Aurist's Cape +1",
+        back={ name="Lugh's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+2','"Mag.Atk.Bns."+10','Phys. dmg. taken-10%',}},--"Aurist's Cape +1",
         waist="Acuity Belt +1",
         }
 
@@ -569,20 +569,21 @@ function init_gear_sets()
 
     -- Elemental Magic
     sets.midcast['Elemental Magic'] = {
-        main="Marin Staff +1", --main="Musa",
-        sub="Kaja Grip", -- "Kaja Grip"
-        head="Nyame Helm",
-        body="Nyame Mail",
-        hands="Nyame Gauntlets",
-        legs="Nyame Flanchard",
-        feet="Nyame Sollerets",
-        neck="Argute Stole +1",
-        waist="Acuity Belt +1",
+        main="Bunzi's Rod", --main="Musa",
+        sub="Ammurapi Shield", -- "Kaja Grip"
+        ammo="Ghastly Tathlum +1",
+        head="Agwu's Cap",
+        body="Agwu's Robe",
+        hands="Agwu's Gages",
+        legs="Agwu's Slops",
+        feet="Agwu's Pigaches",
+        neck="Argute Stole +2",
+        waist="Hachirin-no-Obi",--"Acuity Belt +1",
         left_ear="Malignance Earring",
-        right_ear="Mendi. Earring",
-        left_ring="Jhakri Ring",
+        right_ear="Regal Earring",
+        left_ring="Freke Ring",
         right_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
-        back="Aurist's Cape +1",
+        back={ name="Lugh's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+2','"Mag.Atk.Bns."+10','Phys. dmg. taken-10%',}},--"Aurist's Cape +1",
         
         
         --sub="Enki Strap",
@@ -620,8 +621,8 @@ function init_gear_sets()
         })
 
     sets.midcast.Impact = set_combine(sets.midcast['Elemental Magic'], {
-        main="Marin Staff +1",
-        sub="Kaja Grip", -- "Kaja Grip",
+        main="Bunzi's Rod", --"Marin Staff +1",
+        sub="Ammurapi Shield", -- "Kaja Grip",
         head=empty,
         body="Twilight Cloak",
         ring2="Archon Ring",
@@ -629,10 +630,10 @@ function init_gear_sets()
         })
 
     sets.midcast.Helix = {
-        main="Marin Staff +1",
-        sub="Kaja Grip", --"Enki Strap",
+        main="Bunzi's Rod", --"Marin Staff +1",
+        sub="Ammurapi Shield", --"Enki Strap",
         ammo="Ghastly Tathlum +1",
-        neck="Argute Stole +1",
+        neck="Argute Stole +2",
         ring1="Mujin Band",
         ring2={ name="Metamor. Ring +1", augments={'Path: A',}},
         waist="Skrymir Cord",
@@ -676,7 +677,7 @@ function init_gear_sets()
         }
 
     sets.idle.DT = set_combine(sets.idle, {
-        main="Daybreak", -- "Marin Staff +1"
+        main="Daybreak", -- "Bunzi's Rod", --"Marin Staff +1"
         sub="Genmei Shield", --10/0 -- "Kaja Grip",--
         ammo="Staunch Tathlum +1", --3/3
         head="Nyame Helm",
@@ -704,7 +705,7 @@ function init_gear_sets()
         hands="Regal Cuffs",
         legs="Peda. Pants +3",
         feet="Peda. Loafers +3",
-        neck="Argute Stole +1",
+        neck="Argute Stole +2",
         ear1="Malignance Earring",
         ear2="Regal Earring",
         left_ring="Shneddick Ring",
@@ -751,12 +752,13 @@ function init_gear_sets()
     ------------------------------------------------------------------------------------------------
 
     sets.magic_burst = {
-        main="Marin Staff +1", -- 10
+        main="Bunzi's Rod", --"Marin Staff +1", -- 10
+        sub="Ammurapi Shield",
         head="Agwu's Cap", --"Peda. M.Board +2", --(4)
         body="Agwu's Robe", --10
         hands="Agwu's Gages", --(6)
         feet="Agwu's Pigaches", --11
-        neck="Argute Stole +1", --10
+        neck="Argute Stole +2", --10
         ring2="Mujin Band", --(5)
         }
 
