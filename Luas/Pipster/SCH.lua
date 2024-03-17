@@ -553,13 +553,23 @@ function init_gear_sets()
         waist="Acuity Belt +1",
         }
 
-    sets.midcast.Drain = set_combine(sets.midcast['Dark Magic'], {
+    sets.midcast.Drain = {
+        main={ name="Rubicundity", augments={'Mag. Acc.+9','"Mag.Atk.Bns."+8','Dark magic skill +9','"Conserve MP"+5',}},
+        sub="Ammurapi Shield",
+        ammo="Staunch Tathlum +1",
         head="Pixie Hairpin +1",
-        ear1="Hirudinea Earring",
-        ring1="Evanescence Ring",
-        ring2="Archon Ring",
-        waist="Fucho-no-obi",
-        })
+        body={ name="Merlinic Jubbah", augments={'"Mag.Atk.Bns."+5','"Drain" and "Aspir" potency +10','MND+6',}},
+        hands={ name="Merlinic Dastanas", augments={'"Drain" and "Aspir" potency +5','INT+11','Mag. Acc.+11',}},
+        legs={ name="Peda. Pants +3", augments={'Enhances "Tabula Rasa" effect',}},
+        feet="Agwu's Pigaches",
+        neck="Argute Stole +2",
+        waist="Fucho-no-Obi",
+        left_ear="Malignance Earring",
+        right_ear="Regal Earring",
+        left_ring="Evanescence Ring",
+        right_ring="Archon Ring",
+        back={ name="Lugh's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+2','"Mag.Atk.Bns."+10','Phys. dmg. taken-10%',}},
+        }
 
     sets.midcast.Aspir = sets.midcast.Drain
 
@@ -576,7 +586,7 @@ function init_gear_sets()
         body="Agwu's Robe",
         hands="Agwu's Gages",
         legs="Agwu's Slops",
-        feet="Agwu's Pigaches",
+        feet="Arbatel Loafers +2", --"Agwu's Pigaches",
         neck="Argute Stole +2",
         waist="Hachirin-no-Obi",--"Acuity Belt +1",
         left_ear="Malignance Earring",
@@ -607,7 +617,7 @@ function init_gear_sets()
         head="Merlinic Hood",
         body="Seidr Cotehardie",
         legs="Peda. Pants +3",
-        feet="Agwu's Pigaches",
+        feet="Arbatel Loafers +2",--"Agwu's Pigaches",
         neck="Erra Pendant",
         waist="Acuity Belt +1",
         })
@@ -633,10 +643,18 @@ function init_gear_sets()
         main="Bunzi's Rod", --"Marin Staff +1",
         sub="Ammurapi Shield", --"Enki Strap",
         ammo="Ghastly Tathlum +1",
+        head="Agwu's Cap",
+        body="Agwu's Robe",
+        hands="Agwu's Gages",
+        legs="Agwu's Slops",
+        feet="Arbatel Loafers +2", --"Agwu's Pigaches",
         neck="Argute Stole +2",
-        ring1="Mujin Band",
-        ring2={ name="Metamor. Ring +1", augments={'Path: A',}},
-        waist="Skrymir Cord",
+        left_ear="Malignance Earring",
+        right_ear="Regal Earring",
+        ring1="Freke Ring",
+        ring2="Mujin Band",
+        waist="Skrymir Cord", -- acuity belt +1
+        back={ name="Lugh's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+2','"Mag.Atk.Bns."+10','Phys. dmg. taken-10%',}},
         }
 
     sets.midcast.DarkHelix = set_combine(sets.midcast.Helix, {
@@ -647,7 +665,7 @@ function init_gear_sets()
     sets.midcast.LightHelix = set_combine(sets.midcast.Helix, {
         main="Daybreak",
         sub="Ammurapi Shield",
-        ring2="Weather. Ring"
+        ring2={ name="Metamor. Ring +1", augments={'Path: A',}} -- weatherspoon
         })
 
     -- Initializes trusts at iLvl 119
@@ -764,13 +782,13 @@ function init_gear_sets()
 
     sets.buff['Ebullience'] = {head="Arbatel Bonnet +1"}
     sets.buff['Rapture'] = {head="Arbatel Bonnet +1"}
-    sets.buff['Perpetuance'] = {hands="Arbatel Bracers +1"}
-    sets.buff['Immanence'] = {hands="Arbatel Bracers +1", "Lugh's Cape"}
+    sets.buff['Perpetuance'] = {hands="Arbatel Bracers +2"}
+    sets.buff['Immanence'] = {hands="Arbatel Bracers +2", "Lugh's Cape"}
     sets.buff['Penury'] = {legs="Arbatel Pants +1"}
     sets.buff['Parsimony'] = {legs="Arbatel Pants +1"}
     sets.buff['Celerity'] = {feet="Peda. Loafers +3"}
     sets.buff['Alacrity'] = {feet="Peda. Loafers +3"}
-    sets.buff['Klimaform'] = {feet="Arbatel Loafers +1"}
+    sets.buff['Klimaform'] = {feet="Arbatel Loafers +2"}
 
     sets.buff.FullSublimation = {
        main="Daybreak", --"Siriti", --1
